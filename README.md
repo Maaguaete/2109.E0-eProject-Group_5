@@ -20,7 +20,7 @@ Project title: //
 github report link: 
 ============================
 
-eProject published at https://minhle172.github.io/1910-eProject-Group_4/
+eProject published at 
 
 ============================
 
