@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Fitness Club</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="nav" href="demo.html"><img class="logo" src="images/logonew.png" alt=""></a>
+                <ul class="navbar-nav container-fluid">
+                    <li class="nav-item"><a class="nav-link" href="#">Homepage</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Services</a>
+                        <ul class="dropdown-menu bg-dark">
+                            <a class="dropdown-item" href="#">Cycling</a>
+                            <a class="dropdown-item" href="#">Swimming</a>
+                            <a class="dropdown-item" href="#">Sport & Fitness</a>
+                            <a class="dropdown-item" href="#">Group Exercises</a>
+                            <a class="dropdown-item" href="#">Salon & Spa</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item "><a class="nav-link" href="#">Customer Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Equipments</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning btn-danger" href="#">Membership</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/vintage.jpg" alt="Los Angeles">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/chaiumph.jpg" alt="Chicago">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Mike.jpg" alt="New York">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+</body>
+
+</html>

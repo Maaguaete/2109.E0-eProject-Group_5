@@ -4,15 +4,15 @@ Batch no.: T1.2109.E0
 
 CENTER NAME: ACE-HCMC-2-FPT
 
-Project title: //
+Project title: Prime Fitness
 
 ========> Group 5 <=========
 
 2 collaborators:
 
-             Nguyen Toan(tigermaaguaete@gmail.com) Student1328430
+             Nguyen Toan (ToanNTS2109005@fpt.edu.vn) Student1328430
 
-             Truong Duong Truc Duy(           @gmail.com) Student1333971
+             Truong Duong Truc Duy (DuyTDTTS2109015@fpt.edu.vn) Student1333971
              
              
 ============================
@@ -20,7 +20,7 @@ Project title: //
 github report link: 
 ============================
 
-eProject published at 
+eProject published at https://minhchi2494.github.io/eProject/index.html 
 
 ============================
 

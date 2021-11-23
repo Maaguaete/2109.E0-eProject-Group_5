@@ -1,0 +1,27 @@
+.logo {
+    width: 400px;
+    margin: 5px 100px 20px 20px;
+}
+
+header {
+    color: wheat;
+}
+
+header li a.nav-link {
+    border-radius: 10px;
+    padding: 10px;
+    color: wheat !important;
+}
+
+header li a:hover {
+    background-color: rgb(194, 142, 0);
+}
+
+.dropdown-item {
+    color: wheat;
+}
+
+.dropdown-item:hover {
+    color: wheat;
+    background-color: rgb(194, 142, 0);
+}
