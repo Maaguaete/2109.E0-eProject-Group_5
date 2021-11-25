@@ -9,7 +9,7 @@
     margin: 5px 100px 20px 0px;
 }
 
-.nav-item>a {
+.nav-item a {
     border-radius: 10px;
     padding: 10px;
     display: inline-block;
@@ -19,7 +19,8 @@
 
 .nav-item a:hover {
     background-color: rgba(202, 151, 10, 0.68);
-    transform: scale(1.1);
+    transform: scale(1.05);
+    border-radius: 10px;
     font-weight: bold;
 }
 
