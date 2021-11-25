@@ -20,7 +20,7 @@ Project title: Prime Fitness
 github report link: 
 ============================
 
-eProject published at https://minhchi2494.github.io/eProject/index.html 
+eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
 
 ============================
 
