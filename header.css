@@ -1,27 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .logo {
     width: 330px;
     margin: 5px 100px 20px 0px;
 }
 
-header {
-    color: wheat;
-}
-
-header li a {
+.nav-item>a {
     border-radius: 10px;
     padding: 10px;
-    color: wheat !important;
+    display: inline-block;
+    color: wheat!important;
+    transition: all 200ms ease-in-out;
 }
 
-header li a:hover {
-    background-color: rgba(194, 142, 0, 0.68);
+.nav-item a:hover {
+    background-color: rgba(202, 151, 10, 0.68);
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .dropdown-item {
     color: wheat;
-}
-
-.dropdown-item:hover {
-    color: wheat;
-    background-color: rgb(194, 142, 0);
 }
