@@ -1,0 +1,61 @@
+[{
+        "timeSet": "05:45-06:45",
+        "mon": "Swimming",
+        "tue": "Sports & Fitness",
+        "wed": " ",
+        "thu": "Cycling",
+        "fri": " ",
+        "sat": "Group-X",
+        "sun": "Swimming"
+    },
+    {
+        "timeSet": "07:15-08:15",
+        "mon": " ",
+        "tue": "Sports & Fitness",
+        "wed": "Rest",
+        "thu": "Cycling",
+        "fri": "Rest",
+        "sat": "Group-X",
+        "sun": "Sports & Fitness"
+    },
+    {
+        "timeSet": "11:30-12:30",
+        "mon": "Swimming",
+        "tue": "Sports & Fitness",
+        "wed": "Rest",
+        "thu": "Cycling",
+        "fri": "Rest",
+        "sat": "Group-X",
+        "sun": "Sports & Fitness"
+    },
+    {
+        "timeSet": "12:00-13:00",
+        "mon": "Swimming",
+        "tue": "Sports & Fitness",
+        "wed": "Rest",
+        "thu": "Cycling",
+        "fri": "Rest",
+        "sat": "Group-X",
+        "sun": "Sports & Fitness"
+    },
+    {
+        "timeSet": "17:30-18:30",
+        "mon": "Swimming",
+        "tue": "Sports & Fitness",
+        "wed": "Cycling",
+        "thu": " ",
+        "fri": "Swimming",
+        "sat": "Group-X",
+        "sun": "Sports & Fitness"
+    },
+    {
+        "timeSet": "19:00-20:00",
+        "mon": "Swimming",
+        "tue": "Sports & Fitness",
+        "wed": "Salon & Spa",
+        "thu": "Cycling",
+        "fri": "Sports & Fitness",
+        "sat": "Group-X",
+        "sun": "Sports & Fitness"
+    }
+]

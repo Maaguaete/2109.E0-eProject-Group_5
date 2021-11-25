@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUIPMENT</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <style>
+        .equipment {
+            position: relative;
+        }
+        
+        ul.nav-pills {
+            top: 130px;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="nav" href="demo.html"><img class="logo" src="images/logo.png" alt=""></a>
+                <ul class="navbar-nav container-fluid">
+                    <li class="nav-item"><a class="nav-link" href="#">Homepage</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Services</a>
+                        <ul class="dropdown-menu bg-dark">
+                            <a class="dropdown-item" href="#">Cycling</a>
+                            <a class="dropdown-item" href="#">Swimming</a>
+                            <a class="dropdown-item" href="#">Sport & Fitness</a>
+                            <a class="dropdown-item" href="#">Group-X</a>
+                            <a class="dropdown-item" href="#">Salon & Spa</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Equipments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item "><a class="nav-link" href="#">Your Concern</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning btn-danger" href="#">Membership</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div data-spy="scroll" data-target="#myScrollspy" data-offset="1" class="equipment">
+
+            <div class="row">
+                <nav class="col-sm-3 col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Cycling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">Swimming</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Sports & Fitness</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Group-X</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#section41">Link 1</a>
+                                <a class="dropdown-item" href="#section42">Link 2</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-sm-9 col-9">
+                    <div id="section0" class="bg-secondary text-center text-warning">
+                        <h1>FACILITY'S EQUIPMENT</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section1" class="bg-success">
+                        <h2>Section 1</h2>
+                        <img src="/images/vintage.jpg" alt="">
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section2" class="bg-warning">
+                        <h1>Section 2</h1>
+                        <img src="/images/master2013.jpg" alt="">
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section3" class="bg-secondary">
+                        <h1>Section 3</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section41" class="bg-danger">
+                        <h1>Section 4-1</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                    <div id="section42" class="bg-info">
+                        <h1>Section 4-2</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
