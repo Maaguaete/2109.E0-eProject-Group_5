@@ -9,19 +9,20 @@
     margin: 5px 100px 20px 0px;
 }
 
-.nav-item a {
+.nav-item .nav-link {
     border-radius: 10px;
     padding: 10px;
     display: inline-block;
-    color: wheat!important;
+    color: rgb(238, 212, 163)!important;
     transition: all 200ms ease-in-out;
 }
 
-.nav-item a:hover {
+.nav-item .nav-link:hover {
     background-color: rgba(202, 151, 10, 0.68);
     transform: scale(1.05);
     border-radius: 10px;
     font-weight: bold;
+    color: #000!important;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -30,4 +31,9 @@
 
 .dropdown-item {
     color: wheat;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(202, 151, 10, 0.68);
+    font-weight: bold;
 }
