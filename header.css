@@ -18,7 +18,7 @@ header .bg-image {
 }
 
 .logo {
-    width: 330px;
+    width: 66%;
     margin: 5px 100px 20px 0px;
 }
 
@@ -78,6 +78,10 @@ Extra small devices (portrait phones, less than 576px) */
     a {
         display: block;
     }
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+    }
 }
 
 
@@ -87,6 +91,10 @@ Extra small devices (portrait phones, less than 576px) */
     /*  */
     a {
         display: block;
+    }
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
     }
 }
 
@@ -98,18 +106,8 @@ Extra small devices (portrait phones, less than 576px) */
     a {
         display: block;
     }
-}
-
-
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    /*  */
-}
-
-
-/*  Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-    /*  */
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+    }
 }
