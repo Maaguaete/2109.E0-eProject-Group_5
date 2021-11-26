@@ -21,16 +21,25 @@
             font-size: 3.5em;
             font-weight: bolder;
             color: wheat;
+            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px yellow, 0 0 50px yellow, 0 0 70px yellow;
         }
         
         p {
-            font-size: 0.8em;
+            font-size: 1em;
             font-weight: bold;
-            color: white;
+            color: whitesmoke;
         }
         
-        .row {
-            margin-top: 10px;
+        .content img:hover {
+            box-shadow: 2.5px 2px 10px rgb(233, 230, 230);
+            transition: 0.6s;
+        }
+        
+        @media (min-width: 600px) and (max-width: 991.98px) {
+            /*  */
+            .needBreak {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -60,17 +69,20 @@
             </ul>
         </nav>
     </header>
-
+    <!-- container  -->
     <div class="row bg-dark text-center">
+
         <div class="col-sm-12">
             <h2 class="text-white">SERVICES</h2>
             <h4 class="col bg-secondary ">Prime Fitness Services</h4>
         </div>
 
         <div class="row bg-dark">
-            <aside class="col-sm-2 col-2">
-                <nav id="myScrollspy">
-                    <ul class="nav nav-pills flex-column bg-secondary">
+
+            <aside class="col-sm-2">
+                <nav id="myScrollspy" class="bg-dark">
+                    <ul class="nav nav-pills flex-column">
+
                         <div class="bg-warning">
                             CLASSES:
                         </div>
@@ -88,7 +100,7 @@
                         </li>
 
                     </ul>
-                    <ul class="nav nav-pills flex-column bg-secondary">
+                    <ul class="nav nav-pills flex-column">
                         <div class="bg-info">
                             WELLNESS:
                         </div>
@@ -98,16 +110,31 @@
                     </ul>
                 </nav>
             </aside>
-            <div class="col-sm-8 col-8 bg-dark">
-                <div ng-view></div>
+
+            <div class="col-sm-8 bg-dark">
+                <div ng-view class="shadow-lg p-3 mb-5 rounded "></div>
             </div>
-            <aside class="col-sm-2 col-auto bg-2 text-center">
-                <form action="" class="d-inline text-warning">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Search</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+
+            <aside class="col-sm-2  text-left">
+                <div class="container  text-warning" ng-controller="myController">
+                    <h2 class="text-left text-white">BMI Calculator</h2>
+                    <hr>
+                    <form class="form-inline">
+
+                        <label for="height">Height (cm):</label>
+                        <input type="number" class="form-control" id="height" placeholder="Height" ng-model="height">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" class="form-control" id="weight" placeholder="Weight" ng-model="weight">
+                        <label for="age">Your Age:</label>
+                        <input ng-change="cal()" ng-model="basicSalary" min="1" step="1" type="number" class="form-control" id="basicSalary" placeholder="Age" name="basicSalary">
+                        <br>
+                    </form>
+
+                    <div>
+                        Result:
+                        <span class="btn-outline-success" ng-bind="bmi"></span>
                     </div>
-                </form>
+                </div>
             </aside>
         </div>
 
