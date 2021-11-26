@@ -5,43 +5,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Fitness Services</title>
+    <title>SERVICES</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+    <style>
+        .title {
+            padding: 10px;
+            margin: 10px;
+            font-size: 3.5em;
+            font-weight: bolder;
+            color: wheat;
+        }
+        
+        p {
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .row {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
-<body ng-app="myServices">
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-                <a class="nav" href="demo.html"><img class="logo" src="images/logo.png" alt=""></a>
-                <ul class="navbar-nav container-fluid">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Homepage</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu bg-dark">
-                            <a class="dropdown-item" href="#">Cycling</a>
-                            <a class="dropdown-item" href="#">Swimming</a>
-                            <a class="dropdown-item" href="#">Sport & Fitness</a>
-                            <a class="dropdown-item" href="#">Group-X</a>
-                            <a class="dropdown-item" href="#">Salon & Spa</a>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="equipment.html">Equipments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                    <li class="nav-item "><a class="nav-link" href="yourConcern.html">Your Concern</a></li>
-                    <li class="nav-item"><a class="nav-link btn-danger" href="membership.html">Membership</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div ng-view>
+<body ng-app="servicesApp">
 
+    <header>
+
+        <nav class="navbar navbar-expand-md bg-image">
+            <a class="nav-link" href="home.html"><img class="logo" src="images/logo.png" alt=""></a>
+            <ul class="navbar-nav container-fluid">
+                <li class="nav-item"><a class="nav-link" href="home.html">Homepage</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu bg-dark">
+                        <a class="dropdown-item" href="#/!">Cycling</a>
+                        <a class="dropdown-item" href="#!serSwimming">Swimming</a>
+                        <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
+                        <a class="dropdown-item" href="#!serGroupX">Group-X</a>
+                        <a class="dropdown-item" href="#!serSalonSpa">Salon & Spa</a>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="equipment.html">Equipments</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                <li class="nav-item "><a class="nav-link" href="yourConcern.html">Your Concern</a></li>
+                <li class="nav-item"><a class="nav-link btn-danger" href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row bg-dark text-center">
+        <div class="col-sm-12">
+            <h2 class="text-white">SERVICES</h2>
+            <h4 class="col bg-secondary ">Prime Fitness Services</h4>
         </div>
+
+        <div class="row bg-dark">
+            <aside class="col-sm-2 col-2">
+                <nav id="myScrollspy">
+                    <ul class="nav nav-pills flex-column bg-secondary">
+                        <div class="bg-warning">
+                            CLASSES:
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#/!">Cycling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!serSwimming">Swimming</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!serSportsFitness">Sports & Fitness</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!serGroupX">Group-X</a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav nav-pills flex-column bg-secondary">
+                        <div class="bg-info">
+                            WELLNESS:
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!serSalonSpa">Salon & Spa</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="col-sm-8 col-8 bg-dark">
+                <div ng-view></div>
+            </div>
+            <aside class="col-sm-2 col-auto bg-2 text-center">
+                <form action="" class="d-inline text-warning">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Search</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+                    </div>
+                </form>
+            </aside>
+        </div>
+
+
     </div>
+    <script>
+        var app = angular.module("servicesApp", ["ngRoute"]);
+
+        app.config(function($routeProvider) {
+
+            $routeProvider
+
+                .when("/", {
+                    templateUrl: "serCycling.html"
+                })
+                .when("/serSwimming", {
+                    templateUrl: "serSwimming.html"
+                })
+                .when("/serSportsFitness", {
+                    templateUrl: "serSportsFitness.html"
+                        // controller: "addCtrl"
+                })
+                .when("/serGroupX", {
+                    templateUrl: "serGroupX.html"
+
+                })
+                .when("/serSalonSpa", {
+                    templateUrl: "serSalonSpa.html"
+
+                });
+        });
+    </script>
+    <footer class="bg-dark">
+        <div class="row">
+            <div class="col">
+                <h4>Contact Us</h4>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Address:</span>
+                    <span>No.1, Nguyen Trai, Hanoi, Vietnam</span>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <span>Phone:</span>
+                    <span>+84 987 654 321</span>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <span>Email:</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 
 </html>

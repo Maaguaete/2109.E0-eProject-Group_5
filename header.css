@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+header .bg-image {
+    background-image: url("/images/headlogo.jpg");
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    background-position: center;
+}
+
 .logo {
     width: 330px;
     margin: 5px 100px 20px 0px;
@@ -14,6 +27,7 @@
     padding: 10px;
     display: inline-block;
     color: rgb(238, 212, 163)!important;
+    font-weight: bold;
     transition: all 200ms ease-in-out;
 }
 
@@ -36,4 +50,66 @@
 .dropdown-item:hover {
     background-color: rgba(202, 151, 10, 0.68);
     font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    border: 1px solid rgb(238, 212, 163);
+    color: wheat;
+    margin: 0 auto;
+}
+
+
+/* RESPONSIVE 
+Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    /*  */
+    .fixed-top-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        transition: 0.3s;
+        padding: 30px 0;
+        height: auto;
+        display: block;
+    }
+    a {
+        display: block;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*  */
+    a {
+        display: block;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*  */
+    a {
+        display: block;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*  */
+}
+
+
+/*  Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    /*  */
 }
