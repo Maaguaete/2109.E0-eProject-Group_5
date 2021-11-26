@@ -9,7 +9,7 @@ html {
 }
 
 header .bg-image {
-    background-image: url("/images/headlogo.jpg");
+    background-image: url("images/headlogo.jpg");
     padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -18,8 +18,8 @@ header .bg-image {
 }
 
 .logo {
-    width: 66%;
-    margin: 5px 100px 20px 0px;
+    width: 80%;
+    margin: 5px -100px 20px 0px;
 }
 
 .nav-item .nav-link {
@@ -33,7 +33,7 @@ header .bg-image {
 
 .nav-item .nav-link:hover {
     background-color: rgba(202, 151, 10, 0.68);
-    transform: scale(1.05);
+    transform: scale(1.1);
     border-radius: 10px;
     font-weight: bold;
     color: #000!important;
