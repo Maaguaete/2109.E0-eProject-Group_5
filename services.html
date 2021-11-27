@@ -11,10 +11,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
     <style>
+        .mainView {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(34, 35, 36);
+        }
+        
         .title {
             padding-bottom: 15px;
             margin: 10px;
@@ -38,9 +44,8 @@
         }
         
         aside {
-            background-color: rgb(0, 0, 0);
-            box-shadow: 0px -15px 5px black, 0 0 10px rgb(24, 24, 24);
-            z-index: 99;
+            background-color: rgb(24, 25, 26);
+            box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);
             padding-top: 30px;
         }
     </style>
@@ -51,9 +56,9 @@
     <header>
 
         <nav class="navbar navbar-expand-md bg-image">
-            <a class="nav-link" href="home.html"><img class="logo" src="images/logo.png" alt=""></a>
+            <a class="nav-link" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
-                <li class="nav-item"><a class="nav-link" href="home.html">Homepage</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu bg-dark">
                         <a class="dropdown-item" href="#/!">Cycling</a>
@@ -72,81 +77,96 @@
         </nav>
     </header>
     <!-- container  -->
-    <div class="row bg-dark text-center">
+    <div class="row text-center">
 
 
+        <aside class="col-sm-2">
+            <nav id="myScrollspy">
+                <ul class="nav nav-pills flex-column lead">
 
-        <div class="row bg-dark">
-
-            <aside class="col-sm-2">
-                <nav id="myScrollspy">
-                    <ul class="nav nav-pills flex-column">
-
-                        <div class="btn btn-outline-warning border-right-0">
-                            CLASSES:
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#/!">Cycling</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!serSwimming">Swimming</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!serSportsFitness">Sports & Fitness</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!serGroupX">Group-X</a>
-                        </li>
-
-                    </ul>
-                    <ul class="nav nav-pills flex-column">
-                        <div class="btn btn-outline-info border-right-0">
-                            WELLNESS:
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!serSalonSpa">Salon & Spa</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <div class="col-sm-8 bg-dark">
-                <div class="col-12 ">
-                    <h2 class="text-white">SERVICES</h2>
-                    <h4 class="col bg-secondary ">Prime Fitness Services</h4>
-                </div>
-                <div ng-view class="shadow-lg p-3 mb-5 rounded "></div>
-            </div>
-
-            <aside class="col-sm-2 text-left">
-                <div class="text-warning">
-                    <div class="d-block btn btn-outline-warning border-left-0">BMI CALCULATOR</div>
-                    <div class="m-auto pl-3 pt-2">
-                        <form class="form-inline">
-
-                            <label for="height">Height (cm):</label>
-                            <input type="number" ng-model="height" class="form-control col-lg-10" id="height" min="100" placeholder="Height">
-                            <label for="weight">Weight (kg):</label>
-                            <input type="number" ng-model="weight" class="form-control col-lg-10" id="weight" min="10" placeholder="Weight">
-                            <label for="age">Your Age:</label>
-                            <input ng-model="age" class="form-control col-lg-10" min="1" step="1" type="number" id="age" placeholder="Age" name="age">
-                            <hr>
-                            <button class="form-control mt-3 col-lg-10 btn btn-outline-info" type="button" ng-click="calBMI()">Calculate</button>
-                            <br>
-                        </form>
-
-                        <div class="pt-3">
-                            <h4>Result:</h4>
-
-                            <b>Your BMI is</b>
-
-                            <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
-
-                        </div>
+                    <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
+                        <div class="h4 pt-2 font-weight-lighter">CLASSES</div>
                     </div>
-                </div>
-            </aside>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/!">Cycling</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!serSwimming">Swimming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!serSportsFitness">Sports & Fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!serGroupX">Group-X</a>
+                    </li>
+
+                </ul>
+                <ul class="nav nav-pills flex-column lead pt-4">
+                    <div class="d-block btn btn-outline-info border-right-0 border-left-0">
+                        <div class="h4 pt-2 font-weight-lighter">WELLNESS</div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!serSalonSpa">Salon & Spa</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="mainView col-sm-8">
+            <div class="col-12 ">
+                <h2 class="text-white">SERVICES</h2>
+                <h4 class="col bg-secondary ">Prime Fitness Services</h4>
+            </div>
+            <div ng-view></div>
         </div>
+
+        <aside class="col-sm-2 text-left text-warning">
+
+            <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
+                <div class="h4 pt-2 font-weight-lighter">BMI CALCULATOR</div>
+            </div>
+            <form class="form-group m-auto p-md-3 lead">
+
+                <label for="height">Height (cm):</label>
+                <input type="number" ng-model="height" class="form-control" id="height" min="100" placeholder="Height">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" ng-model="weight" class="form-control" id="weight" min="10" placeholder="Weight">
+                <label for="age">Your Age:</label>
+                <input ng-model="age" class="form-control" min="1" step="1" type="number" id="age" placeholder="Age" name="age">
+                <br>
+                <button class="form-control btn btn-outline-info" type="button" ng-click="calBMI()">Calculate</button>
+                <h4 class="mt-2">Result:</h4>
+                <b>Your BMI is</b>
+                <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
+
+            </form><br>
+
+            <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
+                <div class="h4 pt-2 font-weight-lighter text-success">CHECK YOUR PAYMENT</div>
+            </div>
+            <form class="form-group mr-auto p-md-3 lead">
+
+                <label for="class">Class:</label>
+                <input type="text" ng-model="class" class="form-control" id="class" placeholder="Height">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" ng-model="weight" class="form-control" id="weight" min="10" placeholder="Weight">
+                <label for="age">Your Age:</label>
+                <input ng-model="age" class="form-control" min="1" step="1" type="number" id="age" placeholder="Age" name="age">
+                <br>
+                <button class="form-control btn btn-outline-info" type="button" ng-click="calBMI()">Calculate</button>
+                <br>
+                <div class="pt-3">
+                    <h4>Result:</h4>
+
+                    <b>Your BMI is</b>
+
+                    <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
+
+                </div>
+            </form>
+
+    </div>
+    </aside>
 
 
     </div>

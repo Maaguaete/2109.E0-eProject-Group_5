@@ -4,17 +4,14 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-header .bg-image {
+header {
     background-image: url("images/headlogo.jpg");
     padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: black;
     background-position: center;
+    z-index: 100;
 }
 
 .logo {
@@ -28,6 +25,7 @@ header .bg-image {
     display: inline-block;
     color: rgb(238, 212, 163)!important;
     font-weight: bold;
+    font-size: larger;
     transition: all 200ms ease-in-out;
 }
 
