@@ -1,61 +1,61 @@
 [{
         "timeSet": "05:45-06:45",
-        "mon": "Swimming",
-        "tue": "Sports & Fitness",
+        "mon": "Group-X",
+        "tue": "Cycling",
         "wed": " ",
-        "thu": "Cycling",
-        "fri": " ",
+        "thu": "Sports & Fitness",
+        "fri": "",
         "sat": "Group-X",
-        "sun": "Swimming"
+        "sun": "Sports & Fitness"
     },
     {
         "timeSet": "07:15-08:15",
         "mon": " ",
-        "tue": "Sports & Fitness",
-        "wed": "Rest",
-        "thu": "Cycling",
-        "fri": "Rest",
-        "sat": "Group-X",
-        "sun": "Sports & Fitness"
+        "tue": "",
+        "wed": "Group-X",
+        "thu": " ",
+        "fri": "Swimming",
+        "sat": "Sports & Fitness",
+        "sun": "Group-X"
     },
     {
         "timeSet": "11:30-12:30",
-        "mon": "Swimming",
+        "mon": "Cycling",
         "tue": "Sports & Fitness",
-        "wed": "Rest",
-        "thu": "Cycling",
-        "fri": "Rest",
-        "sat": "Group-X",
+        "wed": " ",
+        "thu": "Group-X",
+        "fri": " ",
+        "sat": "Swimming",
         "sun": "Sports & Fitness"
     },
     {
         "timeSet": "12:00-13:00",
-        "mon": "Swimming",
-        "tue": "Sports & Fitness",
-        "wed": "Rest",
-        "thu": "Cycling",
-        "fri": "Rest",
+        "mon": " ",
+        "tue": " ",
+        "wed": "Sports & Fitness",
+        "thu": " ",
+        "fri": "Cycling",
         "sat": "Group-X",
-        "sun": "Sports & Fitness"
+        "sun": "Swimming"
     },
     {
         "timeSet": "17:30-18:30",
-        "mon": "Swimming",
-        "tue": "Sports & Fitness",
-        "wed": "Cycling",
+        "mon": "Sports & Fitness",
+        "tue": "",
+        "wed": "",
         "thu": " ",
-        "fri": "Swimming",
-        "sat": "Group-X",
-        "sun": "Sports & Fitness"
+        "fri": "",
+        "sat": "Sports & Fitness",
+        "sun": "Cycling"
     },
     {
         "timeSet": "19:00-20:00",
         "mon": "Swimming",
-        "tue": "Sports & Fitness",
-        "wed": "Salon & Spa",
-        "thu": "Cycling",
+        "tue": "",
+        "wed": "Cycling",
+        "thu": "Swimming",
         "fri": "Sports & Fitness",
         "sat": "Group-X",
-        "sun": "Sports & Fitness"
+        "sun": "A free massage voucher"
     }
 ]
