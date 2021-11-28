@@ -1,61 +1,75 @@
-[{
-        "timeSet": "05:45-06:45",
-        "mon": "Group-X",
-        "tue": "Cycling",
-        "wed": " ",
-        "thu": "Sports & Fitness",
-        "fri": "",
-        "sat": "Group-X",
-        "sun": "Sports & Fitness"
-    },
-    {
-        "timeSet": "07:15-08:15",
-        "mon": " ",
-        "tue": "",
-        "wed": "Group-X",
-        "thu": " ",
-        "fri": "Swimming",
-        "sat": "Sports & Fitness",
-        "sun": "Group-X"
-    },
-    {
-        "timeSet": "11:30-12:30",
-        "mon": "Cycling",
-        "tue": "Sports & Fitness",
-        "wed": " ",
-        "thu": "Group-X",
-        "fri": " ",
-        "sat": "Swimming",
-        "sun": "Sports & Fitness"
-    },
-    {
-        "timeSet": "12:00-13:00",
-        "mon": " ",
-        "tue": " ",
-        "wed": "Sports & Fitness",
-        "thu": " ",
-        "fri": "Cycling",
-        "sat": "Group-X",
-        "sun": "Swimming"
-    },
-    {
-        "timeSet": "17:30-18:30",
-        "mon": "Sports & Fitness",
-        "tue": "",
-        "wed": "",
-        "thu": " ",
-        "fri": "",
-        "sat": "Sports & Fitness",
-        "sun": "Cycling"
-    },
-    {
-        "timeSet": "19:00-20:00",
-        "mon": "Swimming",
-        "tue": "",
-        "wed": "Cycling",
-        "thu": "Swimming",
-        "fri": "Sports & Fitness",
-        "sat": "Group-X",
-        "sun": "A free massage voucher"
-    }
-]
+{
+    "class": [{
+            "timeSet": "05:45-06:45",
+            "mon": "Group-X",
+            "tue": "Cycling",
+            "wed": " ",
+            "thu": "Sports & Fitness",
+            "fri": "",
+            "sat": "Group-X",
+            "sun": "Sports & Fitness"
+        },
+        {
+            "timeSet": "07:15-08:15",
+            "mon": " ",
+            "tue": "",
+            "wed": "Group-X",
+            "thu": " ",
+            "fri": "Swimming",
+            "sat": "Sports & Fitness",
+            "sun": "Group-X"
+        },
+        {
+            "timeSet": "11:30-12:30",
+            "mon": "Cycling",
+            "tue": "Sports & Fitness",
+            "wed": " ",
+            "thu": "Group-X",
+            "fri": " ",
+            "sat": "Swimming",
+            "sun": "Sports & Fitness"
+        },
+        {
+            "timeSet": "12:00-13:00",
+            "mon": " ",
+            "tue": " ",
+            "wed": "Sports & Fitness",
+            "thu": " ",
+            "fri": "Cycling",
+            "sat": "Group-X",
+            "sun": "Swimming"
+        },
+        {
+            "timeSet": "17:30-18:30",
+            "mon": "Sports & Fitness",
+            "tue": "",
+            "wed": "",
+            "thu": "Swimming",
+            "fri": "",
+            "sat": "Sports & Fitness",
+            "sun": "Cycling"
+        },
+        {
+            "timeSet": "19:00-20:00",
+            "mon": "Swimming",
+            "tue": "",
+            "wed": "Cycling",
+            "thu": "",
+            "fri": "Sports & Fitness",
+            "sat": "Group-X",
+            "sun": "A free massage voucher"
+        }
+    ],
+
+    "trainer": [{
+            "name": "John Muir",
+            "image": "",
+            "bio": ""
+        },
+        {
+            "name": "John Muir 2",
+            "image": "",
+            "bio": ""
+        }
+    ]
+}

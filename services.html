@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVICES</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
@@ -24,16 +25,16 @@
         .title {
             padding-bottom: 15px;
             margin: 10px;
-            font-size: 3.5em;
+            font-size: 4em;
             font-weight: bolder;
-            color: wheat;
-            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
         }
         
-        .serContent p {
-            font-size: 1em;
-            font-weight: bold;
-            color: white;
+        .swimCourse {
+            background-image: url('images/services/swim.png');
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         
         @media (min-width: 600px) and (max-width: 991.98px) {
@@ -115,10 +116,13 @@
         <!-- End of Left-sidebar -->
         <!-- Start mainView for each class -->
         <div class="mainView col-sm-8">
-            <div class="col-12 ">
-                <h2 class="text-white">SERVICES</h2>
-                <h4 class="col bg-secondary ">Prime Fitness Services</h4>
-            </div>
+            <!--  -->
+            <!--  -->
+
+
+
+
+
             <div ng-view></div>
             <div>
                 <h2 class="text-warning">CLASSES SCHEDULE</h2>
@@ -139,15 +143,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="x in timetable|filter:search">
-                            <td>{{x.timeSet}}</td>
-                            <td>{{x.mon}}</td>
-                            <td>{{x.tue}}</td>
-                            <td>{{x.wed}}</td>
-                            <td>{{x.thu}}</td>
-                            <td>{{x.fri}}</td>
-                            <td>{{x.sat}}</td>
-                            <td>{{x.sun}}</td>
+                        <tr ng-repeat="x in timetable">
+                            <td>{{x.class.timeSet}}</td>
+                            <td>{{x.class.mon}}</td>
+                            <td>{{x.class.tue}}</td>
+                            <td>{{x.class.wed}}</td>
+                            <td>{{x.class.thu}}</td>
+                            <td>{{x.class.fri}}</td>
+                            <td>{{x.class.sat}}</td>
+                            <td>{{x.class.sun}}</td>
                         </tr>
                         <tr class="h4 text-info">
                             <td>Salon & Spa</td>
@@ -236,6 +240,13 @@
                     <span>Email:</span>
                 </p>
             </div>
+            <div class="col">
+                <p>
+                    <i class="fas fa-clock"></i>
+                    <span>Opening Hours:</span>
+                    <span>Mon-Fri: 05:30am - 9:00pm</span>
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -294,5 +305,6 @@
 
     });
 </script>
+
 
 </html>
