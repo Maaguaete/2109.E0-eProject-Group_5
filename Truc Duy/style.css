@@ -54,6 +54,10 @@ header {
     font-weight: bold;
 }
 
+.location {
+    border-radius: 50px;
+}
+
 
 /* RESPONSIVE 
 Extra small devices (portrait phones, less than 576px) */
