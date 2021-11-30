@@ -1,75 +1,63 @@
-{
-    "class": [{
-            "timeSet": "05:45-06:45",
-            "mon": "Group-X",
-            "tue": "Cycling",
-            "wed": " ",
-            "thu": "Sports & Fitness",
-            "fri": "",
-            "sat": "Group-X",
-            "sun": "Sports & Fitness"
-        },
-        {
-            "timeSet": "07:15-08:15",
-            "mon": " ",
-            "tue": "",
-            "wed": "Group-X",
-            "thu": " ",
-            "fri": "Swimming",
-            "sat": "Sports & Fitness",
-            "sun": "Group-X"
-        },
-        {
-            "timeSet": "11:30-12:30",
-            "mon": "Cycling",
-            "tue": "Sports & Fitness",
-            "wed": " ",
-            "thu": "Group-X",
-            "fri": " ",
-            "sat": "Swimming",
-            "sun": "Sports & Fitness"
-        },
-        {
-            "timeSet": "12:00-13:00",
-            "mon": " ",
-            "tue": " ",
-            "wed": "Sports & Fitness",
-            "thu": " ",
-            "fri": "Cycling",
-            "sat": "Group-X",
-            "sun": "Swimming"
-        },
-        {
-            "timeSet": "17:30-18:30",
-            "mon": "Sports & Fitness",
-            "tue": "",
-            "wed": "",
-            "thu": "Swimming",
-            "fri": "",
-            "sat": "Sports & Fitness",
-            "sun": "Cycling"
-        },
-        {
-            "timeSet": "19:00-20:00",
-            "mon": "Swimming",
-            "tue": "",
-            "wed": "Cycling",
-            "thu": "",
-            "fri": "Sports & Fitness",
-            "sat": "Group-X",
-            "sun": "A free massage voucher"
-        }
-    ],
+[{
+        "timeSet": "05:45-06:45",
+        "mon": { "class": "Swimming", "trainer": "Jolie Alisha" },
+        "tue": { "class": "", "trainer": "" },
+        "wed": { "class": "Cycling", "trainer": "Salena" },
+        "thu": { "class": "", "trainer": "" },
+        "fri": { "class": "Swimming", "trainer": "Prisha" },
+        "sat": { "class": "Group-X", "trainer": "Nikhil" },
+        "sun": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" }
 
-    "trainer": [{
-            "name": "John Muir",
-            "image": "",
-            "bio": ""
-        },
-        {
-            "name": "John Muir 2",
-            "image": "",
-            "bio": ""
-        }
-    ]
-}
+    },
+    {
+        "timeSet": "07:15-08:15",
+        "mon": { "class": "", "trainer": "" },
+        "tue": { "class": "Group-X", "trainer": "Nikhil" },
+        "wed": { "class": "", "trainer": "" },
+        "thu": { "class": "Sports & Fitness", "trainer": "Sanjay" },
+        "fri": { "class": "", "trainer": "" },
+        "sat": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
+        "sun": { "class": "Group-X", "trainer": "Timir" }
+    },
+    {
+        "timeSet": "11:30-12:30",
+        "mon": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
+        "tue": { "class": "", "trainer": "" },
+        "wed": { "class": "Sports & Fitness", "trainer": "Sanjay" },
+        "thu": { "class": "", "trainer": "" },
+        "fri": { "class": "Group-X", "trainer": "Nikhil" },
+        "sat": { "class": "Swimming", "trainer": "Prisha" },
+        "sun": { "class": "Sports & Fitness", "trainer": "Sanjay" }
+    },
+    {
+        "timeSet": "12:00-13:00",
+        "mon": { "class": "", "trainer": "" },
+        "tue": { "class": "Swimming", "trainer": "Prisha" },
+        "wed": { "class": "", "trainer": "" },
+        "thu": { "class": "Group-X", "trainer": "Nikhil" },
+        "fri": { "class": "Cycling", "trainer": "Salena" },
+        "sat": { "class": "Group-X", "trainer": "Nikhil" },
+        "sun": { "class": "Swimming", "trainer": "Prisha" }
+    },
+    {
+        "timeSet": "17:30-18:30",
+        "mon": { "class": "", "trainer": "" },
+        "tue": { "class": "", "trainer": "" },
+        "wed": { "class": "Group-X", "trainer": "Nikhil" },
+        "thu": { "class": "", "trainer": "" },
+        "fri": { "class": "", "trainer": "" },
+        "sat": { "class": "Sports & Fitness", "trainer": "Sanjay" },
+        "sun": { "class": "Cycling", "trainer": "Salena" }
+    },
+    {
+        "timeSet": "19:00-20:00",
+        "mon": { "class": "Cycling", "trainer": "Salena" },
+        "tue": { "class": "", "trainer": "" },
+        "wed": { "class": "", "trainer": "" },
+        "thu": { "class": "Swimming", "trainer": "Prisha" },
+        "fri": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
+        "sat": { "class": "Group-X", "trainer": "Nikhil" },
+        "sun": { "class": "A free massage voucher", "trainer": "Applied for Premium Membership only" }
+    }
+
+]
