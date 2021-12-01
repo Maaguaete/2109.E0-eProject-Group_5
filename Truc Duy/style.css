@@ -91,6 +91,10 @@ Extra small devices (portrait phones, less than 576px) */
         width: 100%;
         margin: 5px 0px 20px 0px;
     }
+    /* display full-letter Title */
+    .needBreak {
+        display: block;
+    }
 }
 
 
@@ -98,11 +102,19 @@ Extra small devices (portrait phones, less than 576px) */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     /*  */
+    .video {
+        width: 50%;
+        height: 360px;
+    }
     a {
         display: block;
     }
     .logo {
         width: 100%;
         margin: 5px 0px 20px 0px;
+    }
+    /* display full-letter Title */
+    .needBreak {
+        display: block;
     }
 }

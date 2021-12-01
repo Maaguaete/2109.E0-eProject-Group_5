@@ -6,140 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Fitness Club</title>
+    <!-- awesome icons - fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- General -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Angular JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <style>
-        @media (min-width: 768px) and (max-width: 991.98px) {
-            /*  */
-            .video {
-                width: 50%;
-                height: 360px;
-            }
+        .mainView {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(34, 35, 36);
+        }
+        
+        .swimCourse {
+            background-image: url('images/services/swim.png');
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .title {
+            padding-bottom: 15px;
+            margin: 10px;
+            font-size: 4em;
+            font-weight: bolder;
+        }
+        
+        aside {
+            background-color: rgb(24, 25, 26);
+            box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);
+            padding-top: 30px;
+            z-index: 10;
+        }
+        
+        td small,
+        .sub,
+        .lastRowTimetable {
+            color: mediumturquoise;
+        }
+        
+        .menu-bodies h4 {
+            color: transparent;
+            transition: all 500ms ease-out;
+        }
+        
+        .menu-bodies:hover {
+            transform: translateX(5%);
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            transition: all 500ms ease-in-out;
+        }
+        
+        .menu-bodies:hover h4 {
+            color: rgb(255, 186, 21);
+            font-weight: bolder;
+            font-size: x-large;
+            display: block;
+            margin: 15px;
         }
     </style>
 </head>
 
-<body class="bg-dark">
+<body ng-app="indexApp" ng-controller="indexCtrl" class="bg-dark">
 
+    <!-- Start of Header -->
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="nav-link" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+        <nav class="navbar navbar-expand-md">
+            <a class="nav-link" href="#/!"><img class="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
-                <li class="nav-item"><a class="nav-link" href="#">Homepage</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html">Services</a>
+                <li class="nav-item"><a class="nav-link" href="#/!">Homepage</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#!services" id="navbardrop" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu bg-dark">
-                        <a class="dropdown-item" href="services.html">Cycling</a>
-                        <a class="dropdown-item" href="services.html">Swimming</a>
-                        <a class="dropdown-item" href="services.html#!serSportsFitness">Sport & Fitness</a>
-                        <a class="dropdown-item" href="services.html#!serGroupX">Group-X</a>
-                        <a class="dropdown-item" href="services.html#!serSalonSpa">Salon & Spa</a>
+                        <a class="dropdown-item" href="#!serCycling">Cycling</a>
+                        <a class="dropdown-item" href="#!serSwimming">Swimming</a>
+                        <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
+                        <a class="dropdown-item" href="#!serGroupX">Group-X</a>
+                        <a class="dropdown-item" href="#!serSalonSpa">Salon & Spa</a>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="equipment.html">Equipments</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                <li class="nav-item "><a class="nav-link" href="yourConcern.html">Your Concern</a></li>
-                <li class="nav-item"><a class="nav-link btn-danger" href="membership.html">Membership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!equipment">Equipments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!aboutUs">About Us</a></li>
+                <li class="nav-item "><a class="nav-link" href="#!yourConcern">Your Concern</a></li>
+                <li class="nav-item"><a class="nav-link btn-danger" href="#!membership">Membership</a></li>
             </ul>
         </nav>
     </header>
+    <!-- End of Header -->
 
-    <div class="row-cols mb-5">
-
-        <div id="homeSlide" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
-
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <img src="images/home/motivation1.png" class="img-fluid w-100" alt="...">
-
-                </div>
-                <div class="carousel-item">
-                    <img src="images/home/motivation2.png" class="img-fluid w-100" alt="... ">
-
-                </div>
-                <div class="carousel-item" data-pause="hover">
-                    <img src="images/home/motivation3.png" class="img-fluid w-100" alt="... ">
-
-                </div>
-
-            </div>
-            <div class="carousel-control-prev" role="button " data-target="#homeSlide" data-slide="prev">
-                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                <span class="sr-only ">Previous</span>
-            </div>
-            <div class="carousel-control-next " role="button " data-target="#homeSlide" data-slide="next">
-                <span class="carousel-control-next-icon " aria-hidden="true"></span>
-                <span class="sr-only ">Next</span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- story -->
-    <div class="row m-auto">
-
-        <div class="col-md-6 m-0 text-right">
-            <video autoplay loop>
-                <source class="video rounded" src="images/home/story.mp4" type="video/mp4">Your browser does not support the video tag.
-             </video>
-        </div>
-        <div class="col-lg-5 m-auto text-justify text-warning" style="text-align:center;">
-            <h1>"The scariest moment is always just before you start."
-            </h1>
-            <p>Prime Fitness Club is a no-nonsense, workout center, with a commitment to remaining a true gym. A place, where you are among friends, and where your well being and fun is our priority. Our services are design to provide the most personalized
-                offer to our members through variety of classes, teaching styles, highly qualified trainers and coaches, top notch equipment (Nautilus and Shwinn) and most of all accommodating attitude. We create perfect conditions to every person to
-                train like an athlete.
-            </p>
-        </div>
-    </div>
-    <!-- Service -->
-    <div class="container mt-5 mb-5 text-warning bg-secondary shadow rounded">
-        <h1 style="text-align: center;">OUR SERVICES</h1>
-        <div class="row mb-2">
-            <div class="col-sm-6 ">
-                <img src="images/home/home1.jpeg" alt="cycling" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;"> Cycling</h3>
-                </div>
-            </div>
-            <div class="col-sm-6 ">
-                <img src="images/home/home2.jpeg" alt="swimming" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Swimming</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <img src="images/home/home3.jpeg" alt="sport" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Sports & Fitness</h3>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <img src="images/home/home4.jpg" alt="groupx" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Group Exercise</h3>
-                </div>
-            </div>
-
-        </div>
-        <div class="row mb-2">
-            <div class="col-sm-12">
-                <img src="images/home/home5.jpeg" alt="spa" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Salon & Spa</h3>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div ng-view class="mainView"></div>
 
 
     <div style="background-color: #ccc346b9;" class="container-fluid py-3">
@@ -218,15 +182,15 @@
                 <hr>
                 <ul class="row list-unstyled text-left jumpto">
                     <span class="col">
-                        <li><a class="nav-link text-white" href="index.html">Homepage</a></li>
-                        <li><a class="nav-link text-white" href="services.html">Services</a></li>
-                        <li><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
-                        <li><a class="nav-link text-white" href="equipment.html">Equipment</a></li>
+                        <li><a class="nav-link text-white" href="#!/">Homepage</a></li>
+                        <li><a class="nav-link text-white" href="#!serCycling">Services</a></li>
+                        <li><a class="nav-link text-white" href="#!gallery">Gallery</a></li>
+                        <li><a class="nav-link text-white" href="#!equipment">Equipment</a></li>
                     </span>
                     <span class="col">
-                        <li><a class="nav-link text-white" href="aboutUs.html">About Us</a></li>
-                        <li><a class="nav-link text-white" href="yourConcern.html">Your Concern</a></li>
-                        <li><a class="nav-link text-white" href="membership.html">Membership</a></li>
+                        <li><a class="nav-link text-white" href="#!aboutUs">About Us</a></li>
+                        <li><a class="nav-link text-white" href="#!yourConcern">Your Concern</a></li>
+                        <li><a class="nav-link text-white" href="#!membership">Membership</a></li>
                     </span>
                 </ul>
             </div>
@@ -255,5 +219,79 @@
     </footer>
     <!-- Footer -->
 </body>
+<script>
+    var app = angular.module("indexApp", ["ngRoute"]);
+
+    app.controller("indexCtrl", function($scope, $http) {
+        $http.get("timetable.json").then(function(response) {
+            $scope.timetable = response.data;
+        });
+
+        // Calculate BMI
+        $scope.bmi = 0;
+        $scope.weight = 0;
+        $scope.height = 0;
+        $scope.result = "";
+        $scope.calBMI = function() {
+
+            $scope.bmi = $scope.weight / ($scope.height / 100 * $scope.height / 100);
+
+            if ($scope.bmi < 18.5) {
+                $scope.result = "Underweight! Better gain more!";
+            } else if ($scope.bmi >= 18.5 && $scope.bmi <= 24.9) {
+                $scope.result = "Normal! You are healthy!  Keep it up!";
+            } else if ($scope.bmi >= 25 && $scope.bmi <= 29.9) {
+                $scope.result = "Overweight! Better burn more calories!";
+            } else if ($scope.bmi >= 30) {
+                $scope.result = "Obese! It need to be considered!";
+            }
+        }
+    });
+    app.config(function($routeProvider) {
+
+        $routeProvider
+
+            .when("/", {
+                templateUrl: "home.html"
+            })
+            .when("/services", {
+                templateUrl: "serCycling.html"
+            })
+            .when("/serCycling", {
+                templateUrl: "serCycling.html"
+            })
+            .when("/serSwimming", {
+                templateUrl: "serSwimming.html"
+            })
+            .when("/serSportsFitness", {
+                templateUrl: "serSportsFitness.html"
+            })
+            .when("/serGroupX", {
+                templateUrl: "serGroupX.html"
+            })
+            // Belong to services.html
+
+        .when("/serSalonSpa", {
+                templateUrl: "serSalonSpa.html"
+
+            })
+            // End of services.html
+            .when("/gallery", {
+                templateUrl: "gallery.html"
+            })
+            .when("/equipment", {
+                templateUrl: "equipment.html"
+            })
+            .when("/aboutUs", {
+                templateUrl: "aboutUs.html"
+            })
+            .when("/yourConcern", {
+                templateUrl: "yourConcern.html"
+            })
+            .when("/membership", {
+                templateUrl: "membership.html"
+            })
+    });
+</script>
 
 </html>

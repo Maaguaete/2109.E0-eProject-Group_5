@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,38 +40,26 @@
             color: transparent;
         }
         
-        @media (min-width: 600px) and (max-width: 991.98px) {
-            /* display full-letter Title */
-            .needBreak {
-                display: block;
-            }
-        }
-        
         aside {
             background-color: rgb(24, 25, 26);
             box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);
             padding-top: 30px;
             z-index: 99;
         }
-        
-        td small,
-        .sub {
-            color: mediumturquoise;
-        }
     </style>
-</head>
+</head> -->
 
-<body ng-app="servicesApp" ng-controller="servicesCtrl" class="bg-dark">
 
-    <!-- Start of Header -->
-    <header>
+
+<!-- Start of Header -->
+<!-- <header>
         <nav class="navbar navbar-expand-md">
             <a class="nav-link" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
                 <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu bg-dark">
-                        <a class="dropdown-item" href="#/!">Cycling</a>
+                        <a class="dropdown-item" href="#!serCycling">Cycling</a>
                         <a class="dropdown-item" href="#!serSwimming">Swimming</a>
                         <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
                         <a class="dropdown-item" href="#!serGroupX">Group-X</a>
@@ -85,9 +73,10 @@
                 <li class="nav-item"><a class="nav-link btn-danger" href="membership.html">Membership</a></li>
             </ul>
         </nav>
-    </header>
-    <!-- End of Header -->
+    </header> -->
+<!-- End of Header -->
 
+<div ng-controller="servicesCtrl" class="bg-dark">
     <div class="row text-center">
         <!-- Start of Left-sidebar -->
         <aside class="col-md-2">
@@ -98,7 +87,7 @@
                         <div class="h4 pt-2 font-weight-lighter">CLASSES</div>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link" href="#/!">Cycling</a>
+                        <a class="nav-link" href="#!serCycling">Cycling</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!serSwimming">Swimming</a>
@@ -121,6 +110,7 @@
                 </ul>
             </nav>
         </aside>
+
         <!-- End of Left-sidebar -->
         <!-- Start mainView for each class -->
         <div class="mainView col-md-8">
@@ -248,7 +238,7 @@
         </aside>
         <!-- End of Right-sidebar -->
 
-
+        <!-- Register panel Modal -->
         <div style="background-color: #ccc346b9;" class="container-fluid py-3">
             <div class="row align-content-center w-50 m-auto">
                 <div class="col-md-9 text-left h3">
@@ -303,7 +293,7 @@
     <!-- End of Modal -->
 
     <!-- Footer -->
-    <footer class="mt-5 border-0" style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);">
+    <!-- <footer class="mt-5 border-0" style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);">
 
         <div class="row m-auto">
 
@@ -358,66 +348,9 @@
             </div>
             <p>Copyright © 2021 by Prime Fitness Club</p>
         </div>
-        <!-- Copyright -->
+       -->
 
-    </footer>
+    <!-- </footer> -->
     <!-- Footer -->
 
-</body>
-<script>
-    var app = angular.module("servicesApp", ["ngRoute"]);
-
-    app.config(function($routeProvider) {
-
-        $routeProvider
-
-            .when("/", {
-                templateUrl: "serCycling.html"
-
-            })
-            .when("/serSwimming", {
-                templateUrl: "serSwimming.html"
-            })
-            .when("/serSportsFitness", {
-                templateUrl: "serSportsFitness.html"
-                    // controller: "addCtrl"
-            })
-            .when("/serGroupX", {
-                templateUrl: "serGroupX.html"
-
-            })
-            .when("/serSalonSpa", {
-                templateUrl: "serSalonSpa.html"
-
-            });
-    });
-    app.controller("servicesCtrl", function($scope, $http) {
-        $http.get("timetable.json").then(function(response) {
-            $scope.timetable = response.data;
-        });
-
-        // Calculate BMI
-        $scope.bmi = 0;
-        $scope.weight = 0;
-        $scope.height = 0;
-        $scope.result = "";
-        $scope.calBMI = function() {
-
-            $scope.bmi = $scope.weight / ($scope.height / 100 * $scope.height / 100);
-
-            if ($scope.bmi < 18.5) {
-                $scope.result = "Underweight! Better gain more!";
-            } else if ($scope.bmi >= 18.5 && $scope.bmi <= 24.9) {
-                $scope.result = "Normal! Congratulation!";
-            } else if ($scope.bmi >= 25 && $scope.bmi <= 29.9) {
-                $scope.result = "Overweight! Better burn more calories!";
-            } else if ($scope.bmi >= 30) {
-                $scope.result = "Your are Obese! It's danger!";
-            }
-        }
-
-    });
-</script>
-
-
-</html>
+</div>
