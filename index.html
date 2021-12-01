@@ -55,23 +55,25 @@
             color: mediumturquoise;
         }
         
-        .menu-bodies h4 {
-            color: transparent;
-            transition: all 500ms ease-out;
+        .menu-bodies:hover {
+            color: rgb(255, 186, 21);
+            transition: all 500ms ease-in-out;
+            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
         }
         
-        .menu-bodies:hover {
+        .menu-bodies img {
+            opacity: 0.6;
+            transition: opacity 0.3s;
+            height: 200px;
+            transition: all 1500ms ease-in-out;
+        }
+        
+        .menu-bodies img:hover {
             transform: translateX(5%);
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            transition: all 500ms ease-in-out;
-        }
-        
-        .menu-bodies:hover h4 {
-            color: rgb(255, 186, 21);
-            font-weight: bolder;
-            font-size: x-large;
-            display: block;
-            margin: 15px;
+            transition: all 50ms ease-in-out;
+            opacity: 1;
+            height: 100%;
         }
     </style>
 </head>
