@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
-    <script src="serScript.js"></script>
+    <script src="servicesScript.js"></script>
     <style>
         .title {
             padding-bottom: 15px;
@@ -48,21 +48,26 @@
             color: mediumturquoise;
         }
         
-        .menu-bodies:hover {
-            color: rgb(255, 186, 21);
-            transition: all 300ms ease-in-out;
-            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
-        }
-        
         .menu-bodies img {
             opacity: 0.6;
             transition: opacity 0.5s;
-            height: 200px;
-            transition: all 1500ms ease-in-out;
+            height: 150px;
+            transition: all 1000ms ease-in-out;
         }
         
-        .menu-bodies img:hover {
-            transform: translate(-20px, 0px);
+        .menu-bodies:hover {
+            color: rgb(255, 186, 21);
+            transition: all 30ms ease-in-out;
+            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
+        }
+        
+        .menu-bodies:hover h4 {
+            transform: rotate(360deg);
+            transition: all 300ms ease-in-out;
+        }
+        
+        .menu-bodies:hover img {
+            transform: translate(-5px, 0px);
             box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
             transition: all 50ms ease-in-out;
             opacity: 1;
@@ -188,6 +193,7 @@
             </form>
         </aside>
         <!-- End of Right-sidebar -->
+
         <!-- Register panel Modal -->
         <div style="background-color: #ccc346b9;" class="container-fluid py-3">
             <div class="row align-content-center w-50 m-auto">
@@ -215,7 +221,7 @@
                         <form action="" method="get">
                             <div class="modal-body row">
 
-                                <picture class="col"><img src="images/home/sport.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
+                                <picture class="col"><img src="images/services/exercise-fit-healthy-person.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
 
                                 <div class="col">
                                     <h5>Bring your friends to extend a full-week</h5>
@@ -300,7 +306,8 @@
                         <td class="align-middle">
                             {{x.sun.class}}
                             <hr>
-                            <small>{{x.sun.trainer}}</small>
+                            <small id="premium">{{x.sun.trainer}}</small>
+
                         </td>
                     </tr>
                     <tr class="h3 text-nowrap lastRowTimetable">

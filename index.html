@@ -16,9 +16,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        .text-decoration-none:hover h1 {
+            color: wheat;
+            font-size: 3em;
+            transition: all 500ms ease-in-out;
+            text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
+        }
+        
+        .text-decoration-none:hover div {
+            transform: translate(5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            transition: all 50ms ease-in-out;
+        }
+    </style>
 </head>
 
 <body class="bg-dark">
@@ -29,15 +41,8 @@
             <a class="nav-link" href="#/!"><img class="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
                 <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
-                <li class="nav-item">
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
                     <a class="nav-link" href="services.html">Services</a>
-                    <!-- <ul class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item " href="#!serCycling ">Cycling</a>
-                        <a class="dropdown-item " href="#!serSwimming ">Swimming</a>
-                        <a class="dropdown-item " href="#!serSportsFitness ">Sport & Fitness</a>
-                        <a class="dropdown-item " href="#!serGroupX ">Group-X</a>
-                        <a class="dropdown-item " href="#!serSalonSpa ">Salon & Spa</a>
-                    </ul> -->
                 </li>
                 <li class="nav-item "><a class="nav-link " href="gallery.html">Gallery</a></li>
                 <li class="nav-item "><a class="nav-link " href="equipment.html">Equipments</a></li>
@@ -99,98 +104,102 @@
         </div>
     </div>
     <!-- Service -->
-    <div class="container mt-5 mb-5 text-warning bg-secondary shadow rounded">
-        <h1 style="text-align: center;">OUR SERVICES</h1>
-        <div class="row mb-2">
-            <div class="col-sm-6 ">
-                <img src="images/home/home1.jpeg" alt="cycling" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;"> Cycling</h3>
+    <a href="services.html" class="text-decoration-none">
+
+        <div class="container mt-5 mb-5 text-warning bg-secondary shadow rounded">
+            <h1 style="text-align: center;">OUR SERVICES</h1>
+            <div class="row mb-2">
+                <div class="col-sm-6 ">
+                    <img src="images/home/home1.jpeg" alt="cycling" style="width:100%">
+                    <div class="content">
+                        <h3 style="text-align: center;"> Cycling</h3>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <img src="images/home/home2.jpeg" alt="swimming" style="width:100%">
+                    <div class="content">
+                        <h3 style="text-align: center;">Swimming</h3>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-6 ">
-                <img src="images/home/home2.jpeg" alt="swimming" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Swimming</h3>
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <img src="images/home/home3.jpeg" alt="sport" style="width:100%">
+                    <div class="content">
+                        <h3 style="text-align: center;">Sports & Fitness</h3>
+                    </div>
                 </div>
+                <div class="col-sm-6">
+                    <img src="images/home/home4.jpg" alt="groupx" style="width:100%">
+                    <div class="content">
+                        <h3 style="text-align: center;">Group Exercise</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mb-2">
+                <div class="col-sm-12">
+                    <img src="images/home/home5.jpeg" alt="spa" style="width:100%">
+                    <div class="content">
+                        <h3 style="text-align: center;">Salon & Spa</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <img src="images/home/home3.jpeg" alt="sport" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Sports & Fitness</h3>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <img src="images/home/home4.jpg" alt="groupx" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Group Exercise</h3>
-                </div>
-            </div>
-
-        </div>
-        <div class="row mb-2">
-            <div class="col-sm-12">
-                <img src="images/home/home5.jpeg" alt="spa" style="width:100%">
-                <div class="content">
-                    <h3 style="text-align: center;">Salon & Spa</h3>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div style="background-color: #ccc346b9; " class="container-fluid py-3 ">
-        <div class="row align-content-center w-50 m-auto ">
-            <div class="col-md-9 text-left h3 ">
+    </a>
+    <!-- Register panel Modal -->
+    <div style="background-color: #ccc346b9;" class="container-fluid py-3">
+        <div class="row align-content-center w-50 m-auto">
+            <div class="col-md-9 text-left h3">
                 REGISTER NOW
-                <h5>For Experiencing <span class="text-danger font-weight-bold h3 "> 3-Days Trial-Pass </span></h5>
+                <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
 
             </div>
-            <button type="button " class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal " data-target="#staticBackdrop ">
-            REGISTER</button>
+            <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
+        REGISTER</button>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade " id="staticBackdrop " data-backdrop="static " data-keyboard="false " tabindex="-1 " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-            <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
 
-                <div class="modal-content bg-secondary text-warning ">
+                <div class="modal-content bg-secondary text-warning">
 
-                    <div class="modal-header bg-dark bg-image " style="background-image: url( 'images/logo.png');background-size: contain; background-repeat: no-repeat; ">
+                    <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
 
 
-                        <button type="button " class="close text-warning " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
+                        <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
 
-                    <form action=" " method="get ">
-                        <div class="modal-body row ">
+                    <form action="" method="get">
+                        <div class="modal-body row">
 
-                            <picture class="col "><img src="images/home/sport.jpg " class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded " alt=" "></picture>
+                            <picture class="col"><img src="images/home/sport.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
 
-                            <div class="col ">
+                            <div class="col">
                                 <h5>Bring your friends to extend a full-week</h5>
                                 <hr>
-                                <input class="form-control " type="text " class="name " id="name " placeholder="Your Name " required autocomplete="off " minlength="6 " maxlength="30 ">
+                                <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
                                 <br>
-                                <input type="tel " class="form-control " autocomplete="off " name="telNo " id="telNo " placeholder="Your Phone Number " minlength="9 " maxlength="12 " pattern="[0-9]{} " required>
+                                <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
                                 <br>
-                                <input type="email " class="form-control " id="email " placeholder="Your email ">
+                                <input type="email" class="form-control" id="email" placeholder="Your email">
                                 <br>
-                                <input type="text " class="form-control " id="address " placeholder="Your Address ">
+                                <input type="text" class="form-control" id="address" placeholder="Your Address">
                             </div>
 
                         </div>
-                        <div class="modal-footer bg-dark ">
-                            <button type="submit " class="btn btn-danger ">REGISTER</button>
+                        <div class="modal-footer bg-dark">
+                            <button type="submit" class="btn btn-danger">REGISTER</button>
                         </div>
                     </form>
                 </div>
 
             </div>
         </div>
-        <!-- End of Modal -->
+    </div>
+    <!-- End of Modal -->
 
     </div>
     <!-- Footer -->
