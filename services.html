@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVICES</title>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
     <script src="servicesScript.js"></script>
+
     <style>
         .title {
             padding-bottom: 15px;
@@ -58,12 +60,13 @@
         .mixture {
             box-shadow: 0 0 15px grey;
             border-radius: 15px;
+            transition: all 500ms ease-in-out;
         }
         
         .mixture:hover {
             transform: scale(1.1);
-            text-shadow: 0 0px 5px black, 0 0px 10px black, 0 0px 15px black, 0 0px 20px black, 0 0px 30px rgba(0, 0, 0, 0.555);
-            box-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px grey, 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px grey;
+            text-shadow: 0 0px 5px black, 0 0px 10px black, 0 0px 15px black, 0 0px 20px rgba(53, 52, 52, 0.808), 0 0px 28px rgba(0, 0, 0, 0.555);
+            box-shadow: 0 5px 10px black, 0 0 20px rgba(255, 255, 0, 0.747), 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px grey, 0 0 50px rgba(255, 255, 0, 0.616), 0 0 70px grey;
         }
         
         .menu-bodies:hover {
@@ -100,10 +103,35 @@
         .carousel-item-prev,
         .active.carousel-item-left {
             -webkit-transform: translate3d(0, +100%, 0);
-            transform: translate3d(0, +100, 0);
+            transform: translate3d(0, +100%, 0);
+        }
+        
+        .boredom {
+            background: url(images/services/boredom.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            height: 400px;
+            transition: all 500ms ease-in-out;
+            box-shadow: 0 0px 5px black, 0 0px 10px black, 0 0px 15px black, 0 0px 20px rgb(22, 22, 22), 0 0px 28px rgba(0, 0, 0, 0.555);
+        }
+        
+        .boredom:hover {
+            background: url(images/services/groupX.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .boredom:hover .groupX {
+            font-weight: bolder;
+            color: white;
+            text-shadow: black 0px 0px 5px, orangered 0px 0px 10px, orangered 0px 0px 15px, orangered 0px 0px 20px, orangered 0px 0px 28px;
+        }
+        
+        .boredom:hover div s {
+            color: white;
         }
     </style>
-
 </head>
 
 <body ng-app="servicesApp" ng-controller="servicesCtrl" class="bg-dark">
@@ -165,11 +193,9 @@
                 </ul>
             </nav>
         </aside>
-
         <!-- End of Left-aside-bar -->
 
         <!-- Start mainView for each class -->
-
         <div ng-view class="col-md-8 d-block" style=" background-color: rgb(34, 35, 36); box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);">
             <!-- Main View -->
         </div>
@@ -177,12 +203,10 @@
 
         <!-- Start of Right-sidebar -->
         <aside class="col-md-2 text-left text-warning">
-
             <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
                 <div class="h4 pt-2 font-weight-lighter">BMI CALCULATOR</div>
             </div>
             <form class="form-group m-auto p-md-3 lead">
-
                 <label for="height">Height (cm):</label>
                 <input type="number" ng-model="height" class="form-control" id="height" min="100" placeholder="Height">
                 <label for="weight">Weight (kg):</label>
@@ -194,14 +218,11 @@
                 <h4 class="mt-2">Result:</h4>
                 <b>Your BMI</b>
                 <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
-
             </form><br>
-
             <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
                 <div class="h4 pt-2 font-weight-lighter text-success">CHECK YOUR PAYMENT</div>
             </div>
             <form class="form-group mr-auto p-md-3 lead">
-
                 <label for="class">Class:</label>
                 <input type="text" ng-model="class" class="form-control" id="class" placeholder="Height">
                 <label for="weight">Weight (kg):</label>
@@ -213,142 +234,127 @@
                 <br>
                 <div class="pt-3">
                     <h4>Result:</h4>
-
                     <b>Your BMI is</b>
-
                     <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
-
                 </div>
             </form>
         </aside>
         <!-- End of Right-sidebar -->
-
-        <!-- Register panel Modal -->
-        <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0px 0px 15px black;" class="container-fluid py-3">
-            <div class="row align-content-center w-50 m-auto">
-                <div class="col-md-9 text-left h3">
-                    REGISTER NOW
-                    <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
-
-                </div>
-                <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
-            REGISTER</button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-
-                    <div class="modal-content bg-secondary text-warning">
-
-                        <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
-
-
-                            <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-
-                        <form action="" method="get">
-                            <div class="modal-body row">
-
-                                <picture class="col"><img src="images/services/exercise-fit-healthy-person.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
-
-                                <div class="col">
-                                    <h5>Bring your friends to extend a full-week</h5>
-                                    <hr>
-                                    <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
-                                    <br>
-                                    <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
-                                    <br>
-                                    <input type="email" class="form-control" id="email" placeholder="Your email">
-                                    <br>
-                                    <input type="text" class="form-control" id="address" placeholder="Your Address">
-                                </div>
-
-                            </div>
-                            <div class="modal-footer bg-dark">
-                                <button type="submit" class="btn btn-danger">REGISTER</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- End of Modal -->
-        <!-- Start of Timetable -->
-        <div class="row m-auto text-center d-block pt-5">
-            <h2 class="text-warning">CLASSES SCHEDULE</h2>
-            <hr>
-            <table class="table table-striped table-dark table-hover table-responsive">
-
-                <thead>
-                    <tr class="h4 text-nowrap">
-                        <th class="align-middle "> Sweating <i class="fas fa-clock "></i>
-                            <hr><sup class="text-warning">Class <i class="fas fa-dumbbell sup "></sup></i>/<sub class="sub"><i class="fas fa-user-clock "></i> Trainer</sub>
-                        </th>
-                        <th class="align-middle">MON</th>
-                        <th class="align-middle">TUE</th>
-                        <th class="align-middle">WED</th>
-                        <th class="align-middle">THU</th>
-                        <th class="align-middle">FRI</th>
-                        <th class="text-danger align-middle">
-                            SAT<small class="font-weight-light d-block">(Max Effort)</small> </th>
-                        <th class="text-danger align-middle">
-                            SUN<small class="font-weight-light d-block">(Max Effort)</small></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="x in timetable" class="h5 text-warning">
-                        <td class="align-middle h5 text-white">{{x.timeSet}}
-                        </td>
-                        <td class="align-middle">
-                            {{x.mon.class}}
-                            <hr>
-                            <small>{{x.mon.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.tue.class}}
-                            <hr>
-                            <small>{{x.tue.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.wed.class}}
-                            <hr>
-                            <small>{{x.wed.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.thu.class}}
-                            <hr>
-                            <small>{{x.thu.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.fri.class}}
-                            <hr>
-                            <small>{{x.fri.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.sat.class}}
-                            <hr>
-                            <small>{{x.sat.trainer}}</small>
-                        </td>
-                        <td class="align-middle">
-                            {{x.sun.class}}
-                            <hr>
-                            <small id="premium">{{x.sun.trainer}}</small>
-
-                        </td>
-                    </tr>
-                    <tr class="h3 text-nowrap lastRowTimetable">
-                        <td class="align-middle "><b> Salon & Spa</b></td>
-
-                        <td colspan="7" class="font-weight-light py-4">Available from 05:30 to 21:00 every day</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- End of Timetable -->
     </div>
+    <!-- Register panel Modal -->
+    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0px 0px 15px black;" class="container-fluid row py-3">
+        <div class="row align-content-center w-50 m-auto">
+            <div class="col-md-9 text-left h3">
+                REGISTER NOW
+                <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
+
+            </div>
+            <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
+        REGISTER</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-secondary text-warning">
+                    <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
+                        <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form action="" method="get">
+                        <div class="modal-body row">
+                            <picture class="col"><img src="images/home/modal2.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
+                            <div class="col">
+                                <h5>Bring your friends to extend a full-week</h5>
+                                <hr>
+                                <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
+                                <br>
+                                <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
+                                <br>
+                                <input type="email" class="form-control" id="email" placeholder="Your email">
+                                <br>
+                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="submit" class="btn btn-danger">REGISTER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Modal -->
+    <!-- Start of Timetable -->
+    <div class=" m-auto text-center w-50 pt-4">
+        <h2 class="text-warning">CLASSES SCHEDULE</h2>
+        <hr>
+        <table class="table table-striped table-dark table-hover table-responsive">
+            <thead>
+                <tr class="h4 text-nowrap">
+                    <th class="align-middle "> Sweating <i class="fas fa-clock "></i>
+                        <hr><sup class="text-warning">Class <i class="fas fa-dumbbell sup "></sup></i>/<sub class="sub"><i class="fas fa-user-clock "></i> Trainer</sub>
+                    </th>
+                    <th class="align-middle">MON</th>
+                    <th class="align-middle">TUE</th>
+                    <th class="align-middle">WED</th>
+                    <th class="align-middle">THU</th>
+                    <th class="align-middle">FRI</th>
+                    <th class="text-danger align-middle">
+                        SAT<small class="font-weight-light d-block">(Max Effort)</small> </th>
+                    <th class="text-danger align-middle">
+                        SUN<small class="font-weight-light d-block">(Max Effort)</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in timetable" class="h5 text-warning">
+                    <td class="align-middle h5 text-white">{{x.timeSet}}
+                    </td>
+                    <td class="align-middle">
+                        {{x.mon.class}}
+                        <hr>
+                        <small>{{x.mon.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.tue.class}}
+                        <hr>
+                        <small>{{x.tue.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.wed.class}}
+                        <hr>
+                        <small>{{x.wed.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.thu.class}}
+                        <hr>
+                        <small>{{x.thu.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.fri.class}}
+                        <hr>
+                        <small>{{x.fri.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.sat.class}}
+                        <hr>
+                        <small>{{x.sat.trainer}}</small>
+                    </td>
+                    <td class="align-middle">
+                        {{x.sun.class}}
+                        <hr>
+                        <small id="premium">{{x.sun.trainer}}</small>
+
+                    </td>
+                </tr>
+                <tr class="h3 text-nowrap lastRowTimetable">
+                    <td class="align-middle "><b> Salon & Spa</b></td>
+
+                    <td colspan="7" class="font-weight-light py-4">Available from 05:30 to 21:00 every day</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End of Timetable -->
+
     <!-- Footer -->
     <footer class="mt-5 border-0" style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);">
 
