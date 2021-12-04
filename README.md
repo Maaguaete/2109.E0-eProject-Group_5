@@ -24,8 +24,10 @@ eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
 
 ============================
 
-Most pictures are taken from ...
+Most information and pictures are taken from ...
 
+    - https://origympersonaltrainercourses.co.uk/blog/group-exercise-benefits
+    - https://www.sciencedaily.com/releases/2017/10/171030092917.htm
     - https://www.wallpaperflare.com/
 
 ============================ Thank you for spending your time to look at our work. Happy Holidays

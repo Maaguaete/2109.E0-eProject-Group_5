@@ -1,12 +1,80 @@
 <!-- Banner -->
-<div class="container-fluid text-center mx-auto row h1 pt-5 pb-5 boredom" style="color:orangered;">
-    <div class="col-lg-4 text-right">From <s>Boredom</s></div>
-    <div class="text-nowrap col-lg-8 groupX pt-5" style="font-size: 2em;">To GROUP-X</div>
-</div>
-
+<!-- <div class="container-fluid text-center mx-auto row h1 pt-5 pb-5 boredom" style="color:orangered;">
+    <div class="col-lg-4 text-right split left">From <s>Boredom</s></div>
+    <div class="text-nowrap col-lg-8 groupX pt-5 split right" style="font-size: 2em;">To GROUP-X</div>
+</div> -->
 <!-- End Banner -->
-<div class="container-fluid text-center text-light">
+<!-- New Banner -->
+<div class="boredom2" style="color:orangered;">
+    <div class=" split left h1 text-center align-middle pr-5 py-5">From <s>Boredom</s></div>
+    <div class="split right groupX pl-5 pt-5 text-left text-light">
+        <h1 style="font-weight: 900; padding-top:80px; font-size: 4rem;"> To <span class="text-nowrap">GROUP-X</span></h1>
+    </div>
+</div>
+<script>
+    const left = document.querySelector(".left");
+    const right = document.querySelector(".right");
+    const boredom2 = document.querySelector(".boredom2");
 
+    left.addEventListener("mouseenter", () => {
+        boredom2.classList.add("hover-left");
+    });
 
+    left.addEventListener("mouseleave", () => {
+        boredom2.classList.remove("hover-left");
+    });
 
+    right.addEventListener("mouseenter", () => {
+        boredom2.classList.add("hover-right");
+    });
+
+    right.addEventListener("mouseleave", () => {
+        boredom2.classList.remove("hover-right");
+    });
+</script>
+<!-- End New Banner -->
+<div class="container-fluid text-left text-light">
+
+    <div class="container-fluid rounded-lg my-5 shadow embed-responsive embed-responsive-16by9">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/WMSxTmhrzuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 text-justify">
+            <h2 class="text-center">Reasons Prime Fitness</span> Serves <span class="h1" style="color: orangered;"> Group-X</span></h2>
+            <ul class="list-unstyled">
+                <li>
+                    <h3 style="color: orangered;">More Motivating & More Interesting</h3>
+                    <h5>Exercising is sometimes boring because it's repetitive and lonely.</h5>
+                    <h5>A community instructed by our Professionals provide you with that motivation you need. Boosts motivation with upbeat music, making a little friendly competition.</h5>
+                </li>
+                <li>
+                    <h3 style="color: orangered;">Simple & Effective</h3>
+                    <h5>Because someone else is responsible for planning the workout you don’t have to think about a thing – simply turn up, follow the instructions and leave. Workout done!</h5>
+                </li>
+                <li>
+                    <h3 style="color: orangered;">Meet New Friends With Same Goals</h3>
+                    <h5>Group fitness classes are the ideal place to meet new, like-minded friends. They can help you to stick with your goals and make new ones. These positive influences are critical to long term success. </h5>
+                </li>
+                <li>
+                    <h3 style="color: orangered;">Good For All Age! Obviously, We All Age!</h3>
+                    <h5>The group exercise helped elderly to improve or maintain their functional health and enjoy their lives. They felt socially connected and experienced a sense of security in the community through caring for others and supporting each
+                        other. As the older adults began to seek value beyond individuals, they gradually expanded their communities beyond geographical and generational boundaries.</h5>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 text-justify">
+            <h1 class="text-center">What is <span style="color: orangered;"> Group Exercise</span></h1>
+            <h5 style="text-indent: 20px;">Before we jump into the advantages of group exercise classes, we’re going to quickly cover the answer to ‘what is group exercise?’ so that you know exactly what the exercise method entails! You may already have a strong idea of what it involves,
+                but we’ll go over it just in case. Basically, all that the term alludes to is a form of exercise that is done as part of a group, be it large or small. It can mean any style of exercise, from H.I.I.T training to Pilates or Spinning, all
+                the way to a football or netball team. Before you take a look at the 9 benefits of this exercise style, feel free to take a look at the benefits of group exercise study that we researched first! Hopefully, this will provide greater insight
+                into the topic for you, and allow you to see how and why it has grown in popularity in recent years. </h5>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
 </div>

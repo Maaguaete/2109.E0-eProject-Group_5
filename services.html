@@ -22,6 +22,10 @@
     <script src="servicesScript.js"></script>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
         .title {
             padding-bottom: 15px;
             margin: 10px;
@@ -105,31 +109,92 @@
             -webkit-transform: translate3d(0, +100%, 0);
             transform: translate3d(0, +100%, 0);
         }
+        /* New Banner */
         
-        .boredom {
-            background: url(images/services/boredom.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 5px;
-            height: 400px;
-            transition: all 500ms ease-in-out;
-            box-shadow: 0 0px 5px black, 0 0px 10px black, 0 0px 15px black, 0 0px 20px rgb(22, 22, 22), 0 0px 28px rgba(0, 0, 0, 0.555);
+         :root {
+            --hover-width: 70%;
+            --other-width: 30%;
+            --speed: 1000ms;
         }
         
-        .boredom:hover {
-            background: url(images/services/groupX.png);
-            background-repeat: no-repeat;
-            background-size: cover;
+        .boredom2 {
+            position: relative;
+            width: 100%;
+            height: 390px;
         }
         
-        .boredom:hover .groupX {
+        .boredom2:hover .groupX {
             font-weight: bolder;
             color: white;
             text-shadow: black 0px 0px 5px, orangered 0px 0px 10px, orangered 0px 0px 15px, orangered 0px 0px 20px, orangered 0px 0px 28px;
         }
         
-        .boredom:hover div s {
+        .split {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .split.left {
+            left: 0;
+            background: url('images/services/boredom.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        
+        .split.left:before {
+            position: absolute;
+            content: "";
+            width: 50%;
+            height: 100%;
+        }
+        
+        .split.right {
+            right: 0;
+            background: url('images/services/groupX.png') center center no-repeat;
+            background-size: cover;
+        }
+        
+        .split.right:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+        }
+        
+        .split.left,
+        .split.right,
+        .split.right:before,
+        .split.left:before {
+            transition: var(--speed) all ease-in-out;
+        }
+        
+        .hover-left .left {
+            width: var(--hover-width);
+        }
+        
+        .hover-left .right {
+            width: var(--other-width);
+        }
+        
+        .hover-left .right:before {
+            z-index: 2;
+        }
+        
+        .hover-right .right {
+            width: var(--hover-width);
+        }
+        
+        .hover-right .left {
+            width: var(--other-width);
+            color: whitesmoke;
+        }
+        
+        .hover-right .left:before {
+            z-index: 2;
+            font-weight: bolder;
             color: white;
+            text-shadow: black 0px 0px 5px, orangered 0px 0px 10px, orangered 0px 0px 15px, orangered 0px 0px 20px, orangered 0px 0px 28px;
         }
     </style>
 </head>
@@ -138,7 +203,7 @@
     <!-- Start of Header -->
     <header>
         <nav class="navbar navbar-expand-md">
-            <a class="nav-link" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+            <a class="nav-link" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
                 <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
@@ -284,7 +349,7 @@
     </div>
     <!-- End of Modal -->
     <!-- Start of Timetable -->
-    <div class=" m-auto text-center w-50 pt-4">
+    <div class="container text-center pt-4">
         <h2 class="text-warning">CLASSES SCHEDULE</h2>
         <hr>
         <table class="table table-striped table-dark table-hover table-responsive">
@@ -380,7 +445,7 @@
                 <ul class="row list-unstyled text-left jumpto">
                     <span class="col">
                         <li><a class="nav-link text-white" href="index.html">Homepage</a></li>
-                        <li><a class="nav-link text-white" href="services.html">Services</a></li>
+                        <li><a class="nav-link text-white" href="#logo">Services</a></li>
                         <li><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
                         <li><a class="nav-link text-white" href="equipment.html">Equipment</a></li>
                     </span>

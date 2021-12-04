@@ -53,3 +53,30 @@ header {
     background-color: rgba(202, 151, 10, 0.68);
     font-weight: bold;
 }
+
+
+/* .boredom {
+    background: url(images/services/boredom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    height: 390px;
+    transition: all 500ms ease-in-out;
+    box-shadow: 0 0px 5px black, 0 0px 10px black, 0 0px 15px black, 0 0px 20px rgb(22, 22, 22), 0 0px 28px rgba(0, 0, 0, 0.555);
+}
+
+.boredom:hover {
+    background: url(images/services/groupX.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boredom:hover .groupX {
+    font-weight: bolder;
+    color: white;
+    text-shadow: black 0px 0px 5px, orangered 0px 0px 10px, orangered 0px 0px 15px, orangered 0px 0px 20px, orangered 0px 0px 28px;
+}
+
+.boredom:hover div s {
+    color: white;
+} */
