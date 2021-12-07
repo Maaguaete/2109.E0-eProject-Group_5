@@ -15,7 +15,8 @@ app.config(function($routeProvider) {
             templateUrl: "serSportsFitness.html "
         })
         .when("/serGroupX", {
-            templateUrl: "serGroupX.html "
+            templateUrl: "serGroupX.html ",
+            controller: "groupXCtrl"
         })
         .when("/serSalonSpa", {
             templateUrl: "serSalonSpa.html "
@@ -23,7 +24,12 @@ app.config(function($routeProvider) {
         // End of Services
 
 });
-
+app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+    }
+});
 app.controller("servicesCtrl", function($scope, $http) {
     $http.get("timetable.json ").then(function(response) {
         $scope.timetable = response.data;

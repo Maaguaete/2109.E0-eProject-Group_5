@@ -6,28 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEMBERSHIP</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        footer div a {
+            color: #fff;
+        }
+        
+        footer div a:hover {
+            color: rgb(255, 231, 17);
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Start of Header -->
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-image">
-            <a class="nav-link" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+        <nav class="navbar navbar-expand-md">
+            <a class="nav-link" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
             <ul class="navbar-nav container-fluid">
                 <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html">Services</a>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu bg-dark">
-                        <a class="dropdown-item" href="#">Cycling</a>
-                        <a class="dropdown-item" href="#">Swimming</a>
-                        <a class="dropdown-item" href="#">Sport & Fitness</a>
-                        <a class="dropdown-item" href="#">Group-X</a>
-                        <a class="dropdown-item" href="#">Salon & Spa</a>
+                        <a class="dropdown-item" href="#/!">Cycling</a>
+                        <a class="dropdown-item" href="#!serSwimming">Swimming</a>
+                        <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
+                        <a class="dropdown-item" href="#!serGroupX">Group-X</a>
+                        <a class="dropdown-item" href="#!serSalonSpa">Salon & Spa</a>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -38,10 +48,67 @@
             </ul>
         </nav>
     </header>
-    <!-- End Header -->
+    <!-- End of Header -->
+    <p>Prime Fitness is fitness club established in the year 1982. The fitness club has equipped with all basic fitness equipment and also included the newly introduced. The Prime fitness club is the flagship brand for Prime Fitness Club Ltd, a UN based
+        health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’ business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</p>
 
-    <!-- Body -->
+    <!-- Footer -->
+    <footer class="mt-5 border-0 " style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24); ">
 
+        <div class="row m-auto ">
+
+            <div class="col-md-3 ">
+                <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo "></a>
+            </div>
+
+            <div class="col-md-3 "><br>
+                <h4>CONTACT US</h4>
+                <hr>
+                <p class="text-white "><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
+
+                <p class="text-white "> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
+                <p class="text-white "><i class="fas fa-envelope "></i> Email: <a href="mailto:info@pfg.com " class="text-warning ">prime@fitness.com</a></p>
+
+            </div>
+
+            <div class="col-md-3"><br>
+                <h4>JUMP TO</h4>
+                <hr>
+                <ul class="row list-unstyled text-left jumpto">
+                    <div class="col">
+                        <li><a class="nav-link" href="#logo">Homepage</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="equipment.html">Equipment</a></li>
+                    </div>
+                    <div class="col">
+                        <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                        <li><a class="nav-link" href="yourConcern.html">Your Concern</a></li>
+                        <li><a class="nav-link" href="membership.html">Membership</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-3"><br>
+                <h4>LOCATION</h4>
+                <hr>
+                <iframe class="rounded-lg " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1592309658443!5m2!1svi!2s "
+                    width="240 " height="200 " style="border:0; " allowfullscreen=" ">
+        </iframe>
+            </div>
+        </div>
+        <hr class="bg-warning d-block w-25 m-auto ">
+        <div class="d-block text-center mt-3">
+            <div class="d-inline-flex h3 ">
+                <a href="# "> <i class="fa fa-facebook"></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-twitter"></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-instagram"></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-youtube-play"></i> </a>
+            </div>
+            <p>Copyright © 2021 by Prime Fitness Club</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 </body>
 
 </html>

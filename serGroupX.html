@@ -33,7 +33,7 @@
     });
 </script>
 <!-- End New Banner -->
-<div class="container-fluid text-left text-light">
+<div class="container-fluid text-left text-light" ng-controller="groupXCtrl">
 
     <div class="container-fluid rounded-lg my-5 shadow embed-responsive embed-responsive-16by9">
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/WMSxTmhrzuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -44,16 +44,16 @@
             <h2 class="text-center">Reasons Prime Fitness</span> Serves <span class="h1" style="color: orangered;"> Group-X</span></h2>
             <ul class="list-unstyled">
                 <li>
+                    <h3 style="color: orangered;">Simple & Effective</h3>
+                    <h5>Because someone else is responsible for planning the workout you don’t have to think about a thing – simply turn up, follow the instructions and leave. Workout done!</h5>
+                </li>
+                <li>
                     <h3 style="color: orangered;">More Motivating & More Interesting</h3>
                     <h5>Exercising is sometimes boring because it's repetitive and lonely.</h5>
                     <h5>A community instructed by our Professionals provide you with that motivation you need. Boosts motivation with upbeat music, making a little friendly competition.</h5>
                 </li>
                 <li>
-                    <h3 style="color: orangered;">Simple & Effective</h3>
-                    <h5>Because someone else is responsible for planning the workout you don’t have to think about a thing – simply turn up, follow the instructions and leave. Workout done!</h5>
-                </li>
-                <li>
-                    <h3 style="color: orangered;">Meet New Friends With Same Goals</h3>
+                    <h3 style="color: orangered;">Meet New Friends With The Same Goals</h3>
                     <h5>Group fitness classes are the ideal place to meet new, like-minded friends. They can help you to stick with your goals and make new ones. These positive influences are critical to long term success. </h5>
                 </li>
                 <li>
@@ -66,22 +66,28 @@
         <div class="col-md-6 text-justify">
             <h1 class="text-center">What is <span style="color: orangered;"> Group Exercise</span></h1>
             <h4 style="text-indent: 20px;">Group-X contains many group exercises such as Step, Kickfit, Zumba or Yoga, etc. These challenging exercises help enhance strength and stamina, stimulate muscle and burnout 600-800 calories, relieve stress riduring training phase. Group-X
-                classes also feature the most updated, and upbeat music tracks.</h4><br>
-            <h4>JOIN US NOW TO:
-                <ul style="padding-left: 30px; list-style: '\1F44D'"> <br>
-                    <li> Light up your passion and achieve better result</li>
-                    <li> Experience amazing and impressive Lesmillslicensed classes</li>
-                    <li> Enjoy relaxed and fresh atmosphere of standardized Yoga classes under the guidance of professional Yoga Master</li>
-                    <li> Be consulted and trained by experienced and professional coaches</li>
-                </ul>
-            </h4><br>
+                classes also feature the most updated, and upbeat music tracks.</h4>
+            <h4>JOIN US NOW TO:</h4>
+            <ul style="padding-left: 30px; list-style: '\1F44D'" class="h5">
+                <li> Light up your passion and achieve better result</li>
+                <li> Experience amazing and impressive Lesmillslicensed classes</li>
+                <li> Enjoy relaxed and fresh atmosphere of standardized Yoga classes under the guidance of professional Yoga Master</li>
+                <li> Be consulted and trained by experienced and professional coaches</li>
+            </ul>
+            <br>
             <h4><span class="text-warning">Prime Fitness</span> is bound to provide a professional & innovative, youthful & friendly fitness environment.</h4>
+
+            <div class="h4 text-center pt-4" style="color: orangered;">
+                <p> Attend our Group-X classes just right <a ng-click="scrollTo('groupxClass')" class="text-warning">below</a>
+                </p>
+                <p>And you will be amazed by the results!</p>
+            </div>
         </div>
     </div>
     <!-- End of Group-X Benefits & Definition -->
     <!-- Group-X Classes -->
 
-    <div class="row pt-5">
+    <div class="row pt-5" id="groupxClass">
         <div class="col-lg-5 groupXClass m-auto">
             <img src="images/services/yogaClass.jpg" alt="yogalates" class="imageClass m-auto" style="width: 100%;">
             <div class="nameClass">
@@ -103,7 +109,7 @@
             <div class="nameClass">
                 <h2>FIT <small> & </small>OVER FIFTY</h2>
                 <h5 class="text-justify"> This class is designed for the older active adult, who wants a blend of exercises that addresses the cardiovascular, strength, balance, flexibility and stability issues everyone faces as they age. Balls, bars, free weights and bands are
-                    used.
+                    used. </h5>
                 </h5>
             </div>
 
