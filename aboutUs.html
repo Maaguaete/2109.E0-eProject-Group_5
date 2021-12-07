@@ -21,10 +21,105 @@
         footer div a:hover {
             color: rgb(255, 231, 17);
         }
+        /* Meet the team */
+        
+        .hovereffect {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+        }
+        
+        .hovereffect .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            top: -100px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: all 0.5s ease-out 0.5s;
+            transition: all 0.1s ease-out 0.5s;
+        }
+        
+        .hovereffect:hover .overlay {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            top: 0px;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        
+        .hovereffect img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .hovereffect h2 {
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            font-size: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            -webkit-transform: translateY(-200px);
+            -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+            -webkit-transition: all ease-in-out 0.2s;
+            transition: all ease-in-out 0.1s;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+        }
+        
+        .hovereffect:hover h2 {
+            -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+        
+        .hovereffect h4.info {
+            display: inline-block;
+            text-decoration: none;
+            padding: 7px 14px;
+            text-transform: capitalize;
+            margin-top: 12%;
+            background-color: transparent;
+            -webkit-transform: translateY(-200px);
+            -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+            color: #000;
+            border: 1px solid #000;
+            -webkit-transition: all ease-in-out 0.3s;
+            transition: all ease-in-out 0.3s;
+        }
+        
+        .hovereffect h4.info:hover {
+            box-shadow: 0 0 5px #fff;
+        }
+        
+        .hovereffect:hover h4.info {
+            -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            transform: translateY(0px);
+            box-shadow: 0 0 5px #000;
+            color: #000;
+            border: 1px solid #000;
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+        }
+        
+        .media h4,
+        .media a {
+            color: rgb(255, 193, 7)
+        }
     </style>
 </head>
 
-<body>
+<body class="bg-dark">
     <!-- Start of Header -->
     <header>
         <nav class="navbar navbar-expand-md">
@@ -49,26 +144,98 @@
         </nav>
     </header>
     <!-- End of Header -->
-    <div class="container text-justify">
-        <div class="row">
-            <div class="col-6">
-                <h3>Our Story</h3>
-                <h6>Prime Fitness was founded in 1982 as a family owned and operated business. And as the flagship brand for Prime Fitness Club Ltd, a UN based health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’
-                    business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</h6>
-                <div class="d-flex">
-                    <img src="images/aboutus/oldschool.jpg" class="w-50" alt="">
-                    <img src="images/aboutus/now2.png" class="w-50" alt="">
-                </div>
+    <div class="container text-justify text-white my-5">
+        <div class="row my-3">
+            <div class="col-lg-6">
+                <h3 class="text-warning">Our Story</h3>
+                <h4>Prime Fitness was founded in 1982 as a family owned and operated business. And as the flagship brand for Prime Fitness Club Ltd, a UN based health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’
+                    business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</h4>
+                <h3 class="text-warning mt-3">What We Do</h3>
+                <h4>We want to help people reach and maintain their goals, live a fit and healthy lifestyle!. We combine different types of fitness training sections to meet different fitness needs and levels.</h4>
             </div>
-            <div class="col-6">
-                <h3>What We Do</h3>
-                <h6>We want to help people reach and maintain their goals, live a fit and healthy lifestyle!. We combine different types of fitness training sections to meet different fitness needs and levels.</h6>
-                <h6>At Prime Fitness you’ll find all the latest strength and cardio equipment along with a energetic group exercise program that includes POUND, Zumba, Kickboxing, Bootcamp, Muscle Building and many other cardio classes. You’ll find a supportive
-                    environment with all kinds of people who are working just as hard as you.</h6>
-                <h6>Our Staff, Trainers & Group exercise instructors are committed to offering our members a great fitness experience. Whether you’re a mom looking to get back into shape, a marathon runner trying to shave a few minutes off your personal best
-                    or just trying to stay healthy we would love to help you realize your potential and meet your goals!!</h6>
+            <img src="images/aboutus.jpg" class="col-lg-6" style="width: 100%;" alt="">
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-4 ">
+                <h4 class=" text-center">VISION</h4>
+                <hr class="w-25 bg-danger  mx-auto my-3">
+                <h5>
+                    Become the best and most prestigious quality in the Fitness industry, providing the best service and products to our customers.
+                </h5>
+            </div>
+            <div class="col-md-4">
+                <h4 class=" text-center">MISSION</h5>
+                    <hr class="w-25 bg-danger mx-auto my-3">
+                    <h5>For Community: Being healthy and beautiful for a perfect life.</h5>
+                    <h5>For Partners - Investors: Providing the reliable and sustainable values for Win-Win Cooperation.</h5>
+                    <h5>For Employees: Creating an ideal working-environment where work and passion go hand in hand.</h5>
+            </div>
+            <div class="col-md-4">
+                <h4 class=" text-center">VALUE</h4>
+                <hr class="w-25 bg-danger mx-auto my-3">
+                <h5>Health is the first priority of life.</h5>
+                <h5>Credibility: Doing as we say - Prime Fitness always commits to building and maintaining the credibility with customers and partners.</h5>
             </div>
         </div>
+        <h3 class="text-warning">What They Talk</h3>
+        <div class="container mt-3">
+
+            <br>
+            <div class="media border-left p-3">
+                <img src="images/talk0.png" alt="John Doe" class="mr-3 rounded-circle" style="width:100px;">
+                <div class="media-body">
+                    <h4>Melissa O'Donnell <small><i> From <a href="services.html"> Cycling, Sports & Fitness Class</a></i></small></h4>
+                    <h5 class=" font-weight-light">"Prime Fitness brings exercising, health, and wellness to a new level. Every class is unique and challenging - you will walk out feeling stronger! The instructors are knowledgeable on every skill level and they will help you reach
+                        your full potential! Truly an amazing studio!"</p>
+                </div>
+            </div>
+            <div class="media border-right p-3">
+
+                <div class="media-body">
+                    <h4>Andrea Geppert <small><i> From <a href="services.html"> Swimming & Group-X Class</a></i></small></h4>
+                    <h5 class="font-family:Monaco font-weight-light">"Absolutely the best gym! The amount of variety in their classes as well as their times cannot be beat, coupled with a small group class environment where you are challenged to push yourself- at your own pace."</p>
+                </div>
+                <img src="images/talk1.png" alt="John Doe" class="ml-3 rounded-circle" style="width:100px;">
+            </div>
+            <div class="media border-left p-3">
+                <img src="images/talk3.png" alt="John Doe" class="mr-3 rounded-circle" style="width:100px;">
+                <div class="media-body">
+                    <h4>Danielle Kline <small><i> From <a href="services.html"> Yoga & Swimming Class</a></i></small></h4>
+                    <h5 class="font-family:Monaco font-weight-light">"This is the best place to get away from all the tress in life, find time for yourself & prioritize your health & wellness."</p>
+                </div>
+            </div>
+            <div class="media border-right p-3">
+                <div class="media-body">
+                    <h4>Connie Allgyer <small><i>From <a href="services.html">Group-X Class</a></i></small></h4>
+                    <h5 class="font-family:Monaco font-weight-light">"Incredible classes and truly out-of-this-world instructors. Each class is different, but all of the instructors share a dedication and commitment to keeping you motivated and believing in yourself. Come once, and you'll be hooked!"</h5>
+                </div><img src="images/talk2.png" alt="John Doe" class="ml-3 rounded-circle" style="width:100px;">
+            </div>
+        </div>
+        <h3 class="text-center pt-5">Meet The Team</h3>
+        <hr class="w-25 bg-danger mx-auto my-3">
+        <div class="row w-75 m-auto">
+            <div class="hovereffect col-md-6">
+                <img class="img-responsive" src="/images/mem1.png" alt="">
+                <div class="overlay">
+                    <h2 class="text-warning">Nguyen Toan</h2>
+                    <h4 class="info">Student1328430<span class="d-block py-3">T1.2109.E0</span>Leader</h4>
+                </div>
+            </div>
+            <div class="hovereffect col-md-6">
+                <img class="img-responsive" src="images/mem2.png" alt="">
+                <div class="overlay">
+                    <h2 class="text-warning">Truong Duong Truc Duy</h2>
+                    <h4 class="info">Student1333971 <span class="d-block py-3">T1.2109.E0</span> Member</h4>
+                </div>
+            </div>
+        </div>
+        <hr class="w-25 bg-danger mx-auto my-3">
+
+
+        <h4>Our Staff, Trainers & Group exercise instructors are committed to offering our members a great fitness experience. Whether you’re a mom looking to get back into shape, a marathon runner trying to shave a few minutes off your personal best or just
+            trying to stay healthy we would love to help you realize your potential and meet your goals!!</h4>
+
     </div>
     <!-- Footer -->
     <footer class="mt-5 border-0 " style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24); ">
@@ -78,14 +245,14 @@
             </div>
             <div class="col-md-3 "><br>
                 <h4>CONTACT US</h4>
-                <hr>
+                <hr class="bg-warning w-25">
                 <p class="text-white "><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
                 <p class="text-white "> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
                 <p class="text-white "><i class="fas fa-envelope "></i> Email: <a href="mailto:info@pfg.com " class="text-warning ">prime@fitness.com</a></p>
             </div>
             <div class="col-md-3"><br>
                 <h4>JUMP TO</h4>
-                <hr>
+                <hr class="bg-warning w-25">
                 <ul class="row list-unstyled text-left jumpto">
                     <div class="col">
                         <li><a class="nav-link" href="#logo">Homepage</a></li>
@@ -102,7 +269,7 @@
             </div>
             <div class="col-md-3"><br>
                 <h4>LOCATION</h4>
-                <hr>
+                <hr class="bg-warning w-25">
                 <iframe class="rounded-lg " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1592309658443!5m2!1svi!2s "
                     width="240 " height="200 " style="border:0; " allowfullscreen=" "></iframe>
             </div>
