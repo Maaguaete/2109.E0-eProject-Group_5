@@ -1,39 +1,39 @@
 [{
         "timeSet": "05:45-06:45",
-        "mon": { "class": "Swimming", "trainer": "Jolie Alisha" },
+        "mon": { "class": "Swimming", "trainer": "Prisha" },
         "tue": { "class": "", "trainer": "" },
         "wed": { "class": "Cycling", "trainer": "Salena" },
         "thu": { "class": "", "trainer": "" },
         "fri": { "class": "Swimming", "trainer": "Prisha" },
         "sat": { "class": "Group-X", "trainer": "Nikhil" },
-        "sun": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" }
+        "sun": { "class": "Sports & Fitness", "trainer": "Jolie" }
     }, {
         "timeSet": "07:15-08:15",
         "mon": { "class": "", "trainer": "" },
-        "tue": { "class": "Group-X", "trainer": "Nikhil" },
+        "tue": { "class": "Group-X", "trainer": "Flora" },
         "wed": { "class": "", "trainer": "" },
         "thu": { "class": "Sports & Fitness", "trainer": "Sanjay" },
         "fri": { "class": "", "trainer": "" },
-        "sat": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
-        "sun": { "class": "Group-X", "trainer": "Timir" }
+        "sat": { "class": "Sports & Fitness", "trainer": "Jolie" },
+        "sun": { "class": "Group-X", "trainer": "Flora" }
     }, {
         "timeSet": "11:30-12:30",
-        "mon": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
+        "mon": { "class": "Sports & Fitness", "trainer": "Jolie" },
         "tue": { "class": "", "trainer": "" },
         "wed": { "class": "Sports & Fitness", "trainer": "Sanjay" },
         "thu": { "class": "", "trainer": "" },
-        "fri": { "class": "Group-X", "trainer": "Nikhil" },
+        "fri": { "class": "Group-X", "trainer": "Flora" },
         "sat": { "class": "Swimming", "trainer": "Prisha" },
         "sun": { "class": "Sports & Fitness", "trainer": "Sanjay" }
     }, {
         "timeSet": "12:00-13:00",
         "mon": { "class": "", "trainer": "" },
-        "tue": { "class": "Swimming", "trainer": "Prisha" },
+        "tue": { "class": "Swimming", "trainer": "Atik" },
         "wed": { "class": "", "trainer": "" },
         "thu": { "class": "Group-X", "trainer": "Nikhil" },
-        "fri": { "class": "Cycling", "trainer": "Salena" },
+        "fri": { "class": "Cycling", "trainer": "Aaditya" },
         "sat": { "class": "Group-X", "trainer": "Nikhil" },
-        "sun": { "class": "Swimming", "trainer": "Prisha" }
+        "sun": { "class": "Swimming", "trainer": "Atik" }
     }, {
         "timeSet": "17:30-18:30",
         "mon": { "class": "Cycling", "trainer": "Salena" },
@@ -42,7 +42,7 @@
         "thu": { "class": "", "trainer": "" },
         "fri": { "class": "", "trainer": "" },
         "sat": { "class": "Sports & Fitness", "trainer": "Sanjay" },
-        "sun": { "class": "Cycling", "trainer": "Salena" }
+        "sun": { "class": "Cycling", "trainer": "Aaditya" }
     },
     {
         "timeSet": "19:00-20:00",
@@ -51,7 +51,7 @@
         "wed": { "class": "", "trainer": "" },
         "thu": { "class": "Swimming", "trainer": "Prisha" },
         "fri": { "class": "Sports & Fitness", "trainer": "Aaditya Kavya" },
-        "sat": { "class": "Group-X", "trainer": "Nikhil" },
+        "sat": { "class": "Group-X", "trainer": "Flora" },
         "sun": { "class": "A free massage voucher", "trainer": "Applied for Premium Membership only" }
     }
 

@@ -9,7 +9,8 @@ app.config(function($routeProvider) {
             templateUrl: "serCycling.html "
         })
         .when("/serSwimming", {
-            templateUrl: "serSwimming.html "
+            templateUrl: "serSwimming.html ",
+            controller: "swimmingCtrl"
         })
         .when("/serSportsFitness", {
             templateUrl: "serSportsFitness.html "
@@ -23,6 +24,12 @@ app.config(function($routeProvider) {
         })
         // End of Services
 
+});
+app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+    }
 });
 app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
     $scope.scrollTo = function(id) {

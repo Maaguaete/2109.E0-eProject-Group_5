@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="swimmingCtrl">
 
     <div class="row mb-5">
 
@@ -14,12 +14,12 @@
             <div class="text-white">
                 <h5>Swimming is a genuine full body workout, making it the perfect exercise for toning up and burning fat, a healthy activity that can be enjoyed by people of any age and ability</h5>
                 <h5>
-                    <strong class="text-info">Prime Fitness</strong> gives you all range from basic swimming lessons to advanced training courses. <i style='font-size:18px' class='fas text-info'>&#xf103;</i>
+                    <strong class="text-info">Prime Fitness</strong> gives you all range from basic swimming lessons to advanced training courses<a ng-click="scrollTo('swimClass')" style="cursor: pointer;"><i style='font-size:18px' class='fas text-info'>&#xf103;</i></a>
                 </h5>
             </div>
         </div>
     </div>
-    <h2 class="d-block w-100 text-center m-3 swimCourse">SWIM LESSONS & TRAINING COURSES
+    <h2 id="swimClass" class="d-block w-100 text-center m-3 swimCourse">SWIM LESSONS & TRAINING COURSES
     </h2>
     <!-- Start of Carousel Swimming Classes -->
     <div id="swimCourses" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">

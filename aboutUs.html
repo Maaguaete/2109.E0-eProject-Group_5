@@ -23,98 +23,50 @@
         }
         /* Meet the team */
         
-        .hovereffect {
-            width: 100%;
-            height: auto;
-            overflow: hidden;
+        .teamMember {
             position: relative;
-            text-align: center;
-            cursor: default;
         }
         
-        .hovereffect .overlay {
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
             width: 100%;
             height: 100%;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: .3s ease;
+            transition: .3s ease;
+        }
+        
+        #mem1:hover .overlay,
+        #mem2:hover .overlay {
+            -webkit-transform: scale(0.68);
+            -ms-transform: scale(0.68);
+            transform: scale(0.68);
+        }
+        
+        .text {
+            color: black;
             position: absolute;
-            overflow: hidden;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            top: -100px;
-            opacity: 0;
-            filter: alpha(opacity=0);
-            -webkit-transition: all 0.5s ease-out 0.5s;
-            transition: all 0.1s ease-out 0.5s;
-        }
-        
-        .hovereffect:hover .overlay {
-            opacity: 1;
-            filter: alpha(opacity=100);
-            top: 0px;
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-        }
-        
-        .hovereffect img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .hovereffect h2 {
-            text-transform: uppercase;
-            text-align: center;
-            position: relative;
-            font-size: 25px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            -webkit-transform: translateY(-200px);
-            -ms-transform: translateY(-200px);
-            transform: translateY(-200px);
-            -webkit-transition: all ease-in-out 0.2s;
-            transition: all ease-in-out 0.1s;
-            -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-        }
-        
-        .hovereffect:hover h2 {
-            -webkit-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-            transform: translateY(0px);
-        }
-        
-        .hovereffect h4.info {
-            display: inline-block;
-            text-decoration: none;
-            padding: 7px 14px;
-            text-transform: capitalize;
-            margin-top: 12%;
-            background-color: transparent;
-            -webkit-transform: translateY(-200px);
-            -ms-transform: translateY(-200px);
-            transform: translateY(-200px);
-            color: #000;
-            border: 1px solid #000;
-            -webkit-transition: all ease-in-out 0.3s;
-            transition: all ease-in-out 0.3s;
-        }
-        
-        .hovereffect h4.info:hover {
-            box-shadow: 0 0 5px #fff;
-        }
-        
-        .hovereffect:hover h4.info {
-            -webkit-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-            transform: translateY(0px);
-            box-shadow: 0 0 5px #000;
-            color: #000;
-            border: 1px solid #000;
-            -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
         
         .media h4,
         .media a {
             color: rgb(255, 193, 7)
+        }
+        
+        .trainer>div>div {
+            background-color: rgba(51, 51, 51, 0.596);
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -193,7 +145,7 @@
             <div class="media border-right p-3">
 
                 <div class="media-body">
-                    <h4>Andrea Geppert <small><i> From <a href="services.html"> Swimming & Group-X Class</a></i></small></h4>
+                    <h4 style="text-align: right;">Andrea Geppert <small><i> From <a href="services.html"> Swimming & Group-X Class</a></i></small></h4>
                     <h5 class="font-family:Monaco font-weight-light">"Absolutely the best gym! The amount of variety in their classes as well as their times cannot be beat, coupled with a small group class environment where you are challenged to push yourself- at your own pace."</p>
                 </div>
                 <img src="images/talk1.png" alt="John Doe" class="ml-3 rounded-circle" style="width:100px;">
@@ -207,35 +159,184 @@
             </div>
             <div class="media border-right p-3">
                 <div class="media-body">
-                    <h4>Connie Allgyer <small><i>From <a href="services.html">Group-X Class</a></i></small></h4>
+                    <h4 style="text-align: right;">Connie Allgyer <small><i>From <a href="services.html">Group-X Class</a></i></small></h4>
                     <h5 class="font-family:Monaco font-weight-light">"Incredible classes and truly out-of-this-world instructors. Each class is different, but all of the instructors share a dedication and commitment to keeping you motivated and believing in yourself. Come once, and you'll be hooked!"</h5>
                 </div><img src="images/talk2.png" alt="John Doe" class="ml-3 rounded-circle" style="width:100px;">
             </div>
         </div>
-        <h3 class="text-center pt-5">Meet The Team</h3>
-        <hr class="w-25 bg-danger mx-auto my-3">
-        <div class="row w-75 m-auto">
-            <div class="hovereffect col-md-6">
-                <img class="img-responsive" src="images/mem1.png" alt="">
-                <div class="overlay">
-                    <h2 class="text-warning">Nguyen Toan</h2>
-                    <h4 class="info">Student1328430<span class="d-block py-3">T1.2109.E0</span>Leader</h4>
+        <!-- Training Crew -->
+        <div class="container text-center">
+            <div class=" mt-5 mb-2 ">
+                <h1 class="mb-3 text-warning">Meet The Training Crew</h1>
+                <p><em>Regardless of your personal fitness motivations or abilities, Prime Fitness inspires its
+                  members to strive for lasting lifestyle changes, resulting in healthy minds and bodies.
+                  Boasting an energetic staff with a dynamic take on fitness and healthy lifestyle, the gym's goal is to get
+                  and keep you healthy. The highly trained and dedicated personal trainers at Fitness Gallery work with you to
+                  establish short-term fitness goals,
+                  but will also teach you to incorporate these lessons into your daily life. Their staff will choose a program
+                  based around your specific fitness needs and goals, offering encouragement and constant motivation through
+                  your entire workout. Torch calories in a rigorous spin class,
+                  pack on muscle in a high-intensity weight training session, or sign up for an intensive interval combat
+                  class,all under the guidance of professionals who take a vested</em></p>
+            </div>
+
+            <div class="row trainer d-flex justify-content-center my-3">
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3">
+                        <img class="img-responsive rounded-circle " src="images/aboutus/cyc_AadityaKavya.jpeg " width="100 ">
+                        <h5 class="mt-3">Cycling Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;"> Aaditya</h5>
+                        <div>
+                            <p>English language</p>
+                            <p>9 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3">
+                        <img class="img-responsive rounded-circle" src="images/aboutus/swim_Selena.png " width="100 ">
+                        <h5 class="mt-3">Cycling Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;"> Selena</h5>
+                        <div>
+                            <p>English language</p>
+                            <p>7 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3">
+                        <img class="img-responsive rounded-circle " src="images/aboutus/Prisha.jpg " width="100">
+                        <h5 class="mt-3 name ">Swimming Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Prisha</h5>
+                        <div class="mt-4 about ">
+                            <p>English language</p>
+                            <p>11 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3">
+                        <img class="img-responsive rounded-circle " src="images/aboutus/swim_Atik.jpeg " width="100 ">
+                        <h5 class="mt-3 name ">Swimming Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Atik</h5>
+                        <div class="mt-4 about ">
+                            <p>English language</p>
+                            <p>8 years of experience</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hovereffect col-md-6">
-                <img class="img-responsive" src="images/mem2.png" alt="">
-                <div class="overlay">
-                    <h2 class="text-warning">Truong Duong Truc Duy</h2>
-                    <h4 class="info">Student1333971 <span class="d-block py-3">T1.2109.E0</span> Member</h4>
+            <div class="row trainer">
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3"><img class="img-responsive rounded-circle " src="images/aboutus/sport_jolie.jpeg " width="100 ">
+                        <h5 class="mt-3  ">Sports & Fitness Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Jolie</h5>
+                        <div>
+                            <p>English language</p>
+                            <p>8 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3"><img class="img-responsive rounded-circle " src="images/aboutus/Sport_Sanjay.jpeg " width="100 ">
+                        <h5 class="mt-3">Sports & Fitness Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Sanjay</h5>
+                        <div class="mt-4  ">
+                            <p>English language</p>
+                            <p>10 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3"><img class="img-responsive rounded-circle " src="images/aboutus/Nikhil.jpeg " width="100 ">
+                        <h5 class="mt-3 name ">Group Exercise Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Nikhil</h5>
+                        <div>
+                            <p>English language</p>
+                            <p>8 years of experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-3">
+                    <div class="p-3"><img class="img-responsive rounded-circle " src="images/aboutus/Flora.jpeg " width="100 ">
+                        <h5 class="mt-3 name ">Group Exercise Trainer</h5>
+                        <h5 class="mb-4 font-weight-bold" style="color: tomato;">Flora</h5>
+                        <div class="mt-4 about ">
+                            <p>English language</p>
+                            <p>7 years of experience</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <hr class="w-25 bg-danger mx-auto my-3">
-
-
-        <h4>Our Staff, Trainers & Group exercise instructors are committed to offering our members a great fitness experience. Whether you’re a mom looking to get back into shape, a marathon runner trying to shave a few minutes off your personal best or just
-            trying to stay healthy we would love to help you realize your potential and meet your goals!!</h4>
-
+    </div>
+    <!-- Register panel Modal -->
+    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0 0 10px black, 0px 0px 25px black;" class="container-fluid py-4">
+        <div class="row align-content-center w-50 m-auto">
+            <div class="col-md-9 text-left h3">
+                REGISTER NOW
+                <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
+            </div>
+            <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
+    REGISTER</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-secondary text-warning">
+                    <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
+                        <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form action="" method="get">
+                        <div class="modal-body row">
+                            <picture class="col"><img src="images/home/sport.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
+                            <div class="col">
+                                <h5>Bring your friends to extend a full-week</h5>
+                                <hr>
+                                <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
+                                <br>
+                                <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
+                                <br>
+                                <input type="email" class="form-control" id="email" placeholder="Your email">
+                                <br>
+                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                            <button type="submit" class="btn btn-danger">REGISTER</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
+    </div>
+    <div class="container">
+        <h3 class="text-center pt-5 text-light">Team Members</h3>
+        <hr class="w-25 bg-danger mx-auto my-3 ">
+        <div class="row w-50 m-auto text-center teamMember">
+            <div class="hovereffect col-md-6 mt-2" id="mem1">
+                <img src="images/mem1.png" alt="" class="d-block w-100 h-auto">
+                <div class="overlay">
+                    <div class="text">
+                        <h3 class="text-danger text-nowrap">NGUYEN TOAN</h3>
+                        <h6 class="border border-dark rounded-lg p-2 bg-light">Student1328430<span class="d-block py-2">T1.2109.E0</span>Leader</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="hovereffect col-md-6 mt-2" id="mem2">
+                <img src="images/mem2.png" alt="" class="d-block w-100 h-auto">
+                <div class="overlay">
+                    <div class="text">
+                        <h3 class="text-danger text-nowrap">TRUONG DUONG<br>TRUC DUY</h3>
+                        <h6 class="border border-dark rounded-lg p-2 bg-light">Student1333971<span class="d-block py-2 ">T1.2109.E0</span> Member</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
     <footer class="mt-5 border-0 " style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24); ">
@@ -245,45 +346,45 @@
             </div>
             <div class="col-md-3 "><br>
                 <h4>CONTACT US</h4>
-                <hr class="bg-warning w-25">
+                <hr class="bg-warning w-25 ">
                 <p class="text-white "><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
                 <p class="text-white "> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
                 <p class="text-white "><i class="fas fa-envelope "></i> Email: <a href="mailto:info@pfg.com " class="text-warning ">prime@fitness.com</a></p>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>JUMP TO</h4>
-                <hr class="bg-warning w-25">
-                <ul class="row list-unstyled text-left jumpto">
-                    <div class="col">
-                        <li><a class="nav-link" href="index.html">Homepage</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li><a class="nav-link" href="equipment.html">Equipment</a></li>
+                <hr class="bg-warning w-25 ">
+                <ul class="row list-unstyled text-left jumpto ">
+                    <div class="col ">
+                        <li><a class="nav-link " href="index.html ">Homepage</a></li>
+                        <li><a class="nav-link " href="services.html ">Services</a></li>
+                        <li><a class="nav-link " href="gallery.html ">Gallery</a></li>
+                        <li><a class="nav-link " href="equipment.html ">Equipment</a></li>
                     </div>
-                    <div class="col">
-                        <li><a class="nav-link" href="#logo">About Us</a></li>
-                        <li><a class="nav-link" href="yourConcern.html">Your Concerns</a></li>
-                        <li><a class="nav-link" href="membership.html">Membership</a></li>
+                    <div class="col ">
+                        <li><a class="nav-link " href="#logo ">About Us</a></li>
+                        <li><a class="nav-link " href="yourConcern.html ">Your Concerns</a></li>
+                        <li><a class="nav-link " href="membership.html ">Membership</a></li>
                     </div>
                 </ul>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>LOCATION</h4>
-                <hr class="bg-warning w-25">
+                <hr class="bg-warning w-25 ">
                 <iframe class="rounded-lg " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1592309658443!5m2!1svi!2s "
                     width="240 " height="200 " style="border:0; " allowfullscreen=" "></iframe>
             </div>
         </div>
         <hr class="bg-warning d-block w-25 m-auto ">
-        <div class="d-block text-center mt-3">
+        <div class="d-block text-center mt-3 ">
             <div class="d-inline-flex h3 ">
-                <a href="# "> <i class="fa fa-facebook"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-twitter"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-instagram"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-youtube-play"></i> </a> &ThickSpace;
-                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5"> <i class="fa fa-github-square"></i> </a>
+                <a href="# "> <i class="fa fa-facebook "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-twitter "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-instagram "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-youtube-play "></i> </a> &ThickSpace;
+                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5 "> <i class="fa fa-github-square "></i> </a>
             </div>
-            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/" class="text-warning">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
+            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/ " class="text-warning ">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
         </div>
         <!-- Copyright -->
     </footer>
