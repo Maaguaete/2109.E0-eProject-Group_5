@@ -34,11 +34,8 @@ app.controller("servicesCtrl", function($scope, $http, $location, $anchorScroll)
     $http.get("timetable.json ").then(function(response) {
         $scope.timetable = response.data;
     });
-    $scope.scrollTo = function(id) {
-            $location.hash(id);
-            $anchorScroll();
-        }
-        // Calculate BMI
+
+    // Calculate BMI
     $scope.bmi = 0;
     $scope.weight = 0;
     $scope.height = 0;
