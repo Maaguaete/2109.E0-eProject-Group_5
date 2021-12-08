@@ -26,6 +26,7 @@ eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
 
 Most information and pictures are taken from ...
 
+    - https://38xfitness.com.au/
     - https://origympersonaltrainercourses.co.uk/blog/group-exercise-benefits
     - https://www.sciencedaily.com/releases/2017/10/171030092917.htm
     - https://www.wallpaperflare.com/
