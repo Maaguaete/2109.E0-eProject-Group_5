@@ -53,6 +53,7 @@
             background-color: rgb(24, 25, 26);
             box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24);
             padding-top: 20px;
+            margin: 0;
             z-index: 10;
         }
         
@@ -243,6 +244,47 @@
             text-shadow: black 0px 0px 2px, black 0px 0px 3px, rgba(0, 0, 0, 0.712) 0px 0px 5px, orangered 0px 0px 15px;
             font-weight: bolder;
             z-index: 399;
+        }
+        /* Spa */
+        
+        .textSpa {
+            text-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px rgb(23, 162, 184);
+        }
+        
+        .treatments {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        
+        .treatments>div {
+            height: fit-content;
+        }
+        
+        .treatments>div>h3 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bolde;
+            background-color: rgba(51, 136, 88, 0.534);
+            border-radius: 15px;
+        }
+        
+        .treatments>div>a {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bolder;
+            background-color: rgba(51, 136, 88, 0.534);
+            border-radius: 15px;
+        }
+        
+        @media only screen and (max-device-width: 1024px) {
+            .bgimgSpa {
+                background-attachment: scroll;
+            }
         }
     </style>
 </head>
