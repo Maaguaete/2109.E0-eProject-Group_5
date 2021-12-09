@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("images/headlogo.jpg");
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    background-position: center;
+    z-index: 100;
+    position: fixed;
+    transition: 0.5s;
+}
+
+.logo {
+    width: 40%;
+    margin: 5px -100px 20px 0px;
+    transition: all 0.5s;
+}
+
+.nav-item .nav-link {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    display: inline-block;
+    color: rgb(238, 212, 163)!important;
+    font-weight: bold;
+    font-size: larger;
+    transition: all 200ms ease-in-out;
+    white-space: nowrap;
+}
+
+.nav-item .nav-link:hover {
+    background-color: rgba(202, 151, 10, 0.68);
+    transform: scale(1.1);
+    border-radius: 10px;
+    font-weight: bold;
+    color: #000!important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    color: wheat;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(202, 151, 10, 0.68);
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    border: 1px solid rgb(238, 212, 163);
+    color: wheat;
+    margin: 0 auto;
+}
+
+
+/* RESPONSIVE 
+Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    /*  */
+    .fixed-top-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        transition: 0.3s;
+        padding: 30px 0;
+        height: auto;
+        display: block;
+    }
+    a {
+        display: block;
+    }
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*  */
+    a {
+        display: block;
+    }
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*  */
+    a {
+        display: block;
+    }
+    .logo {
+        width: 100%;
+        margin: 5px 0px 20px 0px;
+    }
+}
