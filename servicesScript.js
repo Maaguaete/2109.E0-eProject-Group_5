@@ -3,7 +3,6 @@ var app = angular.module("servicesApp", ["ngRoute"]);
 app.config(function($routeProvider) {
 
     $routeProvider
-    // Start of Services
 
         .when("/", {
             templateUrl: "serCycling.html "
@@ -22,21 +21,8 @@ app.config(function($routeProvider) {
         .when("/serSalonSpa", {
             templateUrl: "serSalonSpa.html "
         })
-        // End of Services
+});
 
-});
-app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
-    $scope.scrollTo = function(id) {
-        $location.hash(id);
-        $anchorScroll();
-    }
-});
-app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
-    $scope.scrollTo = function(id) {
-        $location.hash(id);
-        $anchorScroll();
-    }
-});
 app.controller("servicesCtrl", function($scope, $http, $location, $anchorScroll) {
     $http.get("timetable.json ").then(function(response) {
         $scope.timetable = response.data;
@@ -61,5 +47,18 @@ app.controller("servicesCtrl", function($scope, $http, $location, $anchorScroll)
             $scope.result = "Obese! It need to be considered! ";
         }
         alert("Your BMI is " + $scope.bmi + " " + $scope.result);
+    }
+});
+
+app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+    }
+});
+app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
     }
 });
