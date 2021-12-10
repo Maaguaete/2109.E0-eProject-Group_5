@@ -100,13 +100,13 @@
         }
         
         .active,
-        .demo:hover {
+        .newEquip:hover {
             opacity: 1;
         }
     </style>
 </head>
 
-<body class="bg-dark">
+<body style="background-color: rgb(34, 35, 36);">
     <!-- Start of Header -->
     <header>
         <nav class="navbar navbar-expand-md">
@@ -125,7 +125,7 @@
     <!-- End of Header -->
     <div>
         <div class="row-cols mb-5">
-            <div class="carousel slide carousel-fade" data-ride="carousel ride" data-interval="2000">
+            <div class="carousel slide carousel-fade" data-ride="carousel" data-interval="2500" data-pause="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/equipment/equip1.jpeg" class="img-fluid w-100" alt="...">
@@ -147,7 +147,8 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Sv_IRdLlMKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-6 text-justify text-white h4">We want to help you live a fit and healthy lifestyle! We do this by helping you find the most suitable equipment for your home gym, studio or commercial gym, keeping your budget, lifestyle and fitness goals in mind. We stock a wide range
-                    of gym equipment, with strength equipment, cardio, cross training and so much more. Our awesome team is always keen to help, so please call us to discuss your needs.</div>
+                    of gym equipment, with strength equipment, cardio, cross training and so much more. Our awesome team is always keen to help, so please
+                    <a href="yourConcern.html" class="btn btn-outline-warning my-2 " role="button"><span class="font-weight-light h5"> Contact Us</span></a> to discuss your needs.</div>
             </div>
         </div>
 
@@ -183,19 +184,19 @@
                 </div>
                 <div class="row">
                     <div class="column1">
-                        <img class="demo cursor" src="images/equipment/old1.png" style="width:100%" onclick="currentSlide(1)" alt="">
+                        <img class="newEquip cursor" src="images/equipment/old1.png" style="width:100%" onclick="currentSlide(1)" alt="">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="images/equipment/old2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="">
+                        <img class="newEquip cursor" src="images/equipment/old2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="images/equipment/old3.png" style="width:100%" onclick="currentSlide(3)" alt="">
+                        <img class="newEquip cursor" src="images/equipment/old3.png" style="width:100%" onclick="currentSlide(3)" alt="">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="images/equipment/old4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="">
+                        <img class="newEquip cursor" src="images/equipment/old4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="images/equipment/old5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="">
+                        <img class="newEquip cursor" src="images/equipment/old5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="">
                     </div>
                 </div>
             </div>
@@ -214,7 +215,7 @@
                 function showSlides(n) {
                     var i;
                     var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("demo");
+                    var dots = document.getElementsByClassName("newEquip");
                     var captionText = document.getElementById("caption");
                     if (n > slides.length) {
                         slideIndex = 1

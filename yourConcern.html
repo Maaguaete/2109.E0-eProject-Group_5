@@ -46,7 +46,7 @@
         textarea:valid~label {
             font-size: 0.75em;
             color: rgb(255, 193, 16);
-            top: -5px;
+            top: -10px;
             -webkit-transition: all 0.225s ease;
             transition: all 0.225s ease;
         }
@@ -142,7 +142,7 @@
     </style>
 </head>
 
-<body class="bg-dark">
+<body>
     <!-- Start of Header -->
     <header>
         <nav class="navbar navbar-expand-md">
@@ -222,11 +222,10 @@
             <!-- Enquire Now -->
             <div class="text-center pt-4">
                 <h2 id="enquire" class="btn btn-outline-danger w-100 text-white font-weight-bold">
-                    ENQUIRE NOW FOR ANY FURTHER CONCERNS
+                    <span style="color: rgb(255, 193, 16);">ENQUIRE NOW</span> IF ANY FURTHER CONCERNS
                 </h2>
                 <form id="enquireForm" action="" class="container answer text-warning">
-                    <h1 class="font-weight-light">Enquire Now</h1>
-                    <h4 class="font-weight-light">We'd love to hear from you!</h4>
+                    <h3 class="font-weight-lighter font-italic pt-3">We'd love to hear from you!</h3>
                     <div class="row input-container">
                         <div class="col-xs-12">
                             <div class="styled-input wide">
@@ -315,7 +314,7 @@
                     alert("The message cannot left blank");
                     return false;
                 }
-                alert("\nYour enquiry form has been sent successfully! \nWe will contact you as soon as possible!");
+                alert("\nYour enquiry form has been sent successfully!\nWe will contact you as soon as possible!");
                 return true;
             });
         });

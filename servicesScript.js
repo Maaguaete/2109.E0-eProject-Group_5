@@ -23,7 +23,7 @@ app.config(function($routeProvider) {
         })
 });
 
-app.controller("servicesCtrl", function($scope, $http, $location, $anchorScroll) {
+app.controller("servicesCtrl", function($scope, $http) {
     $http.get("timetable.json ").then(function(response) {
         $scope.timetable = response.data;
     });
