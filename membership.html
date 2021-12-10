@@ -13,7 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        .packageContent {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -123,75 +127,112 @@
                 </div>
             </div>
         </div>
-        <!-- Price -->
+        <!-- Pricing Package -->
         <div class="mx-auto row container-fluid">
             <h2 class="text-warning my-5 d-block w-100">SERVICE PACKAGES & SPECIAL OFFERS</h2>
+
             <div class="col-lg-4 col-md-6">
-                <div class="btn btn-outline-light p-3 mb-3" style="background-color: #111;">
-                    <img src="images/member/run.jpg" class="w-50 h-auto" alt="">
-                    <h1 class="btn btn-outline-primary font-weight-lighter p-3 m-3"> BE A MEMBER NOW </h1>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled border">
-                    <li class="h4 m-0 p-3" style="background-color: #111; color:rgb(223, 100, 0);">MULTIVISIT<br>10 OR 20 VISIT PASS</li>
-                    <li class="border-bottom border-top p-3 bg-success">10 SESSION $259 <br> 20 SESSION $440</li>
-                    <li class="border-bottom p-3 text-justify">Our multi-session passes are a good option if you are planning on taking Prime Fitness group workouts on a more casual basis.</li>
-                    <li class="p-3 text-justify">INCLUSIONS <br> - 10 or 20 visit pass<br> - Initial consult and monthly fitness check in appointments <br><u class="text-success">Bonus:</u> None</li>
+                <ul class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;">
+                    <li class="m-0 py-5 rounded">
+                        <h1 class="btn btn-primary font-weight-lighter my-2"> BE A MEMBER NOW </h1>
+                    </li>
+                    <li class="p-3 font-weight-bold">
+                        <h1 class="btn btn-warning font-weight-lighter my-2"> ENQUIRE IF ANY CONCERNS </h1>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled border">
-                    <li class="h4 m-0 p-3" style="background-color: #111; color:rgb(223, 100, 0);">POWER <br> $44.90/WEEK</li>
-                    <li class="border-bottom border-top p-3 bg-success">UP TO FOUR WORKOUTS<br>PER FORTNIGHT</li>
-                    <li class="border-bottom p-3 text-justify">Prime Fitness is perfect for those who want to complement their current workout program with quality sessions and get the benefit of Prime Fitness.</li>
-                    <li class="p-3 text-justify">INCLUSIONS <br> - 4 group training classes per fortnight <br> - Initial consult and monthly fitness check in appointments <br><u class="text-success">Bonus:</u> None</li>
+                <ul class="list-unstyled rounded" id="package1" style="border: orangered 1px solid;">
+                    <li class="h4 m-0 py-5 rounded" style="background-color: #111; color:orangered;">MULTIVISIT<br>10 OR 20 VISIT PASS</li>
+                    <li class="border-bottom border-top p-3 font-weight-bold" style="background-color: orangered;">10 SESSION - $259 <br> 20 SESSION - $440</li>
+                    <div class="packageContent" id="packageContent1">
+                        <li class="border-bottom p-3 text-justify">Our multi-session passes are a good option if you are planning on taking Prime Fitness group workouts on a more casual basis.</li>
+                        <li class="p-3 text-justify">INCLUSIONS <br> - 10 or 20 visit pass<br> - Initial consult and monthly fitness check in appointments <br><u style="color: orangered;">Bonus:</u> None</li>
+                    </div>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled border">
-                    <li class="h4 m-0 p-3" style="background-color: #111; color:rgb(223, 100, 0);">PREMIUM <br> $79.90 PER WEEK</li>
-                    <li class="border-bottom border-top p-3 bg-success">UNLIMITED WORKOUTS<br>PER FORTNIGHT</li>
-                    <li class="border-bottom p-3 text-justify">Our most popular training plan, Prime Fitness gives you access to as many workouts as you want each week. Suitable for those who are looking to really maximise their results.</li>
-                    <li class="p-3 text-justify">INCLUSIONS <br> - Unlimited group training <br> - Initial consult and monthly fitness check in appointments <br><u class="text-success">Bonus:</u> A Free Massage Voucher at Weekend</li>
+                <ul class="list-unstyled rounded" id="package2" style="border: orange 1px solid">
+                    <li class="h4 m-0 py-5 rounded" style="background-color: #111; color: orange;">POWER <br> $44.90/WEEK</li>
+                    <li class="border-bottom border-top p-3 font-weight-bold" style="background-color: orange;">UP TO FOUR WORKOUTS<br>PER FORTNIGHT</li>
+                    <div class="packageContent" id="packageContent2">
+                        <li class="border-bottom p-3 text-justify">Prime Fitness is perfect for those who want to complement their current workout program with quality sessions and get the benefit of Prime Fitness.</li>
+                        <li class="p-3 text-justify">INCLUSIONS <br> - 4 group training classes per fortnight <br> - Initial consult and monthly fitness check in appointments <br><u style="color: orange;">Bonus:</u> None</li>
+                    </div>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled border">
-                    <li class="h4 m-0 p-3" style="background-color: #111; color:rgb(223, 100, 0);">PLATINUM PACKAGE <br> $140 PER WEEK</li>
-                    <li class="border-bottom border-top p-3 bg-success mx-auto">
+                <ul class="list-unstyled border border-warning rounded" id="package3">
+                    <li class="h4 m-0 py-5 rounded text-warning" style="background-color: #111;">PREMIUM <br> $79.90 PER WEEK</li>
+                    <li class="border-bottom border-top p-3 bg-warning font-weight-bold" style="color: rgb(24, 25, 26);">UNLIMITED WORKOUTS<br>PER FORTNIGHT</li>
+                    <div class="packageContent" id="packageContent3">
+                        <li class="border-bottom p-3 text-justify">Our most popular training plan, Prime Fitness gives you access to as many workouts as you want each week. Suitable for those who are looking to really maximise their results.</li>
+                        <li class="p-3 text-justify">INCLUSIONS <br> - Unlimited group training <br> - Initial consult and monthly fitness check in appointments <br><u class="text-warning">Bonus:</u> A Free Massage Voucher at Weekend</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <ul class="list-unstyled border border-success rounded" id="package4">
+                    <li class="h4 m-0 py-5 rounded text-success" style="background-color: #111;">PLATINUM PACKAGE <br> $140 PER WEEK</li>
+                    <li class="border-bottom border-top p-3 mx-auto bg-success font-weight-bold">
                         <ul class="list-unstyled text-left text-nowrap w-50 pl-lg-4 mx-auto">
                             <li>+ UNLIMITED WORKOUTS</li>
                             <li>+ PRIVATE COACHING</li>
                         </ul>
                     </li>
-                    <li class="border-bottom p-3 text-justify">Prime Fitness Platinum offers the ultimate training support. It’s ideal for those who want to make the most of the group training with the unlimited plan as well as personalised support with a weekly private session and ongoing nutritional
-                        support.
-                    </li>
-                    <li class="p-3 text-justify">INCLUSIONS <br> - Unlimited group training <br> - 1 x private training session (1:1) per week. (45 minutes)<br> - 3 x personalised nutrition consults− Unlimited access to all workouts<br> - Initial consult and monthly Fitness check
-                        in appointments <br><u class="text-success">Bonus:</u>
-                        <ul class="list-unstyled text-left">
-                            <li>- Discount 15%</li>
-                            <li>- A Free Massage Voucher at Weekend</li>
-                        </ul>
-                    </li>
+                    <div class="packageContent" id="packageContent4">
+                        <li class="border-bottom p-3 text-justify">Prime Fitness Platinum offers the ultimate training support. It’s ideal for those who want to make the most of the group training with the unlimited plan as well as personalised support with a weekly private session and ongoing
+                            nutritional support.
+                        </li>
+                        <li class="p-3 text-justify">INCLUSIONS <br> - Unlimited group training <br> - 1 x private training session (1:1) per week. (45 minutes)<br> - 3 x personalised nutrition consults− Unlimited access to all workouts<br> - Initial consult and monthly Fitness check
+                            in appointments <br><u class="text-success">Bonus:</u>
+                            <ul class="list-unstyled text-left">
+                                <li>- Discount 15%</li>
+                                <li>- A Free Massage Voucher at Weekend</li>
+                            </ul>
+                        </li>
+                    </div>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled border">
-                    <li class="h4 m-0 p-3 text-danger " style="background-color: #111;">
+                <ul class="list-unstyled rounded" style="border: #EC96A4 1px solid" id="package5">
+                    <li class="h4 m-0 py-5 rounded bg-primary font-weight-bolder" style="color:#EC96A4;">
                         <span class="float-left w-75 pl-lg-4 ml-lg-4">&ThickSpace;SALON</span><br><span class="text-right w-50">&ThickSpace;&ThickSpace;&&ThickSpace;SPA</span>
                     </li>
-                    <li class="border-bottom border-top p-3" style="background-color:#EC96A4;">Monthly membership fee - $99 <br> One-time initiation fee - $25</li>
-                    <li class="border-bottom p-3 text-justify">Love our spa and services? Join our Membership program and take some time for yourself each month at a substantial discount. Members get to choose one treatment “benefit” each month, can share the membership within the household and
-                        get additional discounts and perks. Does this membership sound right for you?</li>
-                    <li class="border-bottom p-3 text-justify">
-                        <h5 style="text-align: center;">CHOOSE A TREATMENT EACH MONTH</h5> - 60 minute Ultimoot Massage <br> - 60 minute Deep Tissue Massage <br> - 60 minute Sports Knot Massage <br> - 60 minute Prenatal Massage <br> - 60 minute Ultimoot Facial <br> - 60 minute Dapper
-                        Facial <br> - Cleanse and Peel <br> - Shellac manicure OR Coop+ Manicure AND Coop+ Pedicure <br><u class="text-success">Bonus:</u> Gift Vouchers</li>
+                    <li class="border-bottom border-top p-3 text-primary font-weight-bold" style="background-color:#EC96A4;"> ONE-TIME INITIATION FEE - $25<br>MONTHLY MEMBERSHIP FEE - $99</li>
+                    <div class="packageContent" id="packageContent5">
+                        <li class="border-bottom p-3 text-justify">Love our spa and services? Join our Membership program and take some time for yourself each month at a substantial discount. Members get to choose one treatment “benefit” each month, can share the membership within the household
+                            and get additional discounts and perks. Does this membership sound right for you?</li>
+                        <li class="p-3 text-justify">
+                            <h5 style="text-align: center;">CHOOSE A TREATMENT EACH MONTH</h5> - 60 minute Ultimoot Massage <br> - 60 minute Deep Tissue Massage <br> - 60 minute Sports Knot Massage <br> - 60 minute Prenatal Massage <br> - 60 minute Ultimoot Facial <br> - 60 minute Dapper
+                            Facial
+                            <br> - Cleanse and Peel <br> - Shellac manicure OR Coop+ Manicure AND Coop+ Pedicure <br><u class="text-primary">Bonus:</u> Gift Vouchers</li>
+                    </div>
                 </ul>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            // Toggle answer function
+            $("#package1").click(function() {
+                $("#packageContent1").toggle(500);
+            });
+            $("#package2").click(function() {
+                $("#packageContent2").toggle(500);
+            });
+            $("#package3").click(function() {
+                $("#packageContent3").toggle(500);
+            });
+            $("#package4").click(function() {
+                $("#packageContent4").toggle(500);
+            });
+            $("#package5").click(function() {
+                $("#packageContent5").toggle(500);
+            });
+            $("#package1, #package2, #package3, #package4, #package5").css("cursor", "pointer");
+        });
+    </script>
     <!-- Register panel Modal -->
     <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0 0 10px black, 0px 0px 25px black;" class="container-fluid py-4">
         <div class="row align-content-center w-50 m-auto">
@@ -240,7 +281,7 @@
                 <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo"></a>
             </div>
             <div class="col-md-3 text-white"><br>
-                <h4>CONTACT US</h4>
+                <h4 style="color: wheat;">CONTACT US</h4>
                 <hr class="bg-warning w-25">
                 <p><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
                 <p> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
