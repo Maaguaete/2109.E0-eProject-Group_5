@@ -17,6 +17,26 @@
         .packageContent {
             display: none;
         }
+        
+        #package1:hover li {
+            box-shadow: 0 0 10px orangered;
+        }
+        
+        #package2:hover li {
+            box-shadow: 0 0 10px orange;
+        }
+        
+        #package3:hover li {
+            box-shadow: 0 0 10px rgb(255, 193, 16);
+        }
+        
+        #package4:hover li:not(.notthis) {
+            box-shadow: 0 0 10px rgb(40, 167, 69);
+        }
+        
+        #package5:hover li {
+            box-shadow: 0 0 10px #EC96A4;
+        }
     </style>
 </head>
 
@@ -187,8 +207,8 @@
                         <li class="p-3 text-justify">INCLUSIONS <br> - Unlimited group training <br> - 1 x private training session (1:1) per week. (45 minutes)<br> - 3 x personalised nutrition consults− Unlimited access to all workouts<br> - Initial consult and monthly Fitness check
                             in appointments <br><u class="text-success">Bonus:</u>
                             <ul class="list-unstyled text-left">
-                                <li>- Discount 15%</li>
-                                <li>- A Free Massage Voucher at Weekend</li>
+                                <li class="notthis">- Discount 15%</li>
+                                <li class="notthis">- A Free Massage Voucher at Weekend</li>
                             </ul>
                         </li>
                     </div>
@@ -230,7 +250,10 @@
             $("#package5").click(function() {
                 $("#packageContent5").toggle(500);
             });
-            $("#package1, #package2, #package3, #package4, #package5").css("cursor", "pointer");
+            $("#package1, #package2, #package3, #package4, #package5").css({
+                "cursor": "pointer"
+            });
+
         });
     </script>
     <!-- Register panel Modal -->
