@@ -6,24 +6,26 @@
     </div>
 </div>
 <script>
-    const left = document.querySelector(".left");
-    const right = document.querySelector(".right");
-    const bannerGroupX = document.querySelector(".bannerGroupX");
+    $(document).ready(function() {
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        const bannerGroupX = document.querySelector(".bannerGroupX");
 
-    left.addEventListener("mouseenter", () => {
-        bannerGroupX.classList.add("hover-left");
-    });
+        left.addEventListener("mouseenter", () => {
+            bannerGroupX.classList.add("hover-left");
+        });
 
-    left.addEventListener("mouseleave", () => {
-        bannerGroupX.classList.remove("hover-left");
-    });
+        left.addEventListener("mouseleave", () => {
+            bannerGroupX.classList.remove("hover-left");
+        });
 
-    right.addEventListener("mouseenter", () => {
-        bannerGroupX.classList.add("hover-right");
-    });
+        right.addEventListener("mouseenter", () => {
+            bannerGroupX.classList.add("hover-right");
+        });
 
-    right.addEventListener("mouseleave", () => {
-        bannerGroupX.classList.remove("hover-right");
+        right.addEventListener("mouseleave", () => {
+            bannerGroupX.classList.remove("hover-right");
+        });
     });
 </script>
 <!-- End Group-X Banner -->
