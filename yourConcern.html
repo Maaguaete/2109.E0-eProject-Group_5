@@ -44,100 +44,44 @@
         textarea:focus~label,
         input:valid~label,
         textarea:valid~label {
-            font-size: 0.75em;
+            font-size: 0.68em;
             color: rgb(255, 193, 16);
-            top: -10px;
+            top: -20px;
+            left: -30px;
             -webkit-transition: all 0.225s ease;
             transition: all 0.225s ease;
         }
         
-        .styled-input {
-            float: left;
-            width: 293px;
-            margin: 1rem 0;
+        input:valid,
+        textarea:valid {
+            border: lime 1px solid;
+        }
+        
+        input:invalid,
+        textarea:invalid {
+            border: red 1px solid;
+        }
+        
+        .enquireInput {
+            margin: 0.8rem 0;
             position: relative;
-            border-radius: 4px;
         }
         
-        @media only screen and (max-width: 768px) {
-            .styled-input {
-                width: 100%;
-            }
-        }
-        
-        .styled-input label {
+        .enquireInput label {
             color: #999;
-            padding: 1.3rem 30px 1rem 30px;
+            font-size: 0.8em;
+            font-weight: normal;
             position: absolute;
-            top: 10px;
-            left: 0;
+            top: 5px;
+            left: -20px;
             -webkit-transition: all 0.25s ease;
             transition: all 0.25s ease;
             pointer-events: none;
         }
         
-        .styled-input.wide {
-            width: 650px;
-            max-width: 100%;
-        }
-        
-        input,
-        textarea {
-            padding: 30px;
-            border: 0;
-            width: 100%;
-            font-size: 1.3rem;
-            background-color: #2d2d2d;
-            color: white;
-            border-radius: 4px;
-        }
-        
         input:focus,
         textarea:focus {
             outline: 0;
-        }
-        
-        input:focus~span,
-        textarea:focus~span {
-            width: 100%;
-            -webkit-transition: all 0.075s ease;
-            transition: all 0.075s ease;
-        }
-        
-        textarea {
-            width: 100%;
-            min-height: 15em;
-        }
-        
-        .input-container {
-            width: 650px;
-            max-width: 100%;
-            margin: 20px auto 25px auto;
-        }
-        
-        .button {
-            padding: 7px 35px;
-            border-radius: 40px;
-            width: 100%;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-            -webkit-transition: all 300ms ease;
-            transition: all 300ms ease;
-        }
-        
-        .button:hover {
-            transform: translateY(1px);
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
-        }
-        
-        @media (max-width: 768px) {
-            .submit-btn {
-                width: 100%;
-                float: none;
-                text-align: center;
-            }
         }
     </style>
 </head>
@@ -224,35 +168,46 @@
                 <h2 id="enquire" class="btn btn-outline-danger w-100 text-white font-weight-bold">
                     <span style="color: rgb(255, 193, 16);">ENQUIRE NOW</span> IF ANY FURTHER CONCERNS
                 </h2>
-                <form id="enquireForm" action="" class="container answer text-warning">
-                    <h3 class="font-weight-lighter font-italic pt-3">We'd love to hear from you!</h3>
-                    <div class="row input-container">
-                        <div class="col-xs-12">
-                            <div class="styled-input wide">
-                                <input id="name" type="text" required/>
-                                <label>Name</label>
+                <form id="enquireForm" action="" class="answer text-warning">
+                    <h5 class="font-weight-lighter font-italic pt-3">We'd love to hear from you!
+                        <hr class="bg-warning mx-auto" style="width: 25px;">
+                    </h5>
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                            <div class="enquireInput">
+                                <input id="name" type="text" class="form-control" required/>
+                                <label>Your Full Name</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="styled-input">
-                                <input id="email" type="text" required />
+                        <div class="col-md-6">
+                            <div class="enquireInput">
+                                <input id="phone" type="tel" class="form-control" required minlength="10" maxlength="12" pattern="[0-9]{}" />
+                                <label>Phone Number (10-12 numbers)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="enquireInput ">
+                                <input id="email " type="email " class="form-control " required />
                                 <label>Email</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="styled-input" style="float:right;">
-                                <input id="phone" type="tel" required />
-                                <label>Phone Number</label>
-                            </div>
+                        <div class="col-md-6 ">
+                            <select name="cars " id="cars " class="enquireInput form-control ">
+                                <option value=" ">You are available at ...</option>
+                                <option value="Morning ">Morning</option>
+                                <option value="Afternoon ">Afternoon</option>
+                                <option value="Evening ">Evening</option>
+                                <option value="Anytime ">Anytime</option>
+                              </select>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="styled-input wide">
-                                <textarea id="message" required></textarea>
+                        <div class="col-12 ">
+                            <div class="enquireInput ">
+                                <textarea id="message " class="form-control " required></textarea>
                                 <label>Message</label>
                             </div>
                         </div>
-                        <div class="text-center  m-auto w-100">
-                            <button class="button text-white btn btn-outline-primary" type="submit">SEND <i class="fa"> &#xf1d9;</i></button>
+                        <div class="text-center col-12 ">
+                            <button class="btn btn-outline-primary w-100 d-block " type="submit ">SEND <i class="fa "> &#xf1d9;</i></button>
                         </div>
                     </div>
                 </form>
@@ -263,96 +218,96 @@
     <script>
         $(document).ready(function() {
             // Toggle answer function
-            $("#question1").click(function() {
-                $("#answer1").toggle(500);
-                $("#question1").toggleClass("btn-danger text-warning");
+            $("#question1 ").click(function() {
+                $("#answer1 ").toggle(500);
+                $("#question1 ").toggleClass("btn-danger text-warning ");
             });
-            $("#question2").click(function() {
-                $("#answer2").toggle(500);
-                $("#question2").toggleClass("btn-danger text-warning");
+            $("#question2 ").click(function() {
+                $("#answer2 ").toggle(500);
+                $("#question2 ").toggleClass("btn-danger text-warning ");
             });
-            $("#question3").click(function() {
-                $("#answer3").toggle(500);
-                $("#question3").toggleClass("btn-danger text-warning");
+            $("#question3 ").click(function() {
+                $("#answer3 ").toggle(500);
+                $("#question3 ").toggleClass("btn-danger text-warning ");
             });
-            $("#question4").click(function() {
-                $("#answer4").toggle(500);
-                $("#question4").toggleClass("btn-danger text-warning");
+            $("#question4 ").click(function() {
+                $("#answer4 ").toggle(500);
+                $("#question4 ").toggleClass("btn-danger text-warning ");
             });
-            $("#question5").click(function() {
-                $("#answer5").toggle(500);
-                $("#question5").toggleClass("btn-danger text-warning");
+            $("#question5 ").click(function() {
+                $("#answer5 ").toggle(500);
+                $("#question5 ").toggleClass("btn-danger text-warning ");
             });
-            $("#question6").click(function() {
-                $("#answer6").toggle(500);
-                $("#question6").toggleClass("btn-danger text-warning");
+            $("#question6 ").click(function() {
+                $("#answer6 ").toggle(500);
+                $("#question6 ").toggleClass("btn-danger text-warning ");
             });
-            $("#enquire").click(function() {
-                $("#enquireForm").toggle(500);
-                $("#enquire").toggleClass("btn-danger text-warning");
+            $("#enquire ").click(function() {
+                $("#enquireForm ").toggle(500);
+                $("#enquire ").toggleClass("btn-danger text-warning ");
             });
 
-            $("form").submit(function() {
-                var name = $("#name").val();
-                var email = $("#email").val();
-                var phone = $("#phone").val();
-                var message = $("#message").val();
+            $("form ").submit(function() {
+                var name = $("#name ").val();
+                var email = $("#email ").val();
+                var phone = $("#phone ").val();
+                var message = $("#message ").val();
 
                 if (name == '') {
-                    alert("The name cannot left blank");
+                    alert("The name cannot left blank ");
                     return false;
                 }
                 if (email == '') {
-                    alert("The email cannot left blank");
+                    alert("The email cannot left blank ");
                     return false;
                 }
                 if (phone == '') {
-                    alert("The phone cannot left blank");
+                    alert("The phone cannot left blank ");
                     return false;
                 }
                 if (message == '') {
-                    alert("The message cannot left blank");
+                    alert("The message cannot left blank ");
                     return false;
                 }
-                alert("\nYour enquiry form has been sent successfully!\nWe will contact you as soon as possible!");
+                alert("\nYour enquiry form has been sent successfully!\nWe will contact you as soon as possible! ");
                 return true;
             });
         });
     </script>
     <!-- Register panel Modal -->
-    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0 0 10px black, 0px 0px 25px black;" class="container-fluid py-4">
-        <div class="row align-content-center w-50 m-auto">
-            <div class="col-md-9 text-left h3">
+    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0 0 10px black, 0px 0px 25px black; " class="container-fluid py-4 ">
+        <div class="row align-content-center w-50 m-auto ">
+            <div class="col-md-9 text-left h3 ">
                 REGISTER NOW
-                <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
+                <h5>For Experiencing <span class="text-danger font-weight-bold h3 "> 3-Days Trial-Pass </span></h5>
             </div>
-            <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
+            <button type="button " class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal " data-target="#staticBackdrop ">
     REGISTER</button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-secondary text-warning">
-                    <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
-                        <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal fade " id="staticBackdrop " data-backdrop="static " data-keyboard="false " tabindex="-1 " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-secondary text-warning ">
+                    <div class="modal-header bg-dark bg-image " style="background-image: url( 'images/logo.png');background-size: contain; background-repeat: no-repeat; ">
+                        <button type="button " class="close text-warning " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
                     </div>
-                    <form action="" method="get">
-                        <div class="modal-body row">
-                            <picture class="col"><img src="images/home/sport.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
-                            <div class="col">
+                    <form action=" " method="get ">
+                        <div class="modal-body row ">
+                            <picture class="col "><img src="images/home/sport.jpg " class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded " alt=" "></picture>
+                            <div class="col ">
                                 <h5>Bring your friends to extend a full-week</h5>
                                 <hr>
-                                <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
+                                <input class="form-control " type="text " class="name " id="name " placeholder="Your Name " required autocomplete="off " minlength="6 " maxlength="30 ">
                                 <br>
-                                <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
+                                <input type="tel " class="form-control " autocomplete="off " name="telNo " id="telNo " placeholder="Your Phone Number " minlength="9 " maxlength="12 " pattern="[0-9]{} " required>
                                 <br>
-                                <input type="email" class="form-control" id="email" placeholder="Your email">
+                                <input type="email " class="form-control " id="email " placeholder="Your email ">
                                 <br>
-                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                                <input type="text " class="form-control " id="address " placeholder="Your Address ">
                             </div>
                         </div>
-                        <div class="modal-footer bg-dark">
-                            <button type="submit" class="btn btn-danger">REGISTER</button>
+                        <div class="modal-footer bg-dark ">
+                            <button type="submit " class="btn btn-danger ">REGISTER</button>
                         </div>
                     </form>
                 </div>
@@ -364,50 +319,50 @@
     <footer class="mt-5 border-0 " style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24); ">
         <div class="row m-auto ">
             <div class="col-md-3 ">
-                <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo"></a>
+                <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo "></a>
             </div>
-            <div class="col-md-3 text-white"><br>
-                <h4 style="color: wheat;">CONTACT US</h4>
-                <hr class="bg-warning w-25">
+            <div class="col-md-3 text-white "><br>
+                <h4 style="color: wheat; ">CONTACT US</h4>
+                <hr class="bg-warning w-25 ">
                 <p><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
                 <p> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
                 <p><i class="fas fa-envelope "></i> Email: <a href="mailto:info@pfg.com " class="text-warning ">prime@fitness.com</a></p>
-                <p><i class="fa"> &#xf1d9;</i> <a href="yourConcern.html" class="btn btn-outline-warning"> Enquire if any Concerns</a></p>
+                <p><i class="fa "> &#xf1d9;</i> <a href="yourConcern.html " class="btn btn-outline-warning "> Enquire if any Concerns</a></p>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>JUMP TO</h4>
-                <hr class="bg-warning w-25">
-                <ul class="row list-unstyled text-left jumpto">
-                    <div class="col">
-                        <li><a class="nav-link" href="index.html">Homepage</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li><a class="nav-link" href="equipment.html">Equipment</a></li>
+                <hr class="bg-warning w-25 ">
+                <ul class="row list-unstyled text-left jumpto ">
+                    <div class="col ">
+                        <li><a class="nav-link " href="index.html ">Homepage</a></li>
+                        <li><a class="nav-link " href="services.html ">Services</a></li>
+                        <li><a class="nav-link " href="gallery.html ">Gallery</a></li>
+                        <li><a class="nav-link " href="equipment.html ">Equipment</a></li>
                     </div>
-                    <div class="col">
-                        <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                        <li><a class="nav-link" href="#logo">Your Concerns</a></li>
-                        <li><a class="nav-link" href="membership.html">Membership</a></li>
+                    <div class="col ">
+                        <li><a class="nav-link " href="aboutUs.html ">About Us</a></li>
+                        <li><a class="nav-link " href="#logo ">Your Concerns</a></li>
+                        <li><a class="nav-link " href="membership.html ">Membership</a></li>
                     </div>
                 </ul>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>LOCATION</h4>
-                <hr class="bg-warning w-25">
+                <hr class="bg-warning w-25 ">
                 <iframe class="rounded-lg " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1592309658443!5m2!1svi!2s "
-                    width="240 " height="200 " style="border:0;" allowfullscreen=" "></iframe>
+                    width="240 " height="200 " style="border:0; " allowfullscreen=" "></iframe>
             </div>
         </div>
         <hr class="bg-warning d-block w-25 m-auto ">
-        <div class="d-block text-center mt-3">
+        <div class="d-block text-center mt-3 ">
             <div class="d-inline-flex h3 ">
-                <a href="# "> <i class="fa fa-facebook"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-twitter"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-instagram"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-youtube-play"></i> </a> &ThickSpace;
-                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5"> <i class="fa fa-github-square"></i> </a>
+                <a href="# "> <i class="fa fa-facebook "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-twitter "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-instagram "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-youtube-play "></i> </a> &ThickSpace;
+                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5 "> <i class="fa fa-github-square "></i> </a>
             </div>
-            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/" class="text-warning">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
+            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/ " class="text-warning ">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
         </div>
     </footer>
     <!-- Footer -->
