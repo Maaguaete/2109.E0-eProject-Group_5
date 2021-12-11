@@ -57,11 +57,6 @@
             border: lime 1px solid;
         }
         
-        input:invalid,
-        textarea:invalid {
-            border: red 1px solid;
-        }
-        
         .enquireInput {
             margin: 0.8rem 0;
             position: relative;
@@ -182,13 +177,13 @@
                         <div class="col-md-6">
                             <div class="enquireInput">
                                 <input id="phone" type="tel" class="form-control" required minlength="10" maxlength="12" pattern="[0-9]{}" />
-                                <label>Phone Number (10-12 numbers)</label>
+                                <label>Your Phone Number (10-12 numbers)</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="enquireInput ">
                                 <input id="email " type="email " class="form-control " required />
-                                <label>Email</label>
+                                <label>Your Email</label>
                             </div>
                         </div>
                         <div class="col-md-6 ">
@@ -202,7 +197,7 @@
                         </div>
                         <div class="col-12 ">
                             <div class="enquireInput ">
-                                <textarea id="message " class="form-control " required></textarea>
+                                <textarea id="message " class="form-control" rows="5" required></textarea>
                                 <label>Message</label>
                             </div>
                         </div>

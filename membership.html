@@ -33,23 +33,23 @@
         }
         
         #package1:hover {
-            box-shadow: 0 0 15px orangered;
+            box-shadow: 0 0 10px orangered;
         }
         
         #package2:hover {
-            box-shadow: 0 0 15px orange;
+            box-shadow: 0 0 10px orange;
         }
         
         #package3:hover {
-            box-shadow: 0 0 15px rgb(255, 193, 16);
+            box-shadow: 0 0 10px rgb(255, 193, 16);
         }
         
         #package4:hover {
-            box-shadow: 0 0 15px rgb(40, 167, 69);
+            box-shadow: 0 0 10px rgb(40, 167, 69);
         }
         
         #package5:hover {
-            box-shadow: 0 0 15px #EC96A4;
+            box-shadow: 0 0 10px #EC96A4;
         }
     </style>
 </head>
@@ -163,18 +163,8 @@
         </div>
         <!-- Pricing Package -->
         <div class="mx-auto row container-fluid">
-            <h2 class="text-warning my-5 d-block w-100">SERVICE PACKAGES & SPECIAL OFFERS</h2>
-
-            <div class="col-lg-4 col-md-6">
-                <ul id="package0" class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;background-position-x: left;">
-                    <li class="m-0 py-5 rounded text-right p-3">
-                        <button class="btn btn-outline-primary text-white font-weight-light my-2"> BE A MEMBER NOW </button>
-                    </li>
-                    <li class="p-3 text-right align-text-top">
-                        <h1 class="btn btn-outline-warning mt-0 mb-3"> ENQUIRE IF ANY CONCERNS </h1>
-                    </li>
-                </ul>
-            </div>
+            <h2 class="text-warning mt-5 mb-4 d-block w-100">SERVICE PACKAGES & SPECIAL OFFERS</h2>
+            <!-- Multivisit package -->
             <div class="col-lg-4 col-md-6">
                 <ul class="list-unstyled rounded" id="package1" style="border: orangered 1px solid;">
                     <li class="h4 m-0 py-5 rounded-top font-weight-light" style="color:orangered;">MULTIVISIT<br>10 OR 20 VISIT PASS</li>
@@ -185,6 +175,7 @@
                     </div>
                 </ul>
             </div>
+            <!-- Power package -->
             <div class="col-lg-4 col-md-6">
                 <ul class="list-unstyled rounded" id="package2" style="border: orange 1px solid">
                     <li class="h4 m-0 py-5 rounded-top font-weight-light" style="color: orange;">POWER <br> $44.90/WEEK</li>
@@ -195,6 +186,7 @@
                     </div>
                 </ul>
             </div>
+            <!-- Premium package -->
             <div class="col-lg-4 col-md-6">
                 <ul class="list-unstyled border border-warning rounded" id="package3">
                     <li class="h4 m-0 py-5 rounded-top text-warning font-weight-light">PREMIUM <br> $79.90 PER WEEK</li>
@@ -205,6 +197,24 @@
                     </div>
                 </ul>
             </div>
+            <!-- Salon & Spa -->
+            <div class="col-lg-4 col-md-6">
+                <ul class="list-unstyled rounded" style="border: #EC96A4 1px solid" id="package5">
+                    <li class="h4 m-0 py-5 rounded-top font-weight-light" style="color:#EC96A4;">
+                        <span class="float-left w-75 pl-lg-4 ml-lg-4">&ThickSpace;SALON</span><br><span class="text-right w-50">&ThickSpace;&ThickSpace;&&ThickSpace;SPA</span>
+                    </li>
+                    <li class="border-top p-3 font-weight-bold"> ONE-TIME INITIATION FEE - $25<br>MONTHLY MEMBERSHIP FEE - $99</li>
+                    <div class="packageContent" id="packageContent5">
+                        <li class="border-top p-3 text-justify">Love our spa and services? Join our Membership program and take some time for yourself each month at a substantial discount. Members get to choose one treatment “benefit” each month, can share the membership within the household
+                            and get additional discounts and perks. Does this membership sound right for you?</li>
+                        <li class="border-top p-3 text-justify">
+                            <h5 style="text-align: center;">CHOOSE A TREATMENT EACH MONTH</h5> - 60 minute Ultimoot Massage <br> - 60 minute Deep Tissue Massage <br> - 60 minute Sports Knot Massage <br> - 60 minute Prenatal Massage <br> - 60 minute Ultimoot Facial <br> - 60 minute Dapper
+                            Facial
+                            <br> - Cleanse and Peel <br> - Shellac manicure OR Coop+ Manicure AND Coop+ Pedicure <br><u class="text-primary">Bonus:</u><br>- Gift Vouchers</li>
+                    </div>
+                </ul>
+            </div>
+            <!-- Platinum package -->
             <div class="col-lg-4 col-md-6">
                 <ul class="list-unstyled border border-success rounded" id="package4">
                     <li class="h4 m-0 py-5 rounded-top text-success font-weight-light">PLATINUM PACKAGE <br> $140 PER WEEK</li>
@@ -228,27 +238,23 @@
                     </div>
                 </ul>
             </div>
+            <!-- Be a member button -->
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled rounded" style="border: #EC96A4 1px solid" id="package5">
-                    <li class="h4 m-0 py-5 rounded-top font-weight-light" style="color:#EC96A4;">
-                        <span class="float-left w-75 pl-lg-4 ml-lg-4">&ThickSpace;SALON</span><br><span class="text-right w-50">&ThickSpace;&ThickSpace;&&ThickSpace;SPA</span>
+                <ul id="package0" class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;background-position-x: left;">
+                    <li class="m-0 pt-4 rounded text-left pl-3 ">
+                        <button class="btn btn-outline-primary text-white font-weight-light mt-5 mb-0"> BE A MEMBER NOW </button>
                     </li>
-                    <li class="border-top p-3 font-weight-bold"> ONE-TIME INITIATION FEE - $25<br>MONTHLY MEMBERSHIP FEE - $99</li>
-                    <div class="packageContent" id="packageContent5">
-                        <li class="border-top p-3 text-justify">Love our spa and services? Join our Membership program and take some time for yourself each month at a substantial discount. Members get to choose one treatment “benefit” each month, can share the membership within the household
-                            and get additional discounts and perks. Does this membership sound right for you?</li>
-                        <li class="border-top p-3 text-justify">
-                            <h5 style="text-align: center;">CHOOSE A TREATMENT EACH MONTH</h5> - 60 minute Ultimoot Massage <br> - 60 minute Deep Tissue Massage <br> - 60 minute Sports Knot Massage <br> - 60 minute Prenatal Massage <br> - 60 minute Ultimoot Facial <br> - 60 minute Dapper
-                            Facial
-                            <br> - Cleanse and Peel <br> - Shellac manicure OR Coop+ Manicure AND Coop+ Pedicure <br><u class="text-primary">Bonus:</u><br>- Gift Vouchers</li>
-                    </div>
+                    <li class="p-3 text-left">
+                        <h1 class="btn btn-outline-warning mt-1 mb-5"> ENQUIRE IF ANY CONCERNS </h1>
+                    </li>
                 </ul>
             </div>
         </div>
+        <!-- End Pricing Package -->
     </div>
     <script>
         $(document).ready(function() {
-            // Toggle answer function
+            // Toggle and scale the content package function
             $("#package1").click(function() {
                 $("#packageContent1").toggle(500);
             });
