@@ -19,23 +19,23 @@
         }
         
         #package1:hover li {
-            box-shadow: 0 0 10px orangered;
+            box-shadow: 0 0 15px orangered;
         }
         
         #package2:hover li {
-            box-shadow: 0 0 10px orange;
+            box-shadow: 0 0 15px orange;
         }
         
         #package3:hover li {
-            box-shadow: 0 0 10px rgb(255, 193, 16);
+            box-shadow: 0 0 15px rgb(255, 193, 16);
         }
         
         #package4:hover li:not(.notthis) {
-            box-shadow: 0 0 10px rgb(40, 167, 69);
+            box-shadow: 0 0 15px rgb(40, 167, 69);
         }
         
         #package5:hover li {
-            box-shadow: 0 0 10px #EC96A4;
+            box-shadow: 0 0 15px #EC96A4;
         }
     </style>
 </head>
@@ -152,7 +152,7 @@
             <h2 class="text-warning my-5 d-block w-100">SERVICE PACKAGES & SPECIAL OFFERS</h2>
 
             <div class="col-lg-4 col-md-6">
-                <ul class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;">
+                <ul id="package0" class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;">
                     <li class="m-0 py-5 rounded">
                         <h1 class="btn btn-primary font-weight-lighter my-2"> BE A MEMBER NOW </h1>
                     </li>
@@ -250,10 +250,18 @@
             $("#package5").click(function() {
                 $("#packageContent5").toggle(500);
             });
-            $("#package1, #package2, #package3, #package4, #package5").css({
-                "cursor": "pointer"
-            });
-
+            $("#package0,#package1,#package2, #package3, #package4, #package5").hover(function() {
+                    $(this).css({
+                        "transform": "scale(1.03)",
+                        "transition": "all 0.4s ease-in-out",
+                        "cursor": "pointer"
+                    });
+                },
+                function() {
+                    $(this).css({
+                        "transform": "scale(1)",
+                    });
+                });
         });
     </script>
     <!-- Register panel Modal -->
