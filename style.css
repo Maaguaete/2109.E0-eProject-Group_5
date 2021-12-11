@@ -72,6 +72,13 @@ footer div a:hover {
     color: rgb(255, 193, 16);
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+
 
 /* RESPONSIVE 
 Extra small devices (portrait phones, less than 576px) */
