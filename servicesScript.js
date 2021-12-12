@@ -81,6 +81,7 @@ app.controller("servicesCtrl", function($scope, $http) {
         $scope.discountPrice = $scope.packagePrice * $scope.length * $scope.discount
         $scope.totalCost = $scope.packagePrice * $scope.length - $scope.discountPrice;
     }
+
     app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
         $scope.scrollTo = function(id) {
             $location.hash(id);
