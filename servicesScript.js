@@ -73,7 +73,7 @@ app.controller("servicesCtrl", function($scope, $http) {
             $scope.result = "Obese! It need to be considered! ";
         }
         alert("Your BMI is " + $scope.bmi + " " + $scope.result);
-        $('#BMI').addClass('d-inline', 500);
+        $('#BMI').addClass('d-inline');
     }
 
     $scope.packagePrice = 0;
@@ -83,23 +83,28 @@ app.controller("servicesCtrl", function($scope, $http) {
     $scope.totalCost = 0;
     $scope.calCost = function() {
 
-        switch ($scope.Package) {
+        switch ($scope.packages) {
             case "platinum":
                 $scope.packagePrice = 140;
+                $scope.perweek = "/week";
                 break;
             case "premium":
                 $scope.packagePrice = 79.9;
+                $scope.perweek = "/week";
                 break;
             case "power":
                 $scope.packagePrice = 49.9;
+                $scope.perweek = "/week";
                 break;
             case "multivisit20":
                 $scope.packagePrice = 440;
                 $scope.duration = 1;
+                $scope.perweek = "";
                 break;
             case "multivisit10":
                 $scope.packagePrice = 259;
                 $scope.duration = 1;
+                $scope.perweek = "";
                 break;
             default:
                 $scope.packagePrice = 0;
@@ -107,7 +112,7 @@ app.controller("servicesCtrl", function($scope, $http) {
         }
         $scope.discountPrice = $scope.packagePrice * $scope.duration * $scope.discountRate;
         $scope.totalCost = $scope.packagePrice * $scope.duration - $scope.discountPrice;
-        $('#beMember').addClass("d-block", 1000);
+        $('#beMember').addClass("d-block");
     }
 
     app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
