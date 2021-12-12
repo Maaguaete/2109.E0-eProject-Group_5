@@ -48,17 +48,49 @@ app.controller("servicesCtrl", function($scope, $http) {
         }
         alert("Your BMI is " + $scope.bmi + " " + $scope.result);
     }
-});
 
-app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
-    $scope.scrollTo = function(id) {
-        $location.hash(id);
-        $anchorScroll();
+    $scope.packagePrice = 0;
+    $scope.discount = 0;
+    $scope.length = 0;
+    $scope.discountPrice = 0;
+    $scope.totalCost = 0;
+    $scope.calCost = function() {
+
+        switch ($scope.Package) {
+            case "platinum":
+                $scope.packagePrice = 140;
+                break;
+            case "premium":
+                $scope.packagePrice = 79.9;
+                break;
+            case "power":
+                $scope.packagePrice = 49.9;
+                break;
+            case "multivisit20":
+                $scope.packagePrice = 440;
+                $scope.length = 1;
+                break;
+            case "multivisit10":
+                $scope.packagePrice = 259;
+                $scope.length = 1;
+                break;
+            default:
+                $scope.packagePrice = 0;
+                break;
+        }
+        $scope.discountPrice = $scope.packagePrice * $scope.length * $scope.discount
+        $scope.totalCost = $scope.packagePrice * $scope.length - $scope.discountPrice;
     }
-});
-app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
-    $scope.scrollTo = function(id) {
-        $location.hash(id);
-        $anchorScroll();
-    }
+    app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
+        $scope.scrollTo = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+    });
+    app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
+        $scope.scrollTo = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+    });
 });
