@@ -115,13 +115,13 @@
             </div>
             <form class="form-group mr-auto p-md-3 lead">
                 <div>
-                    <label for="class">Package:</label><i class="float-right text-success">{{packagePrice|currency}}/week</i>
-                    <select ng-model="Package" class="form-control" id="myPackage">
-                    <option value="platinum"><span class="text-success h2"> Platinum</span></option>
-                    <option value="premium">Premium</option>
-                    <option value="power">Power</option>
-                    <option value="multivisit20">Multivisit - 20 Session</option>
-                    <option value="multivisit10">Multivisit - 10 Session</option>
+                    <label for="class">Package:</label><i class="float-right text-success">{{packagePrice|currency}}<span ng-bind="perweek"></span></i>
+                    <select ng-model="packages" class="form-control" id="myPackage">
+                        <option value="platinum"><span class="text-success h2"> Platinum</span></option>
+                        <option value="premium">Premium</option>
+                        <option value="power">Power</option>
+                        <option value="multivisit20">Multivisit - 20 Session</option>
+                        <option value="multivisit10">Multivisit - 10 Session</option>
                   </select>
                 </div>
                 <div>
