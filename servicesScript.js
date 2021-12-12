@@ -73,6 +73,7 @@ app.controller("servicesCtrl", function($scope, $http) {
             $scope.result = "Obese! It need to be considered! ";
         }
         alert("Your BMI is " + $scope.bmi + " " + $scope.result);
+        $('#BMI').addClass('d-inline', 500);
     }
 
     $scope.packagePrice = 0;
@@ -106,7 +107,7 @@ app.controller("servicesCtrl", function($scope, $http) {
         }
         $scope.discountPrice = $scope.packagePrice * $scope.duration * $scope.discountRate;
         $scope.totalCost = $scope.packagePrice * $scope.duration - $scope.discountPrice;
-        $('#beMember').addClass("d-block");
+        $('#beMember').addClass("d-block", 1000);
     }
 
     app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {

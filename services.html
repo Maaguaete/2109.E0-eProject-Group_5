@@ -105,11 +105,13 @@
                 <br>
                 <button class="form-control btn btn-outline-info" type="button" ng-click="calBMI()">Calculate</button>
                 <h4 class="mt-2">Result:</h4>
-                <b>Your BMI</b>
-                <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
+
+                <div id="BMI" class="d-none">
+                    <b>Your BMI</b>
+                    <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong></div>
             </form><br>
             <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
-                <div class="h4 pt-2 font-weight-lighter text-warning">CHECK YOUR PAYMENT</div>
+                <div class="h4 pt-2 font-weight-lighter">CHECK YOUR PAYMENT</div>
             </div>
             <form class="form-group mr-auto p-md-3 lead">
                 <div>
@@ -145,15 +147,13 @@
                         <option value="0.15">15%</option>
                 </select></div>
                 <br>
-                <button class="form-control btn btn-outline-info" type="button" ng-click="calCost()">Calculate</button>
-                <br>
-                <div class="pt-3">
-                    <h4>Result:</h4>
+                <button class="form-control btn btn-outline-info mb-2" type="button" ng-click="calCost()">Calculate</button>
+                <h4>Result:</h4>
+                <div id="beMember" class="pt-2 d-none">
                     <b>Total Cost:</b>
                     <span class="btn-outline-success col"><b>{{totalCost|currency}}</b></span>
+                    <a class="form-control mt-2 btn btn-outline-info" href="membership.html" type="button">Be A Member Now</a>
                 </div>
-                <br>
-                <a id="beMember" class="form-control btn btn-outline-info d-none" href="membership.html" type="button">Be A Member Now</a>
             </form>
         </aside>
         <!-- End of Right-sidebar -->
