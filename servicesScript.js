@@ -1,3 +1,29 @@
+$(document).ready(function() {
+    $('#myPackage').change(function() {
+        let myPackage = $('#myPackage').val();
+        if (myPackage == "multivisit20" || myPackage == "multivisit10") {
+            // $('#duration').empty();
+            // $('#duration').prop('disabled', true);
+            $('#week').css('display', 'none');
+        } else {
+            // $('#duration').prop('disabled', false);
+            $('#week').css('display', 'block');
+            // $('#duration').empty();
+            // setDuration();
+        }
+    });
+
+});
+// function setDuration() {
+//     for (var i = 1; i <= 50; i++) {
+//         if (i == 1) {
+//             $("#duration").append("<option value=" + i + ">" + i + " week</option>");
+//         } else {
+//             $("#duration").append("<option value=" + i + ">" + i + " weeks</option>");
+//         }
+//     }
+// }
+
 var app = angular.module("servicesApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
@@ -50,8 +76,8 @@ app.controller("servicesCtrl", function($scope, $http) {
     }
 
     $scope.packagePrice = 0;
-    $scope.discount = 0;
-    $scope.length = 0;
+    $scope.discountRate = 0;
+    $scope.duration = 0;
     $scope.discountPrice = 0;
     $scope.totalCost = 0;
     $scope.calCost = function() {
@@ -68,18 +94,19 @@ app.controller("servicesCtrl", function($scope, $http) {
                 break;
             case "multivisit20":
                 $scope.packagePrice = 440;
-                $scope.length = 1;
+                $scope.duration = 1;
                 break;
             case "multivisit10":
                 $scope.packagePrice = 259;
-                $scope.length = 1;
+                $scope.duration = 1;
                 break;
             default:
                 $scope.packagePrice = 0;
                 break;
         }
-        $scope.discountPrice = $scope.packagePrice * $scope.length * $scope.discount
-        $scope.totalCost = $scope.packagePrice * $scope.length - $scope.discountPrice;
+        $scope.discountPrice = $scope.packagePrice * $scope.duration * $scope.discountRate;
+        $scope.totalCost = $scope.packagePrice * $scope.duration - $scope.discountPrice;
+        $('#beMember').addClass("d-block");
     }
 
     app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {

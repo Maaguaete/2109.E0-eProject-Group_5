@@ -109,12 +109,12 @@
                 <span class="btn-outline-info col"><b>{{bmi|number:2}}</b></span>kg/<sub><b>cm</b><sup>2</sup></sub><br> <strong>{{result}}</strong>
             </form><br>
             <div class="d-block btn btn-outline-warning border-right-0 border-left-0">
-                <div class="h4 pt-2 font-weight-lighter text-success">CHECK YOUR PAYMENT</div>
+                <div class="h4 pt-2 font-weight-lighter text-warning">CHECK YOUR PAYMENT</div>
             </div>
             <form class="form-group mr-auto p-md-3 lead">
                 <div>
-                    <label for="class">Package:</label><i class="float-right text-success">{{packagePrice|currency}}</i>
-                    <select ng-model="Package" class="form-control" id="myPackage" required>
+                    <label for="class">Package:</label><i class="float-right text-success">{{packagePrice|currency}}/week</i>
+                    <select ng-model="Package" class="form-control" id="myPackage">
                     <option value="platinum"><span class="text-success h2"> Platinum</span></option>
                     <option value="premium">Premium</option>
                     <option value="power">Power</option>
@@ -123,8 +123,8 @@
                   </select>
                 </div>
                 <div>
-                    <label for="duration">Duration:</label><span id="week" class="float-right text-success" ng-init="length=0">{{length}} week(s)</span>
-                    <select ng-model="length" class="form-control" id="duration" required>
+                    <label for="duration">Duration:</label><i id="week" class="float-right text-success">{{duration}} week(s)</i>
+                    <select ng-model="duration" class="form-control">
                         <option value="">Intending to sweat ...</option>
                         <option value="1">1 week</option>
                         <option value="2">2 weeks</option>
@@ -136,47 +136,24 @@
                         <option value="96">Two years</option>
                     </select>
                 </div>
-                <script>
-                    $('#myPackage').change(function() {
-                        let myPackage = $('#myPackage').val();
-                        if (myPackage == "multivisit20" || myPackage == "multivisit10") {
-                            // $('#duration').empty();
-                            $('#duration').prop('disabled', true);
-                            $('#week').css('display', 'none');
-                        } else {
-                            $('#duration').prop('disabled', false);
-                            $('#week').css('display', 'block');
-                            // $('#duration').empty();
-                            // setDuration();
-                        }
-                    });
-
-                    // function setDuration() {
-                    //     for (var i = 1; i <= 50; i++) {
-                    //         if (i == 1) {
-                    //             $("#duration").append("<option value=" + i + ">" + i + " week</option>");
-                    //         } else {
-                    //             $("#duration").append("<option value=" + i + ">" + i + " weeks</option>");
-                    //         }
-                    //     }
-                    // }
-                </script>
                 <div>
-                    <label for="discount">Discount:</label><span ng-init="discountPrice=0" class="float-right text-danger">-{{discountPrice|currency}}</span>
-                    <select ng-model="discount" class="form-control" id="discount" required>
-                    <option selected value=" ">No discount</option>
-                    <option value="0.05">5%</option>
-                    <option value="0.1">10%</option>
-                    <option value="0.15">15%</option>
+                    <label for="discount">Discount:</label><i class="float-right text-danger">-{{discountPrice|currency}}</i>
+                    <select ng-model="discountRate" class="form-control" id="discount" ng-required="required">
+                        <option value="0">No Discount</option>
+                        <option value="0.05">5%</option>
+                        <option value="0.1">10%</option>
+                        <option value="0.15">15%</option>
                 </select></div>
                 <br>
-                <button class="form-control btn btn-outline-success" type="button" ng-click="calCost()">Calculate</button>
+                <button class="form-control btn btn-outline-info" type="button" ng-click="calCost()">Calculate</button>
                 <br>
                 <div class="pt-3">
                     <h4>Result:</h4>
                     <b>Total Cost:</b>
                     <span class="btn-outline-success col"><b>{{totalCost|currency}}</b></span>
                 </div>
+                <br>
+                <a id="beMember" class="form-control btn btn-outline-info d-none" href="membership.html" type="button">Be A Member Now</a>
             </form>
         </aside>
         <!-- End of Right-sidebar -->
