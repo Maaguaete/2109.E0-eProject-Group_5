@@ -156,8 +156,17 @@
             <div class="column groupx">
                 <img src="images/gallery/gallery-group3.jpg" alt="Groupx" style="width:100%">
             </div>
-            <div class="column spa w-100 text-center">
-                <iframe width="700" height="450" src="https://www.youtube.com/embed/7BGNAGahig8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="column groupx">
+                <img src="images/gallery/group0.jpg" alt="Groupx" style="width:100%">
+            </div>
+            <div class="column groupx">
+                <img src="images/gallery/group3.jpeg" alt="Groupx" style="width:100% ">
+            </div>
+            <div class="column groupx ">
+                <img src="images/gallery/group1.jpg " alt="Groupx " style="width:100% ">
+            </div>
+            <div class="column spa w-100 text-center ">
+                <iframe width="700 " height="450 " src="https://www.youtube.com/embed/7BGNAGahig8?autoplay=1&mute=1 " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
             </div>
             <!-- END GRID -->
         </div>
@@ -165,15 +174,15 @@
     </div>
 
     <script>
-        filterSelection("all")
+        filterSelection("all ")
 
         function filterSelection(c) {
             var x, i;
-            x = document.getElementsByClassName("column");
-            if (c == "all") c = "";
+            x = document.getElementsByClassName("column ");
+            if (c == "all ") c = " ";
             for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                w3RemoveClass(x[i], "show ");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show ");
             }
         }
 
@@ -200,50 +209,50 @@
             element.className = arr1.join(" ");
         }
         // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btnContainer = document.getElementById("myBtnContainer ");
+        var btns = btnContainer.getElementsByClassName("btn ");
         for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
+            btns[i].addEventListener("click ", function() {
+                var current = document.getElementsByClassName("active ");
+                current[0].className = current[0].className.replace(" active ", " ");
+                this.className += " active ";
             });
         }
     </script>
     <!-- Register panel Modal -->
-    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0px 0px 15px black;" class="container-fluid py-3">
-        <div class="row align-content-center w-50 m-auto">
-            <div class="col-md-9 text-left h3">
+    <div style="background-color: #ccc346b9; z-index: 299; box-shadow: 0px 0px 15px black; " class="container-fluid py-3 ">
+        <div class="row align-content-center w-50 m-auto ">
+            <div class="col-md-9 text-left h3 ">
                 REGISTER NOW
-                <h5>For Experiencing <span class="text-danger font-weight-bold h3"> 3-Days Trial-Pass </span></h5>
+                <h5>For Experiencing <span class="text-danger font-weight-bold h3 "> 3-Days Trial-Pass </span></h5>
             </div>
-            <button type="button" class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal" data-target="#staticBackdrop">
+            <button type="button " class="col-md-3 mb-4 mt-2 btn btn-danger font-weight-bold " data-toggle="modal " data-target="#staticBackdrop ">
     REGISTER</button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-secondary text-warning">
-                    <div class="modal-header bg-dark bg-image" style="background-image: url('images/logo.png');background-size: contain; background-repeat: no-repeat;">
-                        <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal fade " id="staticBackdrop " data-backdrop="static " data-keyboard="false " tabindex="-1 " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-secondary text-warning ">
+                    <div class="modal-header bg-dark bg-image " style="background-image: url( 'images/logo.png');background-size: contain; background-repeat: no-repeat; ">
+                        <button type="button " class="close text-warning " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
                     </div>
-                    <form action="" method="get">
-                        <div class="modal-body row">
-                            <picture class="col"><img src="images/home/sport.jpg" class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded" alt=""></picture>
-                            <div class="col">
+                    <form action=" " method="get ">
+                        <div class="modal-body row ">
+                            <picture class="col "><img src="images/home/sport.jpg " class="img-fluid img-thumbnail bg-transparent border-0 shadow rounded " alt=" "></picture>
+                            <div class="col ">
                                 <h5>Bring your friends to extend a full-week</h5>
                                 <hr>
-                                <input class="form-control" type="text" class="name" id="name" placeholder="Your Name" required autocomplete="off" minlength="6" maxlength="30">
+                                <input class="form-control " type="text " class="name " id="name " placeholder="Your Name " required autocomplete="off " minlength="6 " maxlength="30 ">
                                 <br>
-                                <input type="tel" class="form-control" autocomplete="off" name="telNo" id="telNo" placeholder="Your Phone Number" minlength="9" maxlength="12" pattern="[0-9]{}" required>
+                                <input type="tel " class="form-control " autocomplete="off " name="telNo " id="telNo " placeholder="Your Phone Number " minlength="9 " maxlength="12 " pattern="[0-9]{} " required>
                                 <br>
-                                <input type="email" class="form-control" id="email" placeholder="Your email">
+                                <input type="email " class="form-control " id="email " placeholder="Your email ">
                                 <br>
-                                <input type="text" class="form-control" id="address" placeholder="Your Address">
+                                <input type="text " class="form-control " id="address " placeholder="Your Address ">
                             </div>
                         </div>
-                        <div class="modal-footer bg-dark">
-                            <button type="submit" class="btn btn-danger">REGISTER</button>
+                        <div class="modal-footer bg-dark ">
+                            <button type="submit " class="btn btn-danger ">REGISTER</button>
                         </div>
                     </form>
                 </div>
@@ -254,55 +263,55 @@
     <footer class="mt-5 border-0 " style="background-color: rgb(24, 25, 26);box-shadow: 0px -2px 5px rgb(24, 25, 26), 0 0 10px rgb(24, 24, 24); ">
         <div class="row m-auto ">
             <div class="col-md-3 ">
-                <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo"></a>
+                <a href="index.html "><img class="img-fluid " src="images/logo.png " alt="footerlogo "></a>
             </div>
-            <div class="col-md-3 text-white"><br>
-                <h4 style="color: wheat;">CONTACT US</h4>
-                <hr class="bg-warning w-25">
+            <div class="col-md-3 text-white "><br>
+                <h4 style="color: wheat; ">CONTACT US</h4>
+                <hr class="bg-warning w-25 ">
                 <p><i class="fas fa-map-marker-alt "></i> 590 Cach Mang Thang Tam, District 3, HCM City </p>
                 <p> <i class="fa fa-phone "></i> Hotline: (028) 3 846 0846</p>
                 <p><i class="fas fa-envelope "></i> Email: <a href="mailto:info@pfg.com " class="text-warning ">prime@fitness.com</a></p>
-                <p><i class="fa"> &#xf1d9;</i> <a href="yourConcern.html" class="btn btn-outline-warning"> Enquire if any Concerns</a></p>
+                <p><i class="fa "> &#xf1d9;</i> <a href="yourConcern.html " class="btn btn-outline-warning "> Enquire if any Concerns</a></p>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>JUMP TO</h4>
-                <hr class="bg-warning w-25">
-                <ul class="row list-unstyled text-left jumpto">
-                    <div class="col">
-                        <li><a class="nav-link" href="index.html">Homepage</a></li>
-                        <li><a class="nav-link" href="services.html">Services</a></li>
-                        <li><a class="nav-link" href="#logo">Gallery</a></li>
-                        <li><a class="nav-link" href="equipment.html">Equipment</a></li>
+                <hr class="bg-warning w-25 ">
+                <ul class="row list-unstyled text-left jumpto ">
+                    <div class="col ">
+                        <li><a class="nav-link " href="index.html ">Homepage</a></li>
+                        <li><a class="nav-link " href="services.html ">Services</a></li>
+                        <li><a class="nav-link " href="#logo ">Gallery</a></li>
+                        <li><a class="nav-link " href="equipment.html ">Equipment</a></li>
                     </div>
-                    <div class="col">
-                        <li><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                        <li><a class="nav-link" href="yourConcern.html">Your Concerns</a></li>
-                        <li><a class="nav-link" href="membership.html">Membership</a></li>
+                    <div class="col ">
+                        <li><a class="nav-link " href="aboutUs.html ">About Us</a></li>
+                        <li><a class="nav-link " href="yourConcern.html ">Your Concerns</a></li>
+                        <li><a class="nav-link " href="membership.html ">Membership</a></li>
                     </div>
                 </ul>
             </div>
-            <div class="col-md-3"><br>
+            <div class="col-md-3 "><br>
                 <h4>LOCATION</h4>
-                <hr class="bg-warning w-25">
+                <hr class="bg-warning w-25 ">
                 <iframe class="rounded-lg " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1592309658443!5m2!1svi!2s "
-                    width="240 " height="200 " style="border:0;" allowfullscreen=" "></iframe>
+                    width="240 " height="200 " style="border:0; " allowfullscreen=" "></iframe>
             </div>
         </div>
         <hr class="bg-warning d-block w-25 m-auto ">
-        <div class="d-block text-center mt-3">
+        <div class="d-block text-center mt-3 ">
             <div class="d-inline-flex h3 ">
-                <a href="# "> <i class="fa fa-facebook"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-twitter"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-instagram"></i> </a>&ThickSpace;
-                <a href="# "> <i class="fa fa-youtube-play"></i> </a> &ThickSpace;
-                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5"> <i class="fa fa-github-square"></i> </a>
+                <a href="# "> <i class="fa fa-facebook "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-twitter "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-instagram "></i> </a>&ThickSpace;
+                <a href="# "> <i class="fa fa-youtube-play "></i> </a> &ThickSpace;
+                <a href="https://github.com/Maaguaete/2109.E0-eProject-Group_5 "> <i class="fa fa-github-square "></i> </a>
             </div>
-            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/" class="text-warning">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
+            <div>TERMS OF USE © 2021 | <a href="https://maaguaete.github.io/2109.E0-eProject-Group_5/ " class="text-warning ">www.PrimeFitness.com</a> | ALL RIGHTS RESERVED</div>
         </div>
     </footer>
-    <a id="back-to-top" href="#" class="btn btn-outline-light btn-md back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <a id="back-to-top " href="# " class="btn btn-outline-light btn-md back-to-top " role="button "><i class="fas fa-chevron-up "></i></a>
     <!-- Footer -->
 </body>
-<script src="main.js"></script>
+<script src="main.js "></script>
 
 </html>

@@ -31,21 +31,21 @@ app.config(function($routeProvider) {
     $routeProvider
 
         .when("/", {
-            templateUrl: "serCycling.html "
+            templateUrl: "services_subpages/serCycling.html "
         })
         .when("/serSwimming", {
-            templateUrl: "serSwimming.html ",
+            templateUrl: "services_subpages/serSwimming.html ",
             controller: "swimmingCtrl"
         })
         .when("/serSportsFitness", {
-            templateUrl: "serSportsFitness.html "
+            templateUrl: "services_subpages/serSportsFitness.html "
         })
         .when("/serGroupX", {
-            templateUrl: "serGroupX.html ",
+            templateUrl: "services_subpages/serGroupX.html ",
             controller: "groupXCtrl"
         })
         .when("/serSalonSpa", {
-            templateUrl: "serSalonSpa.html "
+            templateUrl: "services_subpages/serSalonSpa.html "
         })
 });
 
@@ -72,10 +72,11 @@ app.controller("servicesCtrl", function($scope, $http) {
         } else if ($scope.bmi >= 30) {
             $scope.result = "Obese! It need to be considered! ";
         }
-        alert("Your BMI is " + $scope.bmi + " " + $scope.result);
+        // alert("Your BMI is " + $scope.bmi + " " + $scope.result);
         $('#BMI').addClass('d-inline');
     }
 
+    // Calculate the total price when user choose the package and duration
     $scope.packagePrice = 0;
     $scope.discountRate = 0;
     $scope.duration = 0;
@@ -112,6 +113,7 @@ app.controller("servicesCtrl", function($scope, $http) {
         }
         $scope.discountPrice = $scope.packagePrice * $scope.duration * $scope.discountRate;
         $scope.totalCost = $scope.packagePrice * $scope.duration - $scope.discountPrice;
+        // Then display button link to membership page
         $('#beMember').addClass("d-block");
     }
 

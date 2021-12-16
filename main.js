@@ -46,7 +46,7 @@
          $("#enquire ").toggleClass("btn-danger text-warning ");
      });
 
-     $("form ").submit(function() {
+     $("#enquireForm").submit(function() {
          var name = $("#name ").val();
          var email = $("#email ").val();
          var phone = $("#phone ").val();
@@ -101,5 +101,41 @@
                  "transform": "scale(1)",
              });
          });
+
+     // Membership page: membership form
+     $("#membershipForm").submit(function() {
+         var name = $("#name").val();
+         var email = $("#email ").val();
+         var phone = $("#phone ").val();
+         var packageForm = $("#packageForm ").val();
+         var durationForm = $("#durationForm ").val();
+         var address = $("#address ").val();
+         if (name == '') {
+             alert("The name cannot left blank ");
+             return false;
+         }
+         if (email == '') {
+             alert("The email cannot left blank ");
+             return false;
+         }
+         if (phone == '') {
+             alert("The phone cannot left blank ");
+             return false;
+         }
+         if (packageForm == '') {
+             alert("The packageForm cannot left blank ");
+             return false;
+         }
+         if (durationForm == '') {
+             alert("The durationForm cannot left blank ");
+             return false;
+         }
+         if (address == '') {
+             alert("The address cannot left blank ");
+             return false;
+         }
+         alert("\nThank you for choosing Prime Fitness as your accommodation\nHope you enjoy our services! ");
+         return true;
+     });
      // End of Membership page
  });

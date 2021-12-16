@@ -242,13 +242,91 @@
             <div class="col-lg-4 col-md-6">
                 <ul id="package0" class="list-unstyled rounded border" style="background-image: url('images/member/run.jpg'); background-size: cover;background-position-x: left;">
                     <li class="m-0 pt-4 rounded text-left pl-3 ">
-                        <button class="btn btn-outline-primary text-white font-weight-light mt-5 mb-0"> BE A MEMBER NOW </button>
+                        <button type="button" data-toggle="modal" data-target="#beamember" class="btn btn-outline-primary text-white font-weight-light mt-5 mb-0"> BE A MEMBER NOW </button>
                     </li>
                     <li class="p-3 text-left">
-                        <h1 class="btn btn-outline-warning mt-1 mb-5"> ENQUIRE IF ANY CONCERNS </h1>
+                        <h1 class="btn btn-outline-warning mt-1 mb-5 "><a href="yourConcern.html" class="text-decoration-none text-white"> ENQUIRE IF ANY CONCERNS </a></h1>
                     </li>
                 </ul>
             </div>
+            <!-- Register panel Modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="beamember" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-secondary text-warning">
+                        <div class="modal-header bg-dark ">
+                            <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <form id="membershipForm" action="" class="text-warning text-left p-2">
+                            <h5 class="font-weight-lighter font-italic pt-3 text-center">Welcome to Prime Fitness Family!
+                                <hr class="bg-warning mx-auto" style="width: 25px;">
+                            </h5>
+                            <div class="row form-group">
+                                <div class="col-md-6">
+                                    <label>Full Name</label>
+                                    <input id="name" type="text" class="form-control" required/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="gender">Gender</label>
+                                    <div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="gender" id="gender" value="Male" checked>Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="gender" id="gender" value="Female">Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Phone (10-12 numbers)</label>
+                                    <input id="phone" type="tel" class="form-control" required minlength="10" maxlength="12" pattern="[0-9]{}" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                    <input id="email" type="email " class="form-control " required />
+                                </div>
+                                <div class="col-md-6 ">
+                                    <lable>Choose your package</lable>
+                                    <select name="packageForm" id="packageForm" class="form-control mt-2">
+                                        <option value="platinum">Platinum</option>
+                                        <option value="premium ">Premium</option>
+                                        <option value="power">Power</option>
+                                        <option value="multivisit20 ">Multivisit - 20 Session</option>
+                                        <option value="multivisit10 ">Multivisit - 10 Session</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <lable>Intending to sweat ...</lable>
+                                    <select name="durationForm" id="durationForm" class="form-control mt-2">
+                                        <option value="1">1 week</option>
+                                        <option value="2">2 weeks</option>
+                                        <option value="3">3 weeks</option>
+                                        <option value="4">4 weeks</option>
+                                        <option value="8">Two months</option>
+                                        <option value="16">Four months</option>
+                                        <option value="48">One year</option>
+                                        <option value="96">Two years</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 ">
+                                    <label>Address</label>
+                                    <input type="text" id="address" class="form-control">
+                                </div>
+
+                            </div>
+                            <div class="text-center col-12 ">
+                                <button class="btn btn-outline-warning w-100 d-block " type="submit">SEND <i class="fa "> &#xf1d9;</i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End of membership Modal -->
         </div>
         <!-- End Pricing Package -->
     </div>

@@ -17,7 +17,7 @@ Project title: Prime Fitness
              
 ============================
 
-github report link: 
+Github report link: 
 ============================
 
 eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
@@ -26,11 +26,13 @@ eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
 
 Most information and pictures are taken from ...
 
+    - https://www.cyclingweekly.com/news/latest-news/benefits-of-cycling-334144
     - https://38xfitness.com.au/
     - https://origympersonaltrainercourses.co.uk/blog/group-exercise-benefits
     - https://www.sciencedaily.com/releases/2017/10/171030092917.htm
     - https://www.wallpaperflare.com/
     - https://spashiki.com/body-treatments/
+    . . .
 
 ============================ Thank you for spending your time to look at our work. Happy Holidays
 
