@@ -2,27 +2,13 @@ $(document).ready(function() {
     $('#myPackage').change(function() {
         let myPackage = $('#myPackage').val();
         if (myPackage == "multivisit20" || myPackage == "multivisit10") {
-            // $('#duration').empty();
-            // $('#duration').prop('disabled', true);
             $('#week').css('display', 'none');
         } else {
-            // $('#duration').prop('disabled', false);
             $('#week').css('display', 'block');
-            // $('#duration').empty();
-            // setDuration();
         }
     });
-
 });
-// function setDuration() {
-//     for (var i = 1; i <= 50; i++) {
-//         if (i == 1) {
-//             $("#duration").append("<option value=" + i + ">" + i + " week</option>");
-//         } else {
-//             $("#duration").append("<option value=" + i + ">" + i + " weeks</option>");
-//         }
-//     }
-// }
+
 
 var app = angular.module("servicesApp", ["ngRoute"]);
 
