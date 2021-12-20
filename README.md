@@ -22,6 +22,7 @@ github report link:
 
 eProject published at https://maaguaete.github.io/2109.E0-eProject-Group_5/
 
+eProject report link at: https://github.com/Maaguaete/2109.E0-eProject-Group_5/tree/main/Documents
 ============================
 
 Most information and pictures are taken from ...
