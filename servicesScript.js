@@ -104,13 +104,13 @@ app.controller("servicesCtrl", function($scope, $http) {
     }
 
     app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
-        $scope.scrollTo = function(id) {
+        $scope.ngScrollTo = function(id) {
             $location.hash(id);
             $anchorScroll();
         }
     });
     app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
-        $scope.scrollTo = function(id) {
+        $scope.ngScrollTo = function(id) {
             $location.hash(id);
             $anchorScroll();
         }

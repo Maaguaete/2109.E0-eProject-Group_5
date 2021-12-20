@@ -55,7 +55,7 @@ td small,
     text-shadow: 0 5px 10px black, 0 0 20px yellow, 0 0 30px rgba(255, 255, 0, 0.63), 0 0 40px rgba(255, 255, 0, 0.767), 0 0 50px rgba(255, 255, 0, 0.829), 0 0 70px yellow;
 }
 
-.menu-bodies:hover h4 {
+.menu-bodies:hover h6 {
     transform: rotate(360deg);
     transition: all 300ms ease-in-out;
 }

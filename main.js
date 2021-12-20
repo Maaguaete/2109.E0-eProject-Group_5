@@ -4,6 +4,7 @@
      $(window).scroll(function() {
          if ($(this).scrollTop() > 50) {
              $('#back-to-top').fadeIn();
+             $('#back-to-top').css('z-index', '999');
          } else {
              $('#back-to-top').fadeOut();
          }
