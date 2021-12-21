@@ -14,7 +14,6 @@ html {
 
 header {
     background-image: url("images/headlogo.jpg");
-    padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: black;
@@ -26,8 +25,7 @@ header>i {
 }
 
 .logo {
-    width: 70%;
-    margin: 0px -100px 20px 0px;
+    width: 80%;
 }
 
 .nav-item .nav-link {

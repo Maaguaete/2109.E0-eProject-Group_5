@@ -55,19 +55,19 @@
          var phone = $("#phone ").val();
          var message = $("#message ").val();
 
-         if (name == '') {
+         if ($.trim(name) == '') {
              alert("The name cannot left blank ");
              return false;
          }
-         if (email == '') {
+         if ($.trim(email) == '') {
              alert("The email cannot left blank ");
              return false;
          }
-         if (phone == '') {
+         if ($.trim(phone) == '') {
              alert("The phone cannot left blank ");
              return false;
          }
-         if (message == '') {
+         if ($.trim(message) == '') {
              alert("The message cannot left blank ");
              return false;
          }
