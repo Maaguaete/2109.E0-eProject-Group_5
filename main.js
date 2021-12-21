@@ -50,10 +50,10 @@
      });
 
      $("#enquireForm").submit(function() {
-         var name = $("#name ").val();
-         var email = $("#email ").val();
-         var phone = $("#phone ").val();
-         var message = $("#message ").val();
+         var name = $("#name").val();
+         var email = $("#email").val();
+         var phone = $("#phone").val();
+         var message = $("#message").val();
 
          if ($.trim(name) == '') {
              alert("The name cannot left blank ");
