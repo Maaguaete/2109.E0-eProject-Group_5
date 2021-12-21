@@ -190,12 +190,12 @@ td small,
 }
 
 .nameClass {
-    transition: .5s ease;
+    transition: 0.3s ease-in-out;
     opacity: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 40%;
+    transform: translate(-40%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -214,7 +214,7 @@ td small,
     color: #fff;
     text-shadow: black 0px 0px 2px, black 0px 0px 3px, rgba(0, 0, 0, 0.712) 0px 0px 5px, orangered 0px 0px 15px;
     font-weight: bolder;
-    z-index: 399;
+    z-index: 299;
 }
 
 

@@ -102,17 +102,4 @@ app.controller("servicesCtrl", function($scope, $http) {
         // Then display button link to membership page
         $('#beMember').addClass("d-block");
     }
-
-    app.controller('swimmingCtrl', function($scope, $location, $anchorScroll) {
-        $scope.ngScrollTo = function(id) {
-            $location.hash(id);
-            $anchorScroll();
-        }
-    });
-    app.controller('groupXCtrl', function($scope, $location, $anchorScroll) {
-        $scope.ngScrollTo = function(id) {
-            $location.hash(id);
-            $anchorScroll();
-        }
-    });
 });
