@@ -8,6 +8,7 @@
     <title>GALLERY</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -67,17 +68,20 @@
 <body style="background-color: rgb(34, 35, 36);">
     <!-- Start of Header -->
     <header>
-        <nav class="navbar navbar-expand-md">
-            <a class="nav-link" href="#/!"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
-            <ul class="navbar-nav container-fluid">
-                <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item "><a class="nav-link " href="gallery.html">Gallery</a></li>
-                <li class="nav-item "><a class="nav-link " href="equipment.html">Equipments</a></li>
-                <li class="nav-item "><a class="nav-link " href="aboutUs.html">About Us</a></li>
-                <li class="nav-item "><a class="nav-link " href="yourConcern.html">Your Concerns</a></li>
-                <li class="nav-item "><a class="nav-link btn-danger " href="membership.html">Membership</a></li>
-            </ul>
+        <i class="material-icons navbar-toggle btn btn-outline-warning menuHeader" data-toggle="collapse" data-target="#headerNavbar">&#xe5d2;</i>
+        <nav class="navbar navbar-expand-md row">
+            <a class="nav-link col-lg-3" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse col-lg-9 mx-auto" id="headerNavbar">
+                <ul class=" navbar-nav container-fluid">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item "><a class="nav-link " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item "><a class="nav-link " href="equipment.html">Equipments</a></li>
+                    <li class="nav-item "><a class="nav-link " href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item "><a class="nav-link " href="yourConcern.html">Your Concerns</a></li>
+                    <li class="nav-item "><a class="nav-link btn-danger " href="membership.html">Membership</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <!-- End of Header -->

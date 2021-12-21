@@ -15,38 +15,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <!-- Css links and AngularJs library -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="services.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
-
     <script src="servicesScript.js"></script>
-
 </head>
 
 <body ng-app="servicesApp" ng-controller="servicesCtrl">
     <!-- Start of Header -->
     <header>
-        <nav class="navbar navbar-expand-md">
-            <a class="nav-link" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
-            <ul class="navbar-nav container-fluid">
-                <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
-                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
-                    <ul class="dropdown-menu bg-dark">
-                        <a class="dropdown-item" href="#/!">Cycling</a>
-                        <a class="dropdown-item" href="#!serSwimming">Swimming</a>
-                        <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
-                        <a class="dropdown-item" href="#!serGroupX">Group-X</a>
-                        <a class="dropdown-item" href="#!serSalonSpa">Salon & Spa</a>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="equipment.html">Equipments</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
-                <li class="nav-item "><a class="nav-link" href="yourConcern.html">Your Concerns</a></li>
-                <li class="nav-item"><a class="nav-link btn-danger" href="membership.html">Membership</a></li>
-            </ul>
+        <i class="material-icons navbar-toggle btn btn-outline-warning" data-toggle="collapse" data-target="#headerNavbar">&#xe5d2;</i>
+        <nav class="navbar navbar-expand-md row">
+            <a class="nav-link col-lg-3" href="index.html"><img class="logo" id="logo" src="images/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse col-lg-9 mx-auto" id="headerNavbar">
+                <ul class=" navbar-nav container-fluid">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="services.html" id="navbardrop" data-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu bg-dark">
+                            <a class="dropdown-item" href="#/!">Cycling</a>
+                            <a class="dropdown-item" href="#!serSwimming">Swimming</a>
+                            <a class="dropdown-item" href="#!serSportsFitness">Sport & Fitness</a>
+                            <a class="dropdown-item" href="#!serGroupX">Group-X</a>
+                            <a class="dropdown-item" href="#!serSalonSpa">Salon & Spa</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item "><a class="nav-link " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item "><a class="nav-link " href="equipment.html">Equipments</a></li>
+                    <li class="nav-item "><a class="nav-link " href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item "><a class="nav-link " href="yourConcern.html">Your Concerns</a></li>
+                    <li class="nav-item "><a class="nav-link btn-danger " href="membership.html">Membership</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <!-- End of Header -->

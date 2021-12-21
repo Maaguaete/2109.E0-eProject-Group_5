@@ -5,8 +5,10 @@
          if ($(this).scrollTop() > 50) {
              $('#back-to-top').fadeIn();
              $('#back-to-top').css('z-index', '999');
+             $('.menuHeader').css('display', 'none');
          } else {
              $('#back-to-top').fadeOut();
+             $('.menuHeader').css('display', 'block');
          }
      });
      // scroll body to 0px on click
