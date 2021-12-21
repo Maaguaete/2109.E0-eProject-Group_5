@@ -14,6 +14,7 @@ html {
 
 header {
     background-image: url("images/headlogo.jpg");
+    padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: black;
